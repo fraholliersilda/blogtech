@@ -1,0 +1,20 @@
+{
+    "name": "project/blogtech",
+    "description": "A dynamic PHP project for blog management with MVC structure, including controllers, views, and request handling.",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "controllers/",
+            "Exceptions\\": "Exceptions/",
+            "Requests\\": "Requests/",
+            "QueryBuilder\\": "QueryBuilder/",
+            "Models\\": "models/",
+            "core\\": "core/",
+            "Middlewares\\" : "middlewares/"
+        }
+    }
+}

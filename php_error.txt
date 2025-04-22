@@ -1,0 +1,2127 @@
+[21-Apr-2025 22:56:57 Europe/Berlin] Reset password path detected: /views/registration/reset_password?token=6bb7474cac775977d84d76a2af49833ccf568fb1
+[21-Apr-2025 22:56:57 Europe/Berlin] Token saved in session: 6bb7474cac775977d84d76a2af49833ccf568fb1
+[21-Apr-2025 22:56:57 Europe/Berlin] Token saved in cookie: 6bb7474cac775977d84d76a2af49833ccf568fb1
+[21-Apr-2025 22:57:03 Europe/Berlin] Reset password path detected: /views/registration/reset_password
+[21-Apr-2025 22:57:03 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 22:57:03 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 22:57:03 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 22:57:03 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 22:57:03 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 22:57:03 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 22:57:03 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 22:57:03 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 22:57:03 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 22:57:03 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 22:57:03 Europe/Berlin] Route matched: /views/registration/login
+[21-Apr-2025 23:03:51 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:51 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:03:51 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:51 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:03:51 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:51 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:03:51 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:51 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:03:51 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:51 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:03:51 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:51 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:03:51 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:51 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:03:51 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:51 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:03:51 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:51 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:03:51 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:03:51 Europe/Berlin] WHERE Condition: email = ela@gmail.com
+[21-Apr-2025 23:03:51 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[21-Apr-2025 23:03:51 Europe/Berlin] Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[21-Apr-2025 23:03:51 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[21-Apr-2025 23:03:51 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[21-Apr-2025 23:03:53 Europe/Berlin] Mail sending attempt result: Success
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /logout against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:03:53 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:03:53 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:03:57 Europe/Berlin] Reset password path detected: /views/registration/reset_password?token=a6e59ee93a0d8a7e8dc5ba971eb620788be43d1f
+[21-Apr-2025 23:03:57 Europe/Berlin] Token saved in session: a6e59ee93a0d8a7e8dc5ba971eb620788be43d1f
+[21-Apr-2025 23:03:57 Europe/Berlin] Token saved in cookie: 6bb7474cac775977d84d76a2af49833ccf568fb1
+[21-Apr-2025 23:04:03 Europe/Berlin] Reset password path detected: /views/registration/reset_password
+[21-Apr-2025 23:04:03 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:04:03 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:04:03 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:04:03 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:04:03 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:04:03 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:04:03 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:04:03 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:04:03 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:04:03 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:04:03 Europe/Berlin] Route matched: /views/registration/login
+[21-Apr-2025 23:09:55 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:55 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:09:55 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:55 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:09:55 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:55 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:09:55 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:55 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:09:55 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:55 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:09:55 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:55 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:09:55 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:55 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:09:55 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:55 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:09:55 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:55 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:09:55 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:09:55 Europe/Berlin] WHERE Condition: email = ela@gmail.com
+[21-Apr-2025 23:09:55 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[21-Apr-2025 23:09:55 Europe/Berlin] Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[21-Apr-2025 23:09:55 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[21-Apr-2025 23:09:55 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[21-Apr-2025 23:09:58 Europe/Berlin] Mail sending attempt result: Success
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /logout against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:09:58 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:09:58 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /logout against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:10:05 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:05 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:10:05 Europe/Berlin] No route matched for path: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:38 Europe/Berlin] Reset password path detected: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:38 Europe/Berlin] Token saved in session: 658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:10:38 Europe/Berlin] Token saved in cookie: a6e59ee93a0d8a7e8dc5ba971eb620788be43d1f
+[21-Apr-2025 23:12:21 Europe/Berlin] Reset password path detected: /views/registration/reset_password?token=658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:12:21 Europe/Berlin] Token saved in session: 658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:12:21 Europe/Berlin] Token saved in cookie: 658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:12:21 Europe/Berlin] GET token: 658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:12:21 Europe/Berlin] POST token: NULL
+[21-Apr-2025 23:12:21 Europe/Berlin] SESSION token: 658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:12:21 Europe/Berlin] COOKIE token: 658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:12:21 Europe/Berlin] Final token: 658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:12:26 Europe/Berlin] Reset password path detected: /views/registration/reset_password
+[21-Apr-2025 23:12:26 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:12:26 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:12:26 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:12:26 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:12:26 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:12:26 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:12:26 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:12:26 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:12:26 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:12:26 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:12:26 Europe/Berlin] Route matched: /views/registration/login
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /logout against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:14:58 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:15:00 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:15:00 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:15:00 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:15:00 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:15:00 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:15:00 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:15:00 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:15:00 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:15:00 Europe/Berlin] WHERE Condition: email = ela@gmail.com
+[21-Apr-2025 23:15:00 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[21-Apr-2025 23:15:00 Europe/Berlin] Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[21-Apr-2025 23:15:00 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[21-Apr-2025 23:15:00 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[21-Apr-2025 23:15:02 Europe/Berlin] Mail sending attempt result: Success
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /logout against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:15:02 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /logout against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:15:06 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:15:06 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:15:06 Europe/Berlin] No route matched for path: /views/registration/reset_password?token=cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /logout against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Route matched: /views/registration/reset_password
+[21-Apr-2025 23:18:51 Europe/Berlin] Token saved in session: cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:18:51 Europe/Berlin] Token saved in cookie: 658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:18:51 Europe/Berlin] GET token: cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:18:51 Europe/Berlin] POST token: NULL
+[21-Apr-2025 23:18:51 Europe/Berlin] SESSION token: cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:18:51 Europe/Berlin] COOKIE token: 658e9bd3609b9fd9c165f877d699062b0673f964
+[21-Apr-2025 23:18:51 Europe/Berlin] Final token: cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] Route matched: /views/registration/reset_password
+[21-Apr-2025 23:18:57 Europe/Berlin] GET token: NULL
+[21-Apr-2025 23:18:57 Europe/Berlin] POST token: cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:18:57 Europe/Berlin] SESSION token: cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:18:57 Europe/Berlin] COOKIE token: cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:18:57 Europe/Berlin] Final token: cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:18:57 Europe/Berlin] User found? Yes
+[21-Apr-2025 23:18:57 Europe/Berlin] Token from DB: cf724e48508097cca29d1fc60600ccd3fa94dbf7
+[21-Apr-2025 23:18:57 Europe/Berlin] Token expiration time: 2025-04-22 23:15:00
+[21-Apr-2025 23:18:57 Europe/Berlin] Current time: 2025-04-21 23:18:57
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:18:57 Europe/Berlin] Route matched: /views/registration/login
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:19:09 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:19:09 Europe/Berlin] Route matched: /views/registration/login
+[21-Apr-2025 23:19:09 Europe/Berlin] WHERE Condition: email = ela@gmail.com
+[21-Apr-2025 23:19:09 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[21-Apr-2025 23:19:09 Europe/Berlin] Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[21-Apr-2025 23:19:09 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[21-Apr-2025 23:19:09 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /logout against path: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /views/admin/login against path: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /views/posts/new against path: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /views/posts/blog against path: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /views/admin/admins against path: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /views/admin/users against path: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /views/profile/edit against path: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /views/profile/profile against path: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Checking route: /views/profile/profile against path: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Route matched: /views/profile/profile
+[21-Apr-2025 23:19:09 Europe/Berlin] WHERE Condition: u.id = 31
+[21-Apr-2025 23:19:09 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[21-Apr-2025 23:19:09 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[21-Apr-2025 23:19:09 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[21-Apr-2025 23:19:09 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+)
+
+[21-Apr-2025 23:19:09 Europe/Berlin] WHERE Condition: id = 31
+[21-Apr-2025 23:19:09 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[21-Apr-2025 23:19:09 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[21-Apr-2025 23:19:09 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[21-Apr-2025 23:19:09 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+)
+
+[21-Apr-2025 23:19:09 Europe/Berlin] WHERE Condition: user_id = 31
+[21-Apr-2025 23:19:09 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[21-Apr-2025 23:19:09 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[21-Apr-2025 23:19:09 Europe/Berlin] WHERE Condition: photo_type = profile
+[21-Apr-2025 23:19:09 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[21-Apr-2025 23:19:09 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+    [1] => profile
+)
+
+[21-Apr-2025 23:19:09 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[21-Apr-2025 23:19:09 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+    [1] => profile
+)
+
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /logout against path: /logout
+[21-Apr-2025 23:19:42 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /logout against path: /logout
+[21-Apr-2025 23:19:42 Europe/Berlin] Route matched: /logout
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:19:42 Europe/Berlin] Route matched: /views/registration/login
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /logout against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:44 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:19:48 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:19:48 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:19:48 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:19:48 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:19:48 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:19:48 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:19:48 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:19:48 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:19:48 Europe/Berlin] WHERE Condition: email = besi@gmail.com
+[21-Apr-2025 23:19:48 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[21-Apr-2025 23:19:48 Europe/Berlin] Bindings: Array
+(
+    [0] => besi@gmail.com
+)
+
+[21-Apr-2025 23:19:48 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[21-Apr-2025 23:19:48 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => besi@gmail.com
+)
+
+[21-Apr-2025 23:19:50 Europe/Berlin] Mail sending attempt result: Success
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /logout against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:19:50 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:19:53 Europe/Berlin] Checking route: /logout against path: /views/registration/reset_password
+[21-Apr-2025 23:19:53 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:19:53 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[21-Apr-2025 23:19:53 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:19:53 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[21-Apr-2025 23:19:53 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:19:53 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/reset_password
+[21-Apr-2025 23:19:53 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:19:53 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:19:53 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:19:53 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:19:53 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:19:54 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/reset_password
+[21-Apr-2025 23:19:54 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:19:54 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[21-Apr-2025 23:19:54 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:19:54 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[21-Apr-2025 23:19:54 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:19:54 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/reset_password
+[21-Apr-2025 23:19:54 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:19:54 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[21-Apr-2025 23:19:54 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:19:54 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[21-Apr-2025 23:19:54 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:19:54 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[21-Apr-2025 23:19:54 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:19:54 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:19:54 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:19:54 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:19:54 Europe/Berlin] Route matched: /views/registration/reset_password
+[21-Apr-2025 23:19:54 Europe/Berlin] Token saved in session: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:19:54 Europe/Berlin] PHP Warning:  Undefined array key "reset_token" in C:\downlods\htdocs\blogtech\controllers\RegistrationController.php on line 221
+[21-Apr-2025 23:19:54 Europe/Berlin] Token saved in cookie: 
+[21-Apr-2025 23:19:54 Europe/Berlin] GET token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:19:54 Europe/Berlin] POST token: NULL
+[21-Apr-2025 23:19:54 Europe/Berlin] SESSION token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:19:54 Europe/Berlin] COOKIE token: NULL
+[21-Apr-2025 23:19:54 Europe/Berlin] Final token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Route matched: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] GET token: NULL
+[21-Apr-2025 23:20:07 Europe/Berlin] POST token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:07 Europe/Berlin] SESSION token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:07 Europe/Berlin] COOKIE token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:07 Europe/Berlin] Final token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /logout against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Route matched: /views/registration/reset_password
+[21-Apr-2025 23:20:07 Europe/Berlin] Token saved in session: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:07 Europe/Berlin] Token saved in cookie: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:07 Europe/Berlin] GET token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:07 Europe/Berlin] POST token: NULL
+[21-Apr-2025 23:20:07 Europe/Berlin] SESSION token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:07 Europe/Berlin] COOKIE token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:07 Europe/Berlin] Final token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Route matched: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] GET token: NULL
+[21-Apr-2025 23:20:15 Europe/Berlin] POST token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:15 Europe/Berlin] SESSION token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:15 Europe/Berlin] COOKIE token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:15 Europe/Berlin] Final token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /logout against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Route matched: /views/registration/reset_password
+[21-Apr-2025 23:20:15 Europe/Berlin] Token saved in session: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:15 Europe/Berlin] Token saved in cookie: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:15 Europe/Berlin] GET token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:15 Europe/Berlin] POST token: NULL
+[21-Apr-2025 23:20:15 Europe/Berlin] SESSION token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:15 Europe/Berlin] COOKIE token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:15 Europe/Berlin] Final token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] Route matched: /views/registration/reset_password
+[21-Apr-2025 23:20:25 Europe/Berlin] GET token: NULL
+[21-Apr-2025 23:20:25 Europe/Berlin] POST token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:25 Europe/Berlin] SESSION token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:25 Europe/Berlin] COOKIE token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:25 Europe/Berlin] Final token: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:25 Europe/Berlin] User found? Yes
+[21-Apr-2025 23:20:25 Europe/Berlin] Token from DB: b7b2cac3f73b4c982256800f4f7e6a217056218f
+[21-Apr-2025 23:20:25 Europe/Berlin] Token expiration time: 2025-04-22 23:19:48
+[21-Apr-2025 23:20:25 Europe/Berlin] Current time: 2025-04-21 23:20:25
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:20:25 Europe/Berlin] Route matched: /views/registration/login
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:20:34 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:20:34 Europe/Berlin] Route matched: /views/registration/login
+[21-Apr-2025 23:20:34 Europe/Berlin] WHERE Condition: email = besi@gmail.com
+[21-Apr-2025 23:20:34 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[21-Apr-2025 23:20:34 Europe/Berlin] Bindings: Array
+(
+    [0] => besi@gmail.com
+)
+
+[21-Apr-2025 23:20:34 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[21-Apr-2025 23:20:34 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => besi@gmail.com
+)
+
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /logout against path: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /views/admin/login against path: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /views/posts/new against path: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /views/posts/blog against path: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /views/admin/admins against path: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /views/admin/users against path: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /views/profile/edit against path: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /views/profile/profile against path: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Checking route: /views/profile/profile against path: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Route matched: /views/profile/profile
+[21-Apr-2025 23:20:34 Europe/Berlin] WHERE Condition: u.id = 32
+[21-Apr-2025 23:20:34 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[21-Apr-2025 23:20:34 Europe/Berlin] Bindings: Array
+(
+    [0] => 32
+)
+
+[21-Apr-2025 23:20:34 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[21-Apr-2025 23:20:34 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 32
+)
+
+[21-Apr-2025 23:20:34 Europe/Berlin] WHERE Condition: id = 32
+[21-Apr-2025 23:20:34 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[21-Apr-2025 23:20:34 Europe/Berlin] Bindings: Array
+(
+    [0] => 32
+)
+
+[21-Apr-2025 23:20:34 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[21-Apr-2025 23:20:34 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 32
+)
+
+[21-Apr-2025 23:20:34 Europe/Berlin] WHERE Condition: user_id = 32
+[21-Apr-2025 23:20:34 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[21-Apr-2025 23:20:34 Europe/Berlin] Bindings: Array
+(
+    [0] => 32
+)
+
+[21-Apr-2025 23:20:34 Europe/Berlin] WHERE Condition: photo_type = profile
+[21-Apr-2025 23:20:34 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[21-Apr-2025 23:20:34 Europe/Berlin] Bindings: Array
+(
+    [0] => 32
+    [1] => profile
+)
+
+[21-Apr-2025 23:20:34 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[21-Apr-2025 23:20:34 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 32
+    [1] => profile
+)
+
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /logout against path: /logout
+[21-Apr-2025 23:20:42 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /logout against path: /logout
+[21-Apr-2025 23:20:42 Europe/Berlin] Route matched: /logout
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:20:42 Europe/Berlin] Route matched: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /logout against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Route matched: /views/registration/reset_password
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[21-Apr-2025 23:20:56 Europe/Berlin] Route matched: /views/registration/login
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /logout against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:01 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:21:03 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:21:03 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:21:03 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:21:03 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:21:03 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:21:03 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:21:03 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:21:03 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:21:03 Europe/Berlin] WHERE Condition: email = ela@gmail.com
+[21-Apr-2025 23:21:03 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[21-Apr-2025 23:21:03 Europe/Berlin] Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[21-Apr-2025 23:21:03 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[21-Apr-2025 23:21:03 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[21-Apr-2025 23:21:05 Europe/Berlin] Mail sending attempt result: Success
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /logout against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[21-Apr-2025 23:21:05 Europe/Berlin] Route matched: /views/registration/forgot_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /logout against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Route matched: /views/registration/reset_password
+[21-Apr-2025 23:21:09 Europe/Berlin] Token saved in session: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:21:09 Europe/Berlin] PHP Warning:  Undefined array key "reset_token" in C:\downlods\htdocs\blogtech\controllers\RegistrationController.php on line 221
+[21-Apr-2025 23:21:09 Europe/Berlin] Token saved in cookie: 
+[21-Apr-2025 23:21:09 Europe/Berlin] GET token: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:21:09 Europe/Berlin] POST token: NULL
+[21-Apr-2025 23:21:09 Europe/Berlin] SESSION token: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:21:09 Europe/Berlin] COOKIE token: NULL
+[21-Apr-2025 23:21:09 Europe/Berlin] Final token: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /logout against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Route matched: /views/registration/reset_password
+[21-Apr-2025 23:21:42 Europe/Berlin] Token saved in session: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:21:42 Europe/Berlin] Token saved in cookie: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:21:42 Europe/Berlin] GET token: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:21:42 Europe/Berlin] POST token: NULL
+[21-Apr-2025 23:21:42 Europe/Berlin] SESSION token: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:21:42 Europe/Berlin] COOKIE token: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:21:42 Europe/Berlin] Final token: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /logout against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /logout
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/admin/login
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/posts/new
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/posts/blog
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/admin/admins
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/admin/users
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/profile/edit
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/profile/profile
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/registration/login
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/registration/signup
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/registration/forgot_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Pattern: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Route matched: /views/registration/reset_password
+[21-Apr-2025 23:22:13 Europe/Berlin] Token saved in session: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:22:13 Europe/Berlin] GET token: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:22:13 Europe/Berlin] POST token: NULL
+[21-Apr-2025 23:22:13 Europe/Berlin] SESSION token: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:22:13 Europe/Berlin] COOKIE token: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[21-Apr-2025 23:22:13 Europe/Berlin] Final token: f086bc995842fcdb8dec92c55ddd09ba31d8c7c1
+[22-Apr-2025 19:37:07 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:37:07 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:37:07 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:37:07 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:37:07 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:37:07 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:37:07 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:37:07 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:37:07 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:37:07 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:37:07 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:43:16 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:43:16 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:43:16 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:43:16 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:43:16 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:43:16 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:43:16 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:43:16 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:43:16 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:43:16 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] WHERE Condition: email = ela@gmail.com
+[22-Apr-2025 19:43:18 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[22-Apr-2025 19:43:18 Europe/Berlin] Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[22-Apr-2025 19:43:18 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[22-Apr-2025 19:43:18 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:43:18 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:43:22 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:43:22 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:43:22 Europe/Berlin] WHERE Condition: email = ela@gmail.com
+[22-Apr-2025 19:43:22 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[22-Apr-2025 19:43:22 Europe/Berlin] Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[22-Apr-2025 19:43:22 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[22-Apr-2025 19:43:22 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /logout against path: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /views/admin/login against path: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /views/posts/new against path: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /views/posts/blog against path: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /views/admin/admins against path: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /views/admin/users against path: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /views/profile/edit against path: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /views/profile/profile against path: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Checking route: /views/profile/profile against path: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Route matched: /views/profile/profile
+[22-Apr-2025 19:43:22 Europe/Berlin] WHERE Condition: u.id = 31
+[22-Apr-2025 19:43:22 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[22-Apr-2025 19:43:22 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:43:22 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[22-Apr-2025 19:43:22 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:43:22 Europe/Berlin] WHERE Condition: id = 31
+[22-Apr-2025 19:43:22 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[22-Apr-2025 19:43:22 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:43:22 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[22-Apr-2025 19:43:22 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:43:22 Europe/Berlin] WHERE Condition: user_id = 31
+[22-Apr-2025 19:43:22 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[22-Apr-2025 19:43:22 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:43:22 Europe/Berlin] WHERE Condition: photo_type = profile
+[22-Apr-2025 19:43:22 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[22-Apr-2025 19:43:22 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+    [1] => profile
+)
+
+[22-Apr-2025 19:43:22 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[22-Apr-2025 19:43:22 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+    [1] => profile
+)
+
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /logout against path: /logout
+[22-Apr-2025 19:43:25 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /logout against path: /logout
+[22-Apr-2025 19:43:25 Europe/Berlin] Route matched: /logout
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:43:25 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /logout against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /views/registration/signup
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Pattern: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:28 Europe/Berlin] Route matched: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:43:30 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:43:30 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] Pattern: /views/registration/signup
+[22-Apr-2025 19:43:30 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:43:30 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:43:30 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:43:30 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:43:30 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:43:30 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] Pattern: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] Route matched: /views/registration/forgot_password
+[22-Apr-2025 19:43:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Requests\PasswordResetRequest" not found in C:\downlods\htdocs\blogtech\controllers\RegistrationController.php:214
+Stack trace:
+#0 C:\downlods\htdocs\blogtech\index.php(125): Controllers\RegistrationController->forgotPassword()
+#1 C:\downlods\htdocs\blogtech\index.php(148): {closure}()
+#2 {main}
+  thrown in C:\downlods\htdocs\blogtech\controllers\RegistrationController.php on line 214
+[22-Apr-2025 19:44:39 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:39 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:44:39 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:39 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:44:39 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:39 Europe/Berlin] Pattern: /views/registration/signup
+[22-Apr-2025 19:44:39 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:39 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:44:39 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:39 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:44:39 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:39 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:44:39 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:39 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:44:39 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:39 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:44:39 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:39 Europe/Berlin] Pattern: /views/registration/forgot_password
+[22-Apr-2025 19:44:39 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:39 Europe/Berlin] Route matched: /views/registration/forgot_password
+[22-Apr-2025 19:44:39 Europe/Berlin] WHERE Condition: email = ela@gmail.com
+[22-Apr-2025 19:44:39 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[22-Apr-2025 19:44:39 Europe/Berlin] Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[22-Apr-2025 19:44:39 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[22-Apr-2025 19:44:39 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[22-Apr-2025 19:44:42 Europe/Berlin] Mail sending attempt result: Success
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /logout against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /views/registration/signup
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Pattern: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:44:42 Europe/Berlin] Route matched: /views/registration/forgot_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /logout against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/registration/signup
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/registration/forgot_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Pattern: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[22-Apr-2025 19:45:02 Europe/Berlin] Route matched: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/registration/signup
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/registration/forgot_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Route matched: /views/registration/reset_password
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:45:13 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:45:19 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:45:19 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:45:19 Europe/Berlin] WHERE Condition: email = ela@gmail.com
+[22-Apr-2025 19:45:19 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[22-Apr-2025 19:45:19 Europe/Berlin] Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[22-Apr-2025 19:45:19 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[22-Apr-2025 19:45:19 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /logout against path: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /views/admin/login against path: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /views/posts/new against path: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /views/posts/blog against path: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /views/admin/admins against path: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /views/admin/users against path: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /views/profile/edit against path: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /views/profile/profile against path: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Checking route: /views/profile/profile against path: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Route matched: /views/profile/profile
+[22-Apr-2025 19:45:19 Europe/Berlin] WHERE Condition: u.id = 31
+[22-Apr-2025 19:45:19 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[22-Apr-2025 19:45:19 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:45:19 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[22-Apr-2025 19:45:19 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:45:19 Europe/Berlin] WHERE Condition: id = 31
+[22-Apr-2025 19:45:19 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[22-Apr-2025 19:45:19 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:45:19 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[22-Apr-2025 19:45:19 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:45:19 Europe/Berlin] WHERE Condition: user_id = 31
+[22-Apr-2025 19:45:19 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[22-Apr-2025 19:45:19 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:45:19 Europe/Berlin] WHERE Condition: photo_type = profile
+[22-Apr-2025 19:45:19 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[22-Apr-2025 19:45:19 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+    [1] => profile
+)
+
+[22-Apr-2025 19:45:19 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[22-Apr-2025 19:45:19 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+    [1] => profile
+)
+
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /logout against path: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/admin/login against path: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/posts/new against path: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/posts/blog against path: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/admin/admins against path: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/admin/users against path: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/profile/edit against path: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/profile/profile against path: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Checking route: /views/profile/profile against path: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Route matched: /views/profile/profile
+[22-Apr-2025 19:45:58 Europe/Berlin] WHERE Condition: u.id = 31
+[22-Apr-2025 19:45:58 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[22-Apr-2025 19:45:58 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:45:58 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[22-Apr-2025 19:45:58 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:45:58 Europe/Berlin] WHERE Condition: id = 31
+[22-Apr-2025 19:45:58 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[22-Apr-2025 19:45:58 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:45:58 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[22-Apr-2025 19:45:58 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:45:58 Europe/Berlin] WHERE Condition: user_id = 31
+[22-Apr-2025 19:45:58 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[22-Apr-2025 19:45:58 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:45:58 Europe/Berlin] WHERE Condition: photo_type = profile
+[22-Apr-2025 19:45:58 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[22-Apr-2025 19:45:58 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+    [1] => profile
+)
+
+[22-Apr-2025 19:45:58 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[22-Apr-2025 19:45:58 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+    [1] => profile
+)
+
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /logout against path: /logout
+[22-Apr-2025 19:46:02 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /logout against path: /logout
+[22-Apr-2025 19:46:02 Europe/Berlin] Route matched: /logout
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:46:02 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:51:06 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:51:06 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:51:06 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:06 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:06 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:51:06 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:51:06 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:51:06 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:51:06 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:51:06 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /logout against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /views/registration/signup
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Pattern: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:08 Europe/Berlin] Route matched: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:51:11 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:51:11 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] Pattern: /views/registration/signup
+[22-Apr-2025 19:51:11 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:51:11 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:11 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:11 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:51:11 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:51:11 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] Pattern: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] Route matched: /views/registration/forgot_password
+[22-Apr-2025 19:51:11 Europe/Berlin] WHERE Condition: email = ela@gmail.com
+[22-Apr-2025 19:51:11 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[22-Apr-2025 19:51:11 Europe/Berlin] Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[22-Apr-2025 19:51:11 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[22-Apr-2025 19:51:11 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[22-Apr-2025 19:51:14 Europe/Berlin] Mail sending attempt result: Success
+[22-Apr-2025 19:51:14 Europe/Berlin] Checking route: /logout against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:14 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:51:14 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:14 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:51:14 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:14 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:51:14 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:14 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:51:14 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:14 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:14 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:14 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:15 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:15 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:51:15 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:15 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:51:15 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:15 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:51:15 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:15 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:51:15 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:15 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:51:15 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:15 Europe/Berlin] Pattern: /views/registration/signup
+[22-Apr-2025 19:51:15 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:15 Europe/Berlin] Pattern: /views/registration/forgot_password
+[22-Apr-2025 19:51:15 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/forgot_password
+[22-Apr-2025 19:51:15 Europe/Berlin] Route matched: /views/registration/forgot_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /logout against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/registration/signup
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/registration/forgot_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Pattern: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[22-Apr-2025 19:51:20 Europe/Berlin] Route matched: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/registration/signup against path: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/registration/signup
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /posts/delete/{id} against path: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /posts/delete/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/registration/forgot_password against path: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/registration/forgot_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/registration/reset_password against path: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Route matched: /views/registration/reset_password
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /logout against path: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/admin/login against path: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/posts/new against path: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/posts/blog against path: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/admin/admins against path: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/admin/users against path: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/profile/edit against path: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/profile/profile against path: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:51:27 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:51:38 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:51:38 Europe/Berlin] Pattern: /views/registration/login
+[22-Apr-2025 19:51:38 Europe/Berlin] Checking route: /views/registration/login against path: /views/registration/login
+[22-Apr-2025 19:51:38 Europe/Berlin] Route matched: /views/registration/login
+[22-Apr-2025 19:51:38 Europe/Berlin] WHERE Condition: email = ela@gmail.com
+[22-Apr-2025 19:51:38 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[22-Apr-2025 19:51:38 Europe/Berlin] Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[22-Apr-2025 19:51:38 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[22-Apr-2025 19:51:38 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ela@gmail.com
+)
+
+[22-Apr-2025 19:51:39 Europe/Berlin] Checking route: /logout against path: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Pattern: /logout
+[22-Apr-2025 19:51:39 Europe/Berlin] Checking route: /views/admin/login against path: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Pattern: /views/admin/login
+[22-Apr-2025 19:51:39 Europe/Berlin] Checking route: /views/posts/new against path: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Pattern: /views/posts/new
+[22-Apr-2025 19:51:39 Europe/Berlin] Checking route: /views/posts/blog against path: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Pattern: /views/posts/blog
+[22-Apr-2025 19:51:39 Europe/Berlin] Checking route: /views/posts/post/{id} against path: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Pattern: /views/posts/post/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:39 Europe/Berlin] Checking route: /views/posts/edit/{id} against path: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Pattern: /views/posts/edit/([a-zA-Z0-9_-]+)
+[22-Apr-2025 19:51:39 Europe/Berlin] Checking route: /views/admin/admins against path: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Pattern: /views/admin/admins
+[22-Apr-2025 19:51:39 Europe/Berlin] Checking route: /views/admin/users against path: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Pattern: /views/admin/users
+[22-Apr-2025 19:51:39 Europe/Berlin] Checking route: /views/profile/edit against path: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Pattern: /views/profile/edit
+[22-Apr-2025 19:51:39 Europe/Berlin] Checking route: /views/profile/profile against path: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Pattern: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Checking route: /views/profile/profile against path: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Route matched: /views/profile/profile
+[22-Apr-2025 19:51:39 Europe/Berlin] WHERE Condition: u.id = 31
+[22-Apr-2025 19:51:39 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[22-Apr-2025 19:51:39 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:51:39 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[22-Apr-2025 19:51:39 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:51:39 Europe/Berlin] WHERE Condition: id = 31
+[22-Apr-2025 19:51:39 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[22-Apr-2025 19:51:39 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:51:39 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[22-Apr-2025 19:51:39 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:51:39 Europe/Berlin] WHERE Condition: user_id = 31
+[22-Apr-2025 19:51:39 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[22-Apr-2025 19:51:39 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+)
+
+[22-Apr-2025 19:51:39 Europe/Berlin] WHERE Condition: photo_type = profile
+[22-Apr-2025 19:51:39 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[22-Apr-2025 19:51:39 Europe/Berlin] Bindings: Array
+(
+    [0] => 31
+    [1] => profile
+)
+
+[22-Apr-2025 19:51:39 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[22-Apr-2025 19:51:39 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 31
+    [1] => profile
+)
+

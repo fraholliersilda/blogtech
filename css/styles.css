@@ -1,0 +1,632 @@
+/* General Body Styling */
+body {
+  color: #1a202c;
+  text-align: left;
+  background-color: #e2e8f0;
+}
+
+.main-body {
+  padding: 15px;
+}
+
+/* Layout for the Container (Profile Content) */
+.container-fluid {
+  padding: 0;
+  margin-left: 238px;
+}
+
+.row.gutters-sm {
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+/* Card Styling */
+.card-body {
+  padding: 1rem;
+}
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.col-md-4 {
+  max-width: 300px;
+}
+
+.col-md-8 {
+  flex: 1;
+}
+
+/* Navbar Styling */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-nav {
+  min-width: 300px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  background-color: #16a085;
+}
+
+.dashboard-nav header {
+  font-size: 20px;
+  min-height: 84px;
+  padding: 8px 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.dashboard-nav a:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-nav-item.active {
+  background: rgba(0, 0, 0, 0.1); /* Same as hover */
+}
+
+.dashboard-nav-list {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 84px);
+}
+
+.dashboard-nav-item {
+  min-height: 56px;
+  padding: 8px 20px 8px 70px;
+  display: flex;
+  align-items: center;
+  transition: ease-out 0.5s;
+}
+
+.dashboard-nav-item i {
+  width: 36px;
+  font-size: 19px;
+  margin-left: -40px;
+}
+
+.dashboard-nav-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-item-divider {
+  height: 1px;
+  margin: 1rem 0;
+  background-color: rgba(236, 238, 239, 0.3);
+}
+
+.logout-container {
+  margin-top: auto;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .dashboard-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1070;
+  }
+
+  .dashboard-nav.mobile-show {
+    display: block;
+  }
+
+  .dashboard-nav header .menu-toggle {
+    display: flex;
+  }
+
+  .container-fluid {
+    margin-left: 0; /* Remove margin on smaller screens */
+  }
+
+  .row.gutters-sm {
+    flex-direction: column;
+  }
+}
+
+/* Dropdown Button */
+.dashboard-nav-item {
+  font-size: 20px;
+  position: relative; /* Needed for dropdown positioning */
+  min-height: 80px;
+  padding: 8px 20px 8px 70px;
+  display: flex;
+  align-items: center;
+  transition: ease-out 0.5s;
+}
+
+.dashboard-nav-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  z-index: 1000;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: #333;
+  /* padding: 10px 20px; */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Active menu item */
+.dashboard-nav-item.active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 992px) {
+  .dropdown-menu {
+      position: static; /* Ensure dropdown displays properly on mobile */
+      box-shadow: none;
+      background-color: #fff;
+  }
+
+  .dashboard-nav {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+  }
+}
+
+
+
+/* Edit Profile Styling */
+body {
+  background: #f7f7ff;
+  margin-top: 20px;
+}
+
+.prov {
+  max-width: 900px!important;
+  margin-left: 280px!important;
+}
+
+.card {
+  padding: 20px;
+}
+
+
+
+/* Profile Content */
+.container {
+  margin-left: 320px!important;
+  max-width: 1300px!important;
+}
+
+.col-sm-9 {
+  padding: 3px;
+}
+
+.mb-3, .my-3 {
+  margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+  background-color: #e2e8f0;
+}
+
+.h-100 {
+  height: 100%!important;
+}
+
+.shadow-none {
+  box-shadow: none!important;
+}
+
+.text-secondary {
+  margin-bottom: 0;
+}
+
+.logout-item {
+  float: right;
+}
+
+/* admin dashboard */
+.admin_dashboard {
+  margin-left: 320px;
+  max-width: 1300px;
+}
+
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.user-card h3 {
+  margin: 0 0 10px;
+}
+
+.user-card p {
+  margin: 5px 0;
+}
+
+.user-card form {
+  margin-top: 10px;
+}
+
+.user-card form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.user-card form input, .user-card form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.user-card form button {
+  border-radius: 4px;
+  background-color: #16a085;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.user-card form button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.create-user-form-container {
+  margin: 2rem auto;
+  max-width: 300px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.create-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.create-user-form label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.create-user-form .form-control {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.create-user-form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.create-user-btn {
+  padding: 120px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-user-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* home(blog) */
+/* Styling for the Blog Post Section */
+.post-card {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Post content */
+.post-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 2000px;
+}
+
+/* Post image */
+.post-image img {
+  width: 150px;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.coverphoto img{
+  width: 700px;
+  height: 400px;
+}
+
+/* Post details */
+.post-details {
+  flex: 1;
+}
+
+.post-details .card-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.post-details .card-text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Button Styling */
+.btn-secondary {
+  background-color: #16a085;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* Styling for the post form */
+.post-form {
+  margin-left: 260px; /* Adjust to give space for the navbar */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 280px); /* Ensures the form does not stretch too wide */
+  max-width: 1000px; /* Optional: To limit the maximum width of the form */
+  margin-top: 20px; /* Add space at the top */
+}
+
+/* Input Fields Styling */
+.post-form input[type="text"],
+.post-form textarea,
+.post-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+}
+
+/* Textarea Specific Styling */
+.post-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit Button Styling */
+.post-form button {
+  background-color: #16a085;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.post-form button:hover {
+  background-color: #1abc9c;
+}
+
+
+
+/* Post Page Styling */
+.post {
+ margin-left: 50px;
+  max-width: 1400px; 
+  background-color: #ffffff; 
+}
+
+/* Title Styling */
+.post h1 {
+  font-size: 2.5rem; /* Larger font size for the title */
+  margin-bottom: 15px; /* Space below the title */
+  color: #333; /* Darker color for the title */
+  text-align: center; /* Center the title */
+}
+
+/* Author Styling */
+.post .author {
+  font-size: 1.2rem; /* Font size for the author */
+  color: #777; /* Lighter color for the author */
+}
+
+/* Image Styling */
+.post img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+/* Description Styling */
+.post .description {
+  font-size: 1.3rem; /* Font size for the description */
+  color: #555; /* Color for the description text */
+  margin-top: 10px; /* Space above the description */
+}
+
+/* Blockquote Styling */
+.post blockquote {
+  border-left: 4px solid #16a085; /* Left border for blockquotes */
+  padding-left: 20px; /* Padding inside the blockquote */
+  margin: 20px 0; /* Margin above and below */
+  font-style: italic; /* Italic text for quotes */
+  color: #555; /* Color for the quote text */
+}
+.posting-details{
+  width: 200px;
+}
+
+/* Responsive Design for Post Page */
+@media (max-width: 768px) {
+  .post {
+    margin: 20px; /* Reduce margin on smaller screens */
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .post h1 {
+    font-size: 2rem; /* Smaller title on mobile */
+  }
+
+  .post .author {
+    font-size: 0.9rem; /* Smaller author text on mobile */
+  }
+
+  .post .description {
+    font-size: 1rem; /* Smaller description text on mobile */
+  }
+}
+
+
+/* edit_post */
+.edit-post-title{
+  margin-left: 320px;
+}
+.edit-post-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+ margin-left: 320px;
+  max-width: 900px;
+  width: 100%;
+  height: 98vh;
+}
+
+.edit-post-form .form-group {
+  margin-bottom: 15px;
+}
+
+.edit-post-form .form-label {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #333;
+}
+
+.edit-post-form .form-input,
+.edit-post-form .form-textarea,
+.edit-post-form .form-file {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.edit-post-form .form-textarea {
+  resize: vertical;
+  min-height: 400px;
+}
+
+.edit-post-form .submit-button {
+  padding: 10px 20px;
+  background-color: #16a085;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.edit-post-form .submit-button:hover {
+  background-color: #1abc9c;
+}
+.error-messages {
+  background-color: #ffebeb;
+  color: #d9534f;
+  border: 1px solid #d9534f;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.error-messages p {
+  margin: 0;
+  padding: 5px 0;
+}
