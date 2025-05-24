@@ -12,7 +12,6 @@ require_once 'successHandler.php';
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-
 <body>
     <?php include BASE_PATH . '/navbar/navbar.php'; ?>
     <?php displaySuccessMessages(); ?>

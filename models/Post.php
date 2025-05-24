@@ -7,52 +7,48 @@ class Post extends Model
     public $fields = [
         'id',
         'title',
-        'description'
+        'description',
+        'user_id'
     ];
 
     public function getAllPost()
     {
         return $this->queryBuilder
             ->table('posts')
-            ->select(['posts.id', 'posts.title', 'posts.description', 'media.path AS cover_photo_path', 'users.username', 'media.user_id'])
-            ->leftJoin('media', 'posts.id', '=', 'media.post_id')
-            ->leftJoin('users', 'media.user_id', '=', 'users.id')
-            ->where('media.size', '>', 0)
+            ->select(['posts.id', 'posts.title', 'posts.description', 'posts.user_id', 'media.path AS cover_photo_path', 'users.username'])
+            ->leftJoin('media', 'posts.id', '=', 'media.post_id AND (media.photo_type = "cover" OR media.photo_type IS NULL)')
+            ->leftJoin('users', 'posts.user_id', '=', 'users.id')
             ->orderBy('posts.created_at', 'DESC')
             ->get();
     }
 
     public function getLatestPosts()
-{
-    return $this->queryBuilder
-    ->table('posts')
-    ->select(['posts.id', 'posts.title', 'posts.description', 'media.path AS cover_photo_path', 'users.username', 'media.user_id'])
-    ->leftJoin('media', 'posts.id', '=', 'media.post_id')
-    ->leftJoin('users', 'media.user_id', '=', 'users.id')
-    ->where('media.size', '>', 0)
-    ->orderBy('posts.created_at', 'DESC')
-    ->limit(2)
-    ->get();
-
-}
-
+    {
+        return $this->queryBuilder
+            ->table('posts')
+            ->select(['posts.id', 'posts.title', 'posts.description', 'posts.user_id', 'media.path AS cover_photo_path', 'users.username'])
+            ->leftJoin('media', 'posts.id', '=', 'media.post_id')
+            ->leftJoin('users', 'posts.user_id', '=', 'users.id')
+            ->where('media.photo_type', '=', 'cover')
+            ->orderBy('posts.created_at', 'DESC')
+            ->limit(2)
+            ->get();
+    }
 
     public function getPostById($postId)
     {
         $result = $this->queryBuilder
             ->table('posts')
-            ->select(['posts.id', 'posts.title', 'posts.description', 'media.path AS cover_photo_path', 'users.username'])
+            ->select(['posts.id', 'posts.title', 'posts.description', 'posts.user_id', 'media.path AS cover_photo_path', 'users.username'])
             ->leftJoin('media', 'posts.id', '=', 'media.post_id')
-            ->leftJoin('users', 'media.user_id', '=', 'users.id')
-            ->where('posts.id', '=', $postId)  
+            ->leftJoin('users', 'posts.user_id', '=', 'users.id')
+            ->where('posts.id', '=', $postId)
+            ->where('media.photo_type', '=', 'cover')
             ->limit(1) 
             ->get();
     
         return !empty($result) ? $result[0] : null; 
     }
-    
-
-    
 
     public function updatePost($postId, $data)
     {
@@ -66,28 +62,23 @@ class Post extends Model
             ->execute();
     }
 
-
     public function createPost($data)
-{
-    return $this->queryBuilder
-        ->table('posts')
-        ->insert($data);
-}
+    {
+        // Add user_id to the data
+        $data['user_id'] = $_SESSION['user_id'];
+        
+        return $this->queryBuilder
+            ->table('posts')
+            ->insert($data);
+    }
 
-public function deletePost($postId)
-{
-    error_log("Deleting post with ID: $postId");
-    return $this->queryBuilder
-        ->table('posts')
-        ->where('id', '=', $postId)
-        ->delete()
-        ->execute();
-}
-
-
-
-
-
-
-
+    public function deletePost($postId)
+    {
+        error_log("Deleting post with ID: $postId");
+        return $this->queryBuilder
+            ->table('posts')
+            ->where('id', '=', $postId)
+            ->delete()
+            ->execute();
+    }
 }

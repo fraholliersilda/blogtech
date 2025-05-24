@@ -25,6 +25,13 @@ class PostsController extends BaseController
     {
         try {
             $posts = (new Post)->getAllPost();
+            
+            // Check if user is admin
+            $is_admin = false;
+            if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin') {
+                $is_admin = true;
+            }
+            
             include BASE_PATH . '/views/posts/blog_posts.php';
         } catch (PDOException $e) {
             setErrors(["Error: " . $e->getMessage()]);
@@ -48,9 +55,6 @@ class PostsController extends BaseController
         }
     }
 
-    
-
-
     public function editPost($postId)
     {
         try {
@@ -58,6 +62,7 @@ class PostsController extends BaseController
 
             if (!$post) {
                 setErrors(["Post not found"]);
+                redirect('/blogtech/views/posts/blog');
                 return;
             }
 
@@ -71,6 +76,7 @@ class PostsController extends BaseController
                         'title' => $_POST['title'],
                         'description' => $_POST['description']
                     ]);
+                    
                     if (!empty($_FILES['cover_photo']) && $_FILES['cover_photo']['error'] === UPLOAD_ERR_OK) {
                         if ($coverPhoto) {
                             $deleteFile = $_SERVER['DOCUMENT_ROOT'] . $coverPhoto['path'];
@@ -83,21 +89,20 @@ class PostsController extends BaseController
 
                         (new Media)->saveCoverPhoto($_FILES['cover_photo'], $postId);
                     }
+                    
                     setSuccessMessages(['Post updated!']);
                     redirect("/blogtech/views/posts/post/$postId");
                 } catch (ValidationException $e) {
                     setErrors([$e->getMessage()]);
-                    redirect("/blogtech/views/posts/post/$postId");
                 }
             }
 
             include BASE_PATH . '/views/posts/edit_post.php';
         } catch (PDOException $e) {
             setErrors(["Database Error: " . $e->getMessage()]);
-            redirect("/blogtech/views/posts/post/$postId");
+            redirect("/blogtech/views/posts/blog");
         }
     }
-
 
     public function createPost()
     {
@@ -115,16 +120,14 @@ class PostsController extends BaseController
                         (new Media)->saveCoverPhoto($_FILES['cover_photo'], $postId);
                     }
 
+                    setSuccessMessages(['Post created!']);
                     redirect('/blogtech/views/posts/blog');
                 } else {
                     setErrors(['Failed to create post.']);
                 }
-                setSuccessMessages(['Post created!']);
             } catch (Exception $e) {
                 setErrors(["Error: " . $e->getMessage()]);
             }
-        } else {
-            setErrors(['Please fill out all fields.']);
         }
 
         include BASE_PATH . '/views/posts/new_post.php';
@@ -138,17 +141,31 @@ class PostsController extends BaseController
 
     public function deletePost($postId)
     {
+        error_log("DeletePost called with ID: " . $postId);
+        
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             try {
+                // Validate post ID
+                if (!$postId || !is_numeric($postId)) {
+                    setErrors(["Invalid post ID."]);
+                    redirect('/blogtech/views/posts/blog');
+                    return;
+                }
+
                 $post = (new Post)->getPostById($postId);
 
                 if (!$post) {
                     setErrors(["Post not found."]);
+                    redirect('/blogtech/views/posts/blog');
                     return;
                 }
 
+                error_log("Post found, proceeding with deletion");
+
+                // Delete associated media first
                 $coverPhoto = (new Media)->getCoverPhotoByPostId($postId);
                 if ($coverPhoto) {
+                    error_log("Deleting cover photo: " . $coverPhoto['path']);
                     (new Media)->deleteMediaById($coverPhoto['id']);
                     $deleteFile = $_SERVER['DOCUMENT_ROOT'] . $coverPhoto['path'];
                     if (file_exists($deleteFile)) {
@@ -156,18 +173,20 @@ class PostsController extends BaseController
                     }
                 }
 
-                error_log("Before deleting post: $postId");
-                (new Post)->deletePost($postId);
-                error_log("Post deleted: $postId");
+                // Delete the post
+                $result = (new Post)->deletePost($postId);
+                error_log("Delete result: " . ($result ? 'success' : 'failed'));
 
-                setSuccessMessages(['Post deleted!']);
+                setSuccessMessages(['Post deleted successfully!']);
                 redirect('/blogtech/views/posts/blog');
             } catch (Exception $e) {
+                error_log("Delete error: " . $e->getMessage());
                 setErrors(["Error: " . $e->getMessage()]);
                 redirect('/blogtech/views/posts/blog');
             }
+        } else {
+            setErrors(["Invalid request method."]);
+            redirect('/blogtech/views/posts/blog');
         }
     }
-
 }
-

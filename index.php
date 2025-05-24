@@ -66,7 +66,7 @@ $routes = [
         '/views/posts/edit/{id}' =>
             [
                 fn($id) => $postsController->editPost($id),
-                [AuthMiddleware::class, PostOwnershipMiddleware::class, IsAdminMiddleware::class]
+                [AuthMiddleware::class, PostOwnershipMiddleware::class]
             ],
         '/views/admin/admins' =>
             [
@@ -104,13 +104,16 @@ $routes = [
             ],
         '/views/posts/edit/{id}' =>
             [
-                fn() => $postsController->editPost($_POST['id']),
+                fn($id) => $postsController->editPost($id),
                 [AuthMiddleware::class, PostOwnershipMiddleware::class]
             ],
         '/posts/delete/{id}' =>
             [
-                fn($id) => $postsController->deletePost($id),
-                [AuthMiddleware::class, IsAdminMiddleware::class, PostOwnershipMiddleware::class]
+                function($id) use ($postsController) { 
+                    error_log("Route matched for delete with ID: " . $id);
+                    return $postsController->deletePost($id); 
+                },
+                [AuthMiddleware::class, PostOwnershipMiddleware::class]
             ],
         '/views/admin/users' =>
             [

@@ -21,22 +21,22 @@ require_once 'successHandler.php';
         <div class="row">
       <?php if (!empty($posts)) { ?>
     <?php foreach ($posts as $post) { ?>
-        <div class="col-md-10 post-card">
+        <div class="col-md-12 post-card">
             <div class="post-content">
                 <div class="post-image">
-                <img src="<?= htmlspecialchars($post['cover_photo_path'] ?? 'default_path.jpg'); ?>" alt="Cover Photo" class="card-img-top">
+                <img src="<?= htmlspecialchars($post['cover_photo_path'] ?? '/blogtech/images/default_cover.jpg'); ?>" alt="Cover Photo" class="card-img-top">
                 </div>
                 <div class="post-details">
                     <h5 class="card-title"><?= htmlspecialchars($post['title']); ?></h5>
                     <p class="card-text"><em>By: <?= htmlspecialchars($post['username'] ?? 'Unknown'); ?></em></p>
                     <p class="card-text"><?= htmlspecialchars(substr($post['description'], 0, 300)); ?>...</p>
                     <a href="<?= BASE_URL ?>/views/posts/post/<?= $post['id']; ?>" class="btn btn-secondary">Read More</a>
-                    <?php if ($is_admin || $_SESSION['user_id'] === $post['user_id']) { ?>
+                    <?php if ($is_admin || (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $post['user_id'])) { ?>
                         <a href="/blogtech/views/posts/edit/<?php echo $post['id']; ?>" class="btn btn-primary">Edit</a>
                         <form action="<?= BASE_URL ?>/posts/delete/<?= $post['id'] ?>" method="post" style="display: inline;">
-        <input type="hidden" name="id" value="<?= $post['id']; ?>">
-        <button type="submit" class="btn btn-danger" onclick="confirmDeletePost(event)">Delete</button>
-    </form>
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this post?')">Delete</button>
+                        </form>
                     <?php } ?>
                 </div>
             </div>
@@ -47,7 +47,6 @@ require_once 'successHandler.php';
 <?php } ?>
 
     </div>
-
 
     <script src="../../js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

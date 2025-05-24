@@ -69,7 +69,7 @@ class Media extends Model
     {
         $hashName = md5(uniqid(time(), true)) . "." . strtolower(pathinfo($coverPhoto['name'], PATHINFO_EXTENSION));
     
-        $path = '/ATIS/uploads/' . $hashName;
+        $path = '/blogtech/uploads/' . $hashName;
         move_uploaded_file($coverPhoto['tmp_name'], $_SERVER['DOCUMENT_ROOT'] . $path);
     
         return $this->queryBuilder
