@@ -101,5 +101,15 @@ class Media extends Model
             throw $e;
         }
     }
+public function deleteProfilePicture($userId)
+{
+    return $this->queryBuilder
+        ->table('media')
+        ->where('user_id', '=', $userId)
+        ->where('photo_type', '=', 'profile')
+        ->delete()
+        ->execute();
+}
+
 
 }

@@ -54,7 +54,6 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
-  overflow-y: auto;
   background-color: #16a085;
 }
 
@@ -234,7 +233,7 @@ body {
 /* Profile Content */
 .container {
   margin-left: 320px!important;
-  max-width: 1300px!important;
+  max-width: 700px !important;
 }
 
 .col-sm-9 {

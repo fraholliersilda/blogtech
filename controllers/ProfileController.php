@@ -18,6 +18,7 @@ require_once 'successHandler.php';
 
 class ProfileController extends BaseController
 {
+    private const DEFAULT_PROFILE_PICTURE = '/blogtech/uploads/default.png';
 
     public function __construct($conn)
     {
@@ -32,8 +33,8 @@ class ProfileController extends BaseController
             $user = (new User)->findBy('id', $this->getLoggedInUser()['id']);
             $profilePicture = (new Media)->getProfilePicture($user['id']);
             
-            if (!$profilePicture || !isset($profilePicture['path'])) {
-                $profilePicture = ['path' => '/blogtech/uploads/default.png'];
+            if (!$profilePicture || !isset($profilePicture['path']) || empty($profilePicture['path'])) {
+                $profilePicture = ['path' => self::DEFAULT_PROFILE_PICTURE];
             }
     
             $this->render('profile/profile', ['user' => $user, 'profilePicture' => $profilePicture]);
@@ -49,8 +50,12 @@ class ProfileController extends BaseController
         $this->checkLoggedIn();
 
         try {
-            $user =(new User)->findBy('id', $this->getLoggedInUser()['id']);
-            $profilePicture = (new Media)->getProfilePicture($user['id']) ?? ['path' => '/ATIS/uploads/default.jpg'];
+            $user = (new User)->findBy('id', $this->getLoggedInUser()['id']);
+            $profilePicture = (new Media)->getProfilePicture($user['id']);
+            
+            if (!$profilePicture || !isset($profilePicture['path']) || empty($profilePicture['path'])) {
+                $profilePicture = ['path' => self::DEFAULT_PROFILE_PICTURE];
+            }
 
             $this->render('profile/edit_profile', ['user' => $user, 'profilePicture' => $profilePicture]);
             
@@ -106,7 +111,7 @@ class ProfileController extends BaseController
         try {
             UpdateUsernameRequest::validate($data);
 
-            $result =(new User)->update($id, ['username' => $username, 'email' => $email]);
+            $result = (new User)->update($id, ['username' => $username, 'email' => $email]);
             setSuccessMessages(['Profile updated!']);
             if (!$result) {
                 throw new Exception("Failed to update username or email.");
@@ -128,7 +133,7 @@ class ProfileController extends BaseController
         try {
             UpdatePasswordRequest::validate($data);
 
-            $user =(new User)->findBy('id', $id);
+            $user = (new User)->findBy('id', $id);
 
             if (empty($user)) {
                 throw new Exception("User not found.");
@@ -140,7 +145,7 @@ class ProfileController extends BaseController
 
             $hashedPassword = password_hash($new_password, PASSWORD_DEFAULT);
 
-            $result =(new User)->update($id, ['password' => $hashedPassword]);
+            $result = (new User)->update($id, ['password' => $hashedPassword]);
             setSuccessMessages(['Password updated!']);
 
             if (!$result) {
@@ -184,6 +189,11 @@ class ProfileController extends BaseController
 
             if ($existingProfile && file_exists($_SERVER['DOCUMENT_ROOT'] . $existingProfile['path'])) {
                 unlink($_SERVER['DOCUMENT_ROOT'] . $existingProfile['path']);
+            }
+
+            // Delete the old profile picture record from database if it exists
+            if ($existingProfile) {
+                (new Media)->deleteProfilePicture($id);
             }
 
             (new Media)->create([

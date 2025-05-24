@@ -22,9 +22,9 @@ require_once 'errorHandler.php';
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="<?php echo htmlspecialchars($profilePicture['path']); ?>" alt="Admin"
+                                <img src="<?php echo htmlspecialchars($profilePicture['path']); ?>" alt="User"
                                     class="rounded-circle" width="150">
-                                <h4><?php echo $user['username']; ?></h4>
+                                <h4><?php echo htmlspecialchars($user['username']); ?></h4>
                                 <p class="text-secondary mb-1">Full Stack Developer</p>
                                 <p class="text-muted font-size-sm">Tirane, Albania</p>
                             </div>
@@ -120,7 +120,7 @@ require_once 'errorHandler.php';
                                     <h6 class="mb-0">Profile Picture</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    <input type="file" class="form-control" name="profile_picture">
+                                    <input type="file" class="form-control" name="profile_picture" accept="image/*">
                                 </div>
                             </div>
 
