@@ -37,24 +37,24 @@ class PostsController extends BaseController
             setErrors(["Error: " . $e->getMessage()]);
         }
     }
-
-    public function viewPost($postId)
-    {
-        try {
-            $post = (new Post)->getPostById($postId);
-            
-            if ($post) {
-                // Fetch the latest posts except the current one
-                $latestPosts = (new Post)->getLatestPosts();
-                include BASE_PATH . '/views/posts/post.php';
-            } else {
-                setErrors(["Post not found."]);
-            }
-        } catch (PDOException $e) {
-            setErrors(["Error: " . $e->getMessage()]);
+public function viewPost($postId)
+{
+    try {
+        $post = (new Post)->getPostById($postId);
+        
+        if ($post) {
+            // Fetch the latest posts except the current one
+            $latestPosts = (new Post)->getLatestPosts($postId); // Pass current post ID to exclude it
+            include BASE_PATH . '/views/posts/post.php';
+        } else {
+            setErrors(["Post not found."]);
+            redirect('/blogtech/views/posts/blog');
         }
+    } catch (PDOException $e) {
+        setErrors(["Error: " . $e->getMessage()]);
+        redirect('/blogtech/views/posts/blog');
     }
-
+}
     public function editPost($postId)
     {
         try {
