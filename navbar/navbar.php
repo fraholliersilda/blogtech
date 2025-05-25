@@ -39,14 +39,14 @@ $current_page = basename($_SERVER['REQUEST_URI']);
                 </button>
                 <div class="dropdown-menu" style="background-color: #16a085; width: 100%;">
                     <a href="/blogtech/views/admin/admins"
-                        class="dashboard-nav-item <?php echo ($current_page == 'admins.php') ? 'active' : ''; ?>"
+                        class="dashboard-nav-item-dropdown <?php echo ($current_page == 'admins.php') ? 'active' : ''; ?>"
                         style="color: white;">
-                        <i class="fas fa-user-shield"></i> Admins
+                        <i class="fa fa-user-shield"></i> Admins
                     </a>
                     <a href="/blogtech/views/admin/users"
-                        class="dashboard-nav-item <?php echo ($current_page == 'users.php') ? 'active' : ''; ?>"
+                        class="dashboard-nav-item-dropdown <?php echo ($current_page == 'users.php') ? 'active' : ''; ?>"
                         style="color: white;">
-                        <i class="fas fa-users"></i> Users
+                        <i class="fa fa-users"></i> Users
                     </a>
                 </div>
             </div>
