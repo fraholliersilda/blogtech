@@ -10,6 +10,7 @@ use Requests\UpdateProfilePictureRequest;
 use Exceptions\ValidationException;
 use Models\Media;
 use Models\User;
+use Models\Post;
 
 
 require_once 'redirect.php';
@@ -32,12 +33,17 @@ class ProfileController extends BaseController
         try {
             $user = (new User)->findBy('id', $this->getLoggedInUser()['id']);
             $profilePicture = (new Media)->getProfilePicture($user['id']);
+            $userPosts = (new Post)->getUserPosts($user['id']);
             
             if (!$profilePicture || !isset($profilePicture['path']) || empty($profilePicture['path'])) {
                 $profilePicture = ['path' => self::DEFAULT_PROFILE_PICTURE];
             }
     
-            $this->render('profile/profile', ['user' => $user, 'profilePicture' => $profilePicture]);
+            $this->render('profile/profile', [
+                'user' => $user, 
+                'profilePicture' => $profilePicture, 
+                'userPosts' => $userPosts
+            ]);
         } catch (Exception $e) {
             setErrors([$e->getMessage()]);
             redirect("/blogtech/views/profile/edit");

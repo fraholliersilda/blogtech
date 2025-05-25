@@ -50,6 +50,18 @@ class Post extends Model
         return !empty($result) ? $result[0] : null; 
     }
 
+    public function getUserPosts($userId)
+    {
+        return $this->queryBuilder
+            ->table('posts')
+            ->select(['posts.id', 'posts.title', 'posts.description', 'posts.user_id', 'posts.created_at', 'media.path AS cover_photo_path', 'users.username'])
+            ->leftJoin('media', 'posts.id', '=', 'media.post_id AND (media.photo_type = "cover" OR media.photo_type IS NULL)')
+            ->leftJoin('users', 'posts.user_id', '=', 'users.id')
+            ->where('posts.user_id', '=', $userId)
+            ->orderBy('posts.created_at', 'DESC')
+            ->get();
+    }
+
     public function updatePost($postId, $data)
     {
         return $this->queryBuilder
