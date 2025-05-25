@@ -18,8 +18,14 @@ class PostOwnershipMiddleware implements Middleware {
         }
 
         $url = $_SERVER['REQUEST_URI'];
-        preg_match('/edit\/(\d+)/', $url, $matches);
-        $postId = $matches[1] ?? null; 
+        
+        // Match both edit and delete patterns
+        $postId = null;
+        if (preg_match('/edit\/(\d+)/', $url, $matches)) {
+            $postId = $matches[1];
+        } elseif (preg_match('/delete\/(\d+)/', $url, $matches)) {
+            $postId = $matches[1];
+        }
     
         if (!$postId) {
             http_response_code(400);
