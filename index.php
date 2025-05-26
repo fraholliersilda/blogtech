@@ -7,10 +7,8 @@ session_start();
 define('BASE_PATH', __DIR__);
 define('BASE_URL', '/blogtech');
 
-
 $request = $_SERVER['REQUEST_URI'];
 $method = $_SERVER['REQUEST_METHOD'];
-
 
 $path = rtrim(parse_url(str_replace(BASE_URL, '', $request), PHP_URL_PATH), '/');
 
@@ -28,118 +26,150 @@ use Controllers\ProfileController;
 use Controllers\RegistrationController;
 use Controllers\PostsController;
 use Controllers\AdminController;
+use Controllers\CommentsController;
+use Controllers\LikesController;
+use Middlewares\CommentOwnershipMiddleware;
 
 require_once BASE_PATH . '/Database.php';
-
 
 $profileController = new ProfileController($conn);
 $registrationController = new RegistrationController($conn);
 $postsController = new PostsController($conn);
 $adminController = new AdminController($conn);
-
-// if (strpos($path, '/views/registration/reset_password') === 0) {
-//     error_log("Reset password path detected: " . $path);
-//     $registrationController->showResetPassword();
-//     exit;
-// }
+$commentsController = new CommentsController($conn);
+$likesController = new LikesController($conn);
 
 $routes = [
     'GET' => [
-        '/logout' =>
-            [
-                fn() => $registrationController->logout(),
-                [AuthMiddleware::class]
-            ]
-        ,
-        '/views/admin/login' =>
-            [
-                fn() => $adminController->showAdminLogin(),
-                [GuestMiddleware::class]
-            ],
-        '/views/posts/new' =>
-            [
-                fn() => $postsController->showNewPost(),
-                [AuthMiddleware::class, IsUserMiddleware::class]
-            ],
-        '/views/posts/blog' => [fn() => $postsController->listPosts(), []],
-        '/views/posts/post/{id}' => [fn($id) => $postsController->viewPost($id), []],
-        '/views/posts/edit/{id}' =>
-            [
-                fn($id) => $postsController->editPost($id),
-                [AuthMiddleware::class, PostOwnershipMiddleware::class]
-            ],
-        '/views/admin/admins' =>
-            [
-                fn() => $adminController->listAdmins(),
-                [AuthMiddleware::class, IsAdminMiddleware::class]
-            ],
-        '/views/admin/users' =>
-            [
-                fn() => $adminController->listUsers(),
-                [AuthMiddleware::class, IsAdminMiddleware::class, AdminEditUserRoleMiddleware::class]
-            ],
-        '/views/profile/edit' =>
-            [
-                fn() => $profileController->editProfile(),
-                [AuthMiddleware::class]
-            ],
-        '/views/profile/profile' =>
-            [
-                fn() => $profileController->viewProfile(),
-                [AuthMiddleware::class]
-            ],
-        '/views/registration/login' => [fn() => $registrationController->showLogin(), [GuestMiddleware::class]],
-        '/views/registration/signup' => [fn() => $registrationController->showSignup(), [GuestMiddleware::class]],
-        '/views/registration/forgot_password' => [fn() => $registrationController->showForgotPassword(), [GuestMiddleware::class]],
-        '/views/registration/reset_password' => [fn() => $registrationController->showResetPassword(), [GuestMiddleware::class]],
+        '/logout' => [
+            fn() => $registrationController->logout(),
+            [AuthMiddleware::class]
+        ],
+        '/views/admin/login' => [
+            fn() => $adminController->showAdminLogin(),
+            [GuestMiddleware::class]
+        ],
+        '/views/posts/new' => [
+            fn() => $postsController->showNewPost(),
+            [AuthMiddleware::class, IsUserMiddleware::class]
+        ],
+        '/views/posts/blog' => [
+            fn() => $postsController->listPosts(),
+            []
+        ],
+        '/views/posts/post/{id}' => [
+            fn($id) => $postsController->viewPost($id),
+            []
+        ],
+        '/views/posts/edit/{id}' => [
+            fn($id) => $postsController->editPost($id),
+            [AuthMiddleware::class, PostOwnershipMiddleware::class]
+        ],
+        '/views/admin/admins' => [
+            fn() => $adminController->listAdmins(),
+            [AuthMiddleware::class, IsAdminMiddleware::class]
+        ],
+        '/views/admin/users' => [
+            fn() => $adminController->listUsers(),
+            [AuthMiddleware::class, IsAdminMiddleware::class, AdminEditUserRoleMiddleware::class]
+        ],
+        '/views/profile/edit' => [
+            fn() => $profileController->editProfile(),
+            [AuthMiddleware::class]
+        ],
+        '/views/profile/profile' => [
+            fn() => $profileController->viewProfile(),
+            [AuthMiddleware::class]
+        ],
+        '/views/registration/login' => [
+            fn() => $registrationController->showLogin(),
+            [GuestMiddleware::class]
+        ],
+        '/views/registration/signup' => [
+            fn() => $registrationController->showSignup(),
+            [GuestMiddleware::class]
+        ],
+        '/views/registration/forgot_password' => [
+            fn() => $registrationController->showForgotPassword(),
+            [GuestMiddleware::class]
+        ],
+        '/views/registration/reset_password' => [
+            fn() => $registrationController->showResetPassword(),
+            [GuestMiddleware::class]
+        ],
+        '/comments/edit/{id}' => [
+            fn($id) => $commentsController->editComment($id),
+            [AuthMiddleware::class, CommentOwnershipMiddleware::class]
+        ],
+        '/likes/{id}' => [
+            fn($id) => $likesController->getLikes($id),
+            []
+        ],
     ],
     'POST' => [
-        '/views/registration/login' => [fn() => $registrationController->login(), []],
-        '/views/admin/login' => [fn() => $adminController->login(), []],
-        '/views/registration/signup' => [fn() => $registrationController->signup(), []],
-        '/views/posts/new' =>
-            [
-                fn() => $postsController->createPost(),
-                [AuthMiddleware::class, IsUserMiddleware::class]
-            ],
-        '/views/posts/edit/{id}' =>
-            [
-                fn($id) => $postsController->editPost($id),
-                [AuthMiddleware::class, PostOwnershipMiddleware::class]
-            ],
-        '/posts/delete/{id}' =>
-            [
-                function($id) use ($postsController) { 
-                    error_log("Route matched for delete with ID: " . $id);
-                    return $postsController->deletePost($id); 
-                },
-                [AuthMiddleware::class, PostOwnershipMiddleware::class]
-            ],
-        '/views/admin/users' =>
-            [
-                fn() => $adminController->handleUserActions(),
-                [AuthMiddleware::class, IsAdminMiddleware::class, AdminEditUserRoleMiddleware::class]
-            ],
-        '/views/profile/edit' =>
-            [
-                fn() => $profileController->updateProfile($_POST, $_FILES),
-                [AuthMiddleware::class]
-            ],
-        '/views/registration/forgot_password' => [fn() => $registrationController->forgotPassword(), []],
-        '/views/registration/reset_password' => [fn() => $registrationController->resetPassword(), []],
-    ],
+        '/views/registration/login' => [
+            fn() => $registrationController->login(),
+            []
+        ],
+        '/views/admin/login' => [
+            fn() => $adminController->login(),
+            []
+        ],
+        '/views/registration/signup' => [
+            fn() => $registrationController->signup(),
+            []
+        ],
+        '/views/posts/new' => [
+            fn() => $postsController->createPost(),
+            [AuthMiddleware::class, IsUserMiddleware::class]
+        ],
+        '/views/posts/edit/{id}' => [
+            fn($id) => $postsController->editPost($id),
+            [AuthMiddleware::class, PostOwnershipMiddleware::class]
+        ],
+        '/posts/delete/{id}' => [
+            fn($id) => $postsController->deletePost($id),
+            [AuthMiddleware::class, PostOwnershipMiddleware::class]
+        ],
+        '/views/admin/users' => [
+            fn() => $adminController->handleUserActions(),
+            [AuthMiddleware::class, IsAdminMiddleware::class, AdminEditUserRoleMiddleware::class]
+        ],
+        '/views/profile/edit' => [
+            fn() => $profileController->updateProfile($_POST, $_FILES),
+            [AuthMiddleware::class]
+        ],
+        '/views/registration/forgot_password' => [
+            fn() => $registrationController->forgotPassword(),
+            []
+        ],
+        '/views/registration/reset_password' => [
+            fn() => $registrationController->resetPassword(),
+            []
+        ],
+        '/comments/add/{id}' => [
+            fn($id) => $commentsController->addComment($id),
+            [AuthMiddleware::class]
+        ],
+        '/comments/edit/{id}' => [
+            fn($id) => $commentsController->editComment($id),
+            [AuthMiddleware::class, CommentOwnershipMiddleware::class]
+        ],
+        '/comments/delete/{id}' => [
+            fn($id) => $commentsController->deleteComment($id),
+            [AuthMiddleware::class, CommentOwnershipMiddleware::class]
+        ],
+        '/likes/toggle/{id}' => [
+            fn($id) => $likesController->toggleLike($id),
+            [AuthMiddleware::class]
+        ],
+    ]
 ];
-
-
 
 $routeFound = false;
 foreach ($routes[$method] as $route => $action) {
-    error_log("Checking route: $route against path: $path");
     $pattern = preg_replace('/\{[a-zA-Z]+\}/', '([a-zA-Z0-9_-]+)', $route);
-    error_log("Pattern: $pattern");
     if (preg_match("#^$pattern$#", $path, $matches)) {
-        error_log("Checking route: $route against path: $path");
-        error_log("Route matched: $route");
         array_shift($matches);
 
         try {
@@ -165,7 +195,6 @@ foreach ($routes[$method] as $route => $action) {
     }
 }
 
-error_log("No route matched for path: $path");
 // Route not found - Redirect to 404 page
 if (!$routeFound) {
     require BASE_PATH . '/views/404page.php';

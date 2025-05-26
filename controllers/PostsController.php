@@ -8,6 +8,8 @@ use Exceptions\ValidationException;
 
 use Models\Post;
 use Models\Media;
+use Models\Comment;
+use Models\Like;
 
 require_once 'redirect.php';
 require_once 'errorHandler.php';
@@ -44,7 +46,17 @@ public function viewPost($postId)
         
         if ($post) {
             // Fetch the latest posts except the current one
-            $latestPosts = (new Post)->getLatestPosts($postId); // Pass current post ID to exclude it
+            $latestPosts = (new Post)->getLatestPosts($postId);
+            
+            // Fetch comments for this post
+            $comments = (new Comment)->getCommentsByPostId($postId);
+            
+            // Check if current user has liked this post (if logged in)
+            $hasLiked = false;
+            if (isset($_SESSION['user_id'])) {
+                $hasLiked = (new Like)->hasUserLikedPost($_SESSION['user_id'], $postId);
+            }
+            
             include BASE_PATH . '/views/posts/post.php';
         } else {
             setErrors(["Post not found."]);
