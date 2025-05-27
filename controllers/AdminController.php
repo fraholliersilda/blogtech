@@ -32,12 +32,12 @@ class AdminController extends BaseController
     }
 
 
-    public function fetchUsersByRole($role)
+    public function fetchUsersByRole($role, $search = null)
     {
         $roleId = (new Roles)->findBy('role', $role)['id'] ?? null;
 
         if ($roleId) {
-            return (new User)->findByRole($roleId);
+            return (new User)->findByRoleWithSearch($roleId, $search);
         }
 
         return [];
@@ -46,14 +46,18 @@ class AdminController extends BaseController
     public function listAdmins()
     {
         $this->checkAdmin();
-        $admins = $this->fetchUsersByRole('admin');
+        $search = isset($_GET['search']) ? trim(htmlspecialchars($_GET['search'])) : null;
+        $search = empty($search) ? null : $search; // Convert empty string to null
+        $admins = $this->fetchUsersByRole('admin', $search);
         require BASE_PATH . '/views/admin/admins.php';
     }
 
     public function listUsers()
     {
         $this->checkAdmin();
-        $users = $this->fetchUsersByRole('user');
+        $search = isset($_GET['search']) ? trim(htmlspecialchars($_GET['search'])) : null;
+        $search = empty($search) ? null : $search; // Convert empty string to null
+        $users = $this->fetchUsersByRole('user', $search);
         require BASE_PATH . '/views/admin/users.php';
     }
 
@@ -167,5 +171,3 @@ class AdminController extends BaseController
     }
 
 }
-
-
