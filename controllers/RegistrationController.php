@@ -147,6 +147,7 @@ class RegistrationController extends BaseController
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             return redirect("/blogtech/views/registration/forgot_password");
+            
         }
 
         $email = trim($_POST['email']);

@@ -19,6 +19,7 @@ class PostsController extends BaseController
     public function __construct($conn)
     {
         parent::__construct($conn);
+        
     }
 
     public function listPosts()

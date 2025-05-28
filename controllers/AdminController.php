@@ -22,6 +22,7 @@ class AdminController extends BaseController
     public function __construct($conn)
     {
         parent::__construct($conn);
+        
     }
 
     private function checkAdmin()

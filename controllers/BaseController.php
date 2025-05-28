@@ -11,6 +11,7 @@ class BaseController
     public function __construct($conn)
     {
         $this->conn = $conn;
+        
     }
 
     public function checkLoggedIn()

@@ -22,6 +22,7 @@ class ProfileController extends BaseController
     public function __construct($conn)
     {
         parent::__construct($conn);
+        
     }
 
     public function viewProfile()
