@@ -332,46 +332,6 @@ require_once 'successHandler.php';
         <?php endif; ?>
     </div>
 
-    <!-- Enhanced Like Section -->
-    <div class="like-section">
-        <div class="like-btn-container">
-            <?php if (isset($_SESSION['user_id'])): ?>
-                <button class="like-btn <?= $hasLiked ? 'liked' : ''; ?>" 
-                        onclick="toggleLike(<?= $post['id']; ?>, this)"
-                        data-post-id="<?= $post['id']; ?>">
-                    <i class="fas fa-heart like-icon"></i>
-                    <span><?= $hasLiked ? 'Liked' : 'Like' ?></span>
-                </button>
-            <?php else: ?>
-                <div class="alert alert-info" style="margin: 0;">
-                    <i class="fas fa-info-circle"></i> Please log in to like this post
-                </div>
-            <?php endif; ?>
-        </div>
-        
-        <div class="likes-info">
-            <div class="likes-count">
-                <i class="fas fa-heart text-danger"></i>
-                <span id="likes-count"><?= $post['likes_count'] ?? 0; ?></span> 
-                <?= ($post['likes_count'] == 1) ? 'like' : 'likes'; ?>
-            </div>
-            
-            <?php if ($post['likes_count'] > 0): ?>
-                <div style="margin-top: 10px;">
-                    <a href="#" class="show-likers" onclick="toggleLikers(); return false;">
-                        <i class="fas fa-users"></i> Show who liked this post
-                    </a>
-                </div>
-                <div class="likers-list" id="likers-list">
-                    <div style="margin-bottom: 10px;">
-                        <strong><i class="fas fa-heart text-danger"></i> Liked by:</strong>
-                    </div>
-                    <div id="likers-content">Loading...</div>
-                </div>
-            <?php endif; ?>
-        </div>
-    </div>
-
     <!-- Enhanced Comments Section -->
     <div class="comment-section">
         <h3><i class="fas fa-comments"></i> Comments (<?= count($comments); ?>)</h3>
@@ -423,47 +383,10 @@ require_once 'successHandler.php';
                             <?= nl2br(htmlspecialchars($comment['content'])); ?>
                         </div>
                         
-                        <!-- Inline Edit Form (hidden by default) -->
-                        <div class="comment-edit-form" id="edit-form-<?= $comment['id']; ?>">
-                            <form onsubmit="updateComment(event, <?= $comment['id']; ?>)">
-                                <div class="form-group">
-                                    <textarea class="form-control" id="edit-content-<?= $comment['id']; ?>" 
-                                              rows="3" maxlength="1000" required><?= htmlspecialchars($comment['content']); ?></textarea>
-                                </div>
-                                <div class="btn-group">
-                                    <button type="submit" class="btn btn-success btn-sm">
-                                        <i class="fas fa-save"></i> Save Changes
-                                    </button>
-                                    <button type="button" class="btn btn-secondary btn-sm" 
-                                            onclick="cancelEdit(<?= $comment['id']; ?>)">
-                                        <i class="fas fa-times"></i> Cancel
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
+                   
                         
                         <!-- Comment Actions -->
-                        <?php if (isset($_SESSION['user_id'])): ?>
-                            <div class="comment-actions">
-                                <!-- Edit button - only for comment owner -->
-                                <?php if ($_SESSION['user_id'] == $comment['user_id']): ?>
-                                    <button class="btn btn-comment-action btn-edit" 
-                                            onclick="showEditForm(<?= $comment['id']; ?>)">
-                                        <i class="fas fa-edit"></i> Edit
-                                    </button>
-                                <?php endif; ?>
-                                
-                                <!-- Delete button - for comment owner, post owner, or admin -->
-                                <?php if ($_SESSION['user_id'] == $comment['user_id'] || 
-                                          $_SESSION['user_id'] == $post['user_id'] || 
-                                          (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin')): ?>
-                                    <button class="btn btn-comment-action btn-delete" 
-                                            onclick="deleteComment(<?= $comment['id']; ?>)">
-                                        <i class="fas fa-trash-alt"></i> Delete
-                                    </button>
-                                <?php endif; ?>
-                            </div>
-                        <?php endif; ?>
+
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>
@@ -574,50 +497,92 @@ require_once 'successHandler.php';
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
     // Toggle like functionality with enhanced feedback
-    function toggleLike(postId, button) {
-        // Add loading state
-        $(button).prop('disabled', true);
-        const originalText = $(button).find('span').text();
-        $(button).find('span').text('...');
-        
-        $.ajax({
-            url: '/blogtech/likes/toggle/' + postId,
-            type: 'POST',
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest'
-            },
-            success: function(response) {
-                if (response.success) {
-                    // Update like count with animation
-                    $('#likes-count').fadeOut(200, function() {
-                        $(this).text(response.likes_count).fadeIn(200);
-                    });
-                    
-                    // Toggle button appearance with animation
-                    if (response.has_liked) {
-                        $(button).addClass('liked');
-                        $(button).find('span').text('Liked');
-                    } else {
-                        $(button).removeClass('liked');
-                        $(button).find('span').text('Like');
-                    }
-                    
-                    // Reload page to update likers list
-                    setTimeout(() => location.reload(), 500);
-                } else {
-                    alert('Error: ' + response.message);
-                    $(button).find('span').text(originalText);
-                }
-            },
-            error: function() {
-                alert('An error occurred. Please try again.');
-                $(button).find('span').text(originalText);
-            },
-            complete: function() {
-                $(button).prop('disabled', false);
-            }
-        });
+function toggleLike(postId, button) {
+    // Debug logging
+    console.log('Toggle like called for post ID:', postId);
+    console.log('Button element:', button);
+    
+    // Validate inputs
+    if (!postId || !button) {
+        console.error('Missing postId or button element');
+        alert('Error: Missing required parameters');
+        return;
     }
+
+    // Disable button to prevent double-clicks
+    $(button).prop('disabled', true);
+    
+    // Show loading state
+    const originalContent = $(button).html();
+    $(button).html('<i class="fas fa-spinner fa-spin"></i> Processing...');
+    
+    $.ajax({
+        url: '/likes/toggle/' + postId,
+        type: 'POST',
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        dataType: 'json', // Expect JSON response
+        timeout: 10000, // 10 second timeout
+        success: function(response) {
+            console.log('AJAX Success:', response);
+            
+            if (response.success) {
+                // Update like count
+                const countElement = $('#likes-count-' + postId);
+                if (countElement.length) {
+                    countElement.text(response.likes_count);
+                } else {
+                    // Fallback for single post page
+                    $('#likes-count').text(response.likes_count);
+                }
+                
+                // Toggle button appearance
+                if (response.has_liked) {
+                    $(button).addClass('liked');
+                    $(button).find('span').text('Liked');
+                } else {
+                    $(button).removeClass('liked');
+                    $(button).find('span').text('Like');
+                }
+                
+                // Show success message (optional)
+                if (typeof showNotification === 'function') {
+                    showNotification(response.message, 'success');
+                }
+                
+            } else {
+                console.error('Server returned success=false:', response.message);
+                alert('Error: ' + (response.message || 'Unknown error occurred'));
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error('AJAX Error:', {
+                status: status,
+                error: error,
+                responseText: xhr.responseText,
+                statusCode: xhr.status
+            });
+            
+            let errorMessage = 'An error occurred. Please try again.';
+            
+            if (xhr.status === 404) {
+                errorMessage = 'Like endpoint not found. Please check your routing.';
+            } else if (xhr.status === 500) {
+                errorMessage = 'Server error. Please check your server logs.';
+            } else if (status === 'timeout') {
+                errorMessage = 'Request timed out. Please try again.';
+            }
+            
+            alert(errorMessage);
+        },
+        complete: function() {
+            // Re-enable button and restore original content
+            $(button).prop('disabled', false);
+            $(button).html(originalContent);
+        }
+    });
+}
 
     // Enhanced toggle likers functionality
     function toggleLikers() {
@@ -628,7 +593,7 @@ require_once 'successHandler.php';
             // Load likers if not already loaded
             if ($('#likers-content').text() === 'Loading...') {
                 $.ajax({
-                    url: '/blogtech/likes/<?= $post['id']; ?>',
+                    url: '/likes/<?= $post['id']; ?>',
                     type: 'GET',
                     success: function(response) {
                         if (response.success && response.likes.length > 0) {
@@ -678,7 +643,7 @@ require_once 'successHandler.php';
         submitBtn.html('<i class="fas fa-spinner fa-spin"></i> Saving...').prop('disabled', true);
 
         $.ajax({
-            url: '/blogtech/comments/edit/' + commentId,
+            url: '/comments/edit/' + commentId,
             type: 'POST',
             data: { content: content },
             success: function() {
@@ -704,7 +669,7 @@ require_once 'successHandler.php';
     function deleteComment(commentId) {
         if (confirm('Are you sure you want to delete this comment? This action cannot be undone.')) {
             $.ajax({
-                url: '/blogtech/comments/delete/' + commentId,
+                url: '/comments/delete/' + commentId,
                 type: 'POST',
                 success: function() {
                     $('#comment-' + commentId).slideUp(300, function() {

@@ -27,7 +27,6 @@ use Controllers\RegistrationController;
 use Controllers\PostsController;
 use Controllers\AdminController;
 use Controllers\CommentsController;
-use Controllers\LikesController;
 use Middlewares\CommentOwnershipMiddleware;
 
 require_once BASE_PATH . '/Database.php';
@@ -37,7 +36,6 @@ $registrationController = new RegistrationController($conn);
 $postsController = new PostsController($conn);
 $adminController = new AdminController($conn);
 $commentsController = new CommentsController($conn);
-$likesController = new LikesController($conn);
 
 $routes = [
     'GET' => [
@@ -101,10 +99,6 @@ $routes = [
             fn($id) => $commentsController->editComment($id),
             [AuthMiddleware::class, CommentOwnershipMiddleware::class]
         ],
-        '/likes/{id}' => [
-            fn($id) => $likesController->getLikes($id),
-            []
-        ],
     ],
     'POST' => [
         '/views/registration/login' => [
@@ -159,10 +153,7 @@ $routes = [
             fn($id) => $commentsController->deleteComment($id),
             [AuthMiddleware::class, CommentOwnershipMiddleware::class]
         ],
-        '/likes/toggle/{id}' => [
-            fn($id) => $likesController->toggleLike($id),
-            [AuthMiddleware::class]
-        ],
+        
     ]
 ];
 

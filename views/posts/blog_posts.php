@@ -62,15 +62,15 @@ require_once 'successHandler.php';
                             <?php 
                             $hasLiked = (new \Models\Like())->hasUserLikedPost($_SESSION['user_id'], $post['id']);
                             ?>
-                            <button class="like-btn <?= $hasLiked ? 'liked' : ''; ?>" 
+                            <!-- <button class="like-btn <?= $hasLiked ? 'liked' : ''; ?>" 
                                     onclick="toggleLike(<?= $post['id']; ?>, this)"
                                     data-post-id="<?= $post['id']; ?>">
                                 <i class="fas fa-heart"></i>
-                            </button>
+                            </button> -->
                         <?php else: ?>
                             <i class="fas fa-heart" style="color: #ccc;"></i>
                         <?php endif; ?>
-                        <span id="likes-count-<?= $post['id']; ?>"><?= $post['likes_count'] ?? 0; ?></span> likes
+                      
                         
                         <span style="margin-left: 15px;">
                             <i class="fas fa-comment"></i>
