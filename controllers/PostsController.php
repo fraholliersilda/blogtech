@@ -9,7 +9,6 @@ use Exceptions\ValidationException;
 use Models\Post;
 use Models\Media;
 use Models\Comment;
-use Models\Like;
 
 require_once 'redirect.php';
 require_once 'errorHandler.php';
@@ -39,34 +38,31 @@ class PostsController extends BaseController
             setErrors(["Error: " . $e->getMessage()]);
         }
     }
-public function viewPost($postId)
-{
-    try {
-        $post = (new Post)->getPostById($postId);
-        
-        if ($post) {
-            // Fetch the latest posts except the current one
-            $latestPosts = (new Post)->getLatestPosts($postId);
+
+    public function viewPost($postId)
+    {
+        try {
+            $post = (new Post)->getPostById($postId);
             
-            // Fetch comments for this post
-            $comments = (new Comment)->getCommentsByPostId($postId);
-            
-            // Check if current user has liked this post (if logged in)
-            $hasLiked = false;
-            if (isset($_SESSION['user_id'])) {
-                $hasLiked = (new Like)->hasUserLikedPost($_SESSION['user_id'], $postId);
+            if ($post) {
+                // Fetch the latest posts except the current one
+                $latestPosts = (new Post)->getLatestPosts($postId);
+                
+                // Fetch comments for this post
+                $comments = (new Comment)->getCommentsByPostId($postId);
+                
+                
+                include BASE_PATH . '/views/posts/post.php';
+            } else {
+                setErrors(["Post not found."]);
+                redirect('/blogtech/views/posts/blog');
             }
-            
-            include BASE_PATH . '/views/posts/post.php';
-        } else {
-            setErrors(["Post not found."]);
+        } catch (PDOException $e) {
+            setErrors(["Error: " . $e->getMessage()]);
             redirect('/blogtech/views/posts/blog');
         }
-    } catch (PDOException $e) {
-        setErrors(["Error: " . $e->getMessage()]);
-        redirect('/blogtech/views/posts/blog');
     }
-}
+
     public function editPost($postId)
     {
         try {

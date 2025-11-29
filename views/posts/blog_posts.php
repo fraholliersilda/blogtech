@@ -13,7 +13,7 @@ require_once 'successHandler.php';
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        .like-btn {
+        /* .like-btn {
             background: none;
             border: none;
             color: #ccc;
@@ -26,7 +26,7 @@ require_once 'successHandler.php';
         }
         .like-btn:hover {
             color: #e74c3c;
-        }
+        } */
         .engagement-stats {
             margin: 10px 0;
             font-size: 14px;
@@ -58,18 +58,18 @@ require_once 'successHandler.php';
                     
                     <!-- Engagement Stats -->
                     <div class="engagement-stats">
-                        <?php if (isset($_SESSION['user_id'])): ?>
+                        <?php // if (isset($_SESSION['user_id'])): ?>
                             <?php 
-                            $hasLiked = (new \Models\Like())->hasUserLikedPost($_SESSION['user_id'], $post['id']);
+                            // $hasLiked = (new \Models\Like())->hasUserLikedPost($_SESSION['user_id'], $post['id']);
                             ?>
                             <!-- <button class="like-btn <?= $hasLiked ? 'liked' : ''; ?>" 
                                     onclick="toggleLike(<?= $post['id']; ?>, this)"
                                     data-post-id="<?= $post['id']; ?>">
                                 <i class="fas fa-heart"></i>
                             </button> -->
-                        <?php else: ?>
-                            <i class="fas fa-heart" style="color: #ccc;"></i>
-                        <?php endif; ?>
+                        <?php // else: ?>
+                            <!-- <i class="fas fa-heart" style="color: #ccc;"></i> -->
+                        <?php // endif; ?>
                       
                         
                         <span style="margin-left: 15px;">
@@ -101,35 +101,6 @@ require_once 'successHandler.php';
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script>
-        function toggleLike(postId, button) {
-            $.ajax({
-                url: '/blogtech/likes/toggle/' + postId,
-                type: 'POST',
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest'
-                },
-                success: function(response) {
-                    if (response.success) {
-                        // Update like count
-                        $('#likes-count-' + postId).text(response.likes_count);
-                        
-                        // Toggle button appearance
-                        if (response.has_liked) {
-                            $(button).addClass('liked');
-                        } else {
-                            $(button).removeClass('liked');
-                        }
-                    } else {
-                        alert('Error: ' + response.message);
-                    }
-                },
-                error: function() {
-                    alert('An error occurred. Please try again.');
-                }
-            });
-        }
-    </script>
 </body>
 
 </html>

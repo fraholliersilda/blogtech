@@ -496,125 +496,9 @@ require_once 'successHandler.php';
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
-    // Toggle like functionality with enhanced feedback
-function toggleLike(postId, button) {
-    // Debug logging
-    console.log('Toggle like called for post ID:', postId);
-    console.log('Button element:', button);
-    
-    // Validate inputs
-    if (!postId || !button) {
-        console.error('Missing postId or button element');
-        alert('Error: Missing required parameters');
-        return;
-    }
-
-    // Disable button to prevent double-clicks
-    $(button).prop('disabled', true);
-    
-    // Show loading state
-    const originalContent = $(button).html();
-    $(button).html('<i class="fas fa-spinner fa-spin"></i> Processing...');
-    
-    $.ajax({
-        url: '/likes/toggle/' + postId,
-        type: 'POST',
-        headers: {
-            'X-Requested-With': 'XMLHttpRequest'
-        },
-        dataType: 'json', // Expect JSON response
-        timeout: 10000, // 10 second timeout
-        success: function(response) {
-            console.log('AJAX Success:', response);
-            
-            if (response.success) {
-                // Update like count
-                const countElement = $('#likes-count-' + postId);
-                if (countElement.length) {
-                    countElement.text(response.likes_count);
-                } else {
-                    // Fallback for single post page
-                    $('#likes-count').text(response.likes_count);
-                }
-                
-                // Toggle button appearance
-                if (response.has_liked) {
-                    $(button).addClass('liked');
-                    $(button).find('span').text('Liked');
-                } else {
-                    $(button).removeClass('liked');
-                    $(button).find('span').text('Like');
-                }
-                
-                // Show success message (optional)
-                if (typeof showNotification === 'function') {
-                    showNotification(response.message, 'success');
-                }
-                
-            } else {
-                console.error('Server returned success=false:', response.message);
-                alert('Error: ' + (response.message || 'Unknown error occurred'));
-            }
-        },
-        error: function(xhr, status, error) {
-            console.error('AJAX Error:', {
-                status: status,
-                error: error,
-                responseText: xhr.responseText,
-                statusCode: xhr.status
-            });
-            
-            let errorMessage = 'An error occurred. Please try again.';
-            
-            if (xhr.status === 404) {
-                errorMessage = 'Like endpoint not found. Please check your routing.';
-            } else if (xhr.status === 500) {
-                errorMessage = 'Server error. Please check your server logs.';
-            } else if (status === 'timeout') {
-                errorMessage = 'Request timed out. Please try again.';
-            }
-            
-            alert(errorMessage);
-        },
-        complete: function() {
-            // Re-enable button and restore original content
-            $(button).prop('disabled', false);
-            $(button).html(originalContent);
-        }
-    });
-}
-
-    // Enhanced toggle likers functionality
-    function toggleLikers() {
-        const likersList = $('#likers-list');
-        if (likersList.is(':visible')) {
-            likersList.slideUp(300);
-        } else {
-            // Load likers if not already loaded
-            if ($('#likers-content').text() === 'Loading...') {
-                $.ajax({
-                    url: '/likes/<?= $post['id']; ?>',
-                    type: 'GET',
-                    success: function(response) {
-                        if (response.success && response.likes.length > 0) {
-                            const likersHtml = response.likes.map(like => 
-                                '<span class="liker-badge">' + 
-                                '<i class="fas fa-user"></i> ' + like.username + 
-                                '</span>'
-                            ).join('');
-                            $('#likers-content').html(likersHtml);
-                        } else {
-                            $('#likers-content').html('<em class="text-muted">No likes yet.</em>');
-                        }
-                    },
-                    error: function() {
-                        $('#likers-content').html('<em class="text-danger">Error loading likers.</em>');
-                    }
-                });
-            }
-            likersList.slideDown(300);
-        }
-    }
+    // ========================================
+    // COMMENT FUNCTIONALITY - ACTIVE
+    // ========================================
 
     // Enhanced comment form interactions
     function showEditForm(commentId) {
@@ -770,3 +654,4 @@ function toggleLike(postId, button) {
             }
         );
     });
+</script>
