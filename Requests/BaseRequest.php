@@ -69,12 +69,12 @@ class BaseRequest
                 $maxFileSize = $param * 1024 * 1024;
                 return $_FILES[$field]['size'] > $maxFileSize ? ucfirst(str_replace('_', ' ', $field)) . " must be smaller than $param MB." : null;
 
-                case 'email':
-                    return !filter_var($value, FILTER_VALIDATE_EMAIL) ? ucfirst(str_replace('_', ' ', $field)) . ' must be a valid email address.' : null;          
-                    
-                    case 'different':
-                        return isset($param) && $value === $param ? ucfirst(str_replace('_', ' ', $field)) . ' must be different from ' . str_replace('_', ' ', $param) . '.' : null;
-                    
+            case 'email':
+                return !filter_var($value, FILTER_VALIDATE_EMAIL) ? ucfirst(str_replace('_', ' ', $field)) . ' must be a valid email address.' : null;
+
+            case 'different':
+                return isset($param) && $value === $param ? ucfirst(str_replace('_', ' ', $field)) . ' must be different from ' . str_replace('_', ' ', $param) . '.' : null;
+
 
             default:
                 return null;

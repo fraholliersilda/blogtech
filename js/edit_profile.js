@@ -1,4 +1,3 @@
-// edit_profile.js
 window.isFormDirty = false;
 
 function handleCancel(event) {

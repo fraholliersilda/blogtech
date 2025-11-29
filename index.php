@@ -153,7 +153,7 @@ $routes = [
             fn($id) => $commentsController->deleteComment($id),
             [AuthMiddleware::class, CommentOwnershipMiddleware::class]
         ],
-        
+
     ]
 ];
 

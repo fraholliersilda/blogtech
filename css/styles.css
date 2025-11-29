@@ -1,4 +1,3 @@
-/* General Body Styling */
 * {
   box-sizing: border-box;
 }
@@ -19,7 +18,6 @@ body {
   max-width: 100vw;
 }
 
-/* Layout for the Container (Profile Content) */
 .container-fluid {
   padding: 0;
   margin-left: 238px;
@@ -62,7 +60,7 @@ body {
 
 .col-md-8 {
   flex: 1;
-  min-width: 0; /* Prevents flex item from overflowing */
+  min-width: 0;
 }
 
 /* Navbar Styling */
@@ -157,7 +155,6 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  /* background-color: #f9f9f9; */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   min-width: 200px;
   z-index: 1000;
@@ -331,7 +328,7 @@ body {
   background-color: #0056b3;
 }
 
-/* Blog/Home Styling */
+/*Home Styling */
 .post-card {
   margin-bottom: 1rem;
   display: flex;

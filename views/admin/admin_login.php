@@ -1,8 +1,9 @@
-<?php 
+<?php
 require_once __DIR__ . '/../../errorHandler.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@ require_once __DIR__ . '/../../errorHandler.php';
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
     <div class="wrapper">
         <div class="title"><span>Admin Login</span></div>
@@ -30,7 +32,6 @@ require_once __DIR__ . '/../../errorHandler.php';
                 <a href="../registration/login">User Login</a>
             </div>
 
-            <!-- Display errors using displayErrors function -->
             <?php
             if (isset($_SESSION['messages']['errors']) && !empty($_SESSION['messages']['errors'])) {
                 echo '<div class="error-message">';
@@ -42,4 +43,5 @@ require_once __DIR__ . '/../../errorHandler.php';
         </form>
     </div>
 </body>
+
 </html>

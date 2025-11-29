@@ -25,33 +25,31 @@ if (!empty($token)) {
     <div class="wrapper">
         <div class="title"><span>Reset Password</span></div>
         <?php
-// Get the token from GET, session, or cookie
-$token = $_GET['token'] ?? ($_SESSION['reset_token'] ?? ($_COOKIE['reset_token'] ?? ''));
-?>
-<form method="POST" action="/blogtech/views/registration/reset_password">
-    <!-- Use multiple token sources for redundancy -->
-    <input type="hidden" name="token" value="<?= htmlspecialchars($token) ?>">
+        $token = $_GET['token'] ?? ($_SESSION['reset_token'] ?? ($_COOKIE['reset_token'] ?? ''));
+        ?>
+        <form method="POST" action="/blogtech/views/registration/reset_password">
+            <input type="hidden" name="token" value="<?= htmlspecialchars($token) ?>">
 
-    <div class="row">
-        <i class="fas fa-lock"></i>
-        <input type="password" name="password" placeholder="New Password" required>
-    </div>
-    <div class="row">
-        <i class="fas fa-lock"></i>
-        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-    </div>
-    <div class="row button">
-        <input type="submit" value="Reset Password">
-    </div>
+            <div class="row">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" placeholder="New Password" required>
+            </div>
+            <div class="row">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            </div>
+            <div class="row button">
+                <input type="submit" value="Reset Password">
+            </div>
 
-    <?php
-    if (isset($_SESSION['messages']['errors']) && !empty($_SESSION['messages']['errors'])) {
-        echo '<div class="error-message">';
-        displayErrors();
-        echo '</div>';
-    }
-    ?>
-</form>
+            <?php
+            if (isset($_SESSION['messages']['errors']) && !empty($_SESSION['messages']['errors'])) {
+                echo '<div class="error-message">';
+                displayErrors();
+                echo '</div>';
+            }
+            ?>
+        </form>
 
     </div>
 </body>

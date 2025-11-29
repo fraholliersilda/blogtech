@@ -23,13 +23,13 @@ class PasswordResetRequest extends BaseRequest
             'confirm_password' => ['required', 'string'],
             'token' => ['required', 'string']
         ];
-        
+
         self::validateRules($data, $rules);
 
         if ($data['password'] !== $data['confirm_password']) {
             throw new ValidationException("Passwords do not match.");
         }
-        
+
         return true;
     }
 }
