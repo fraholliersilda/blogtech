@@ -13,140 +13,6 @@ require_once 'successHandler.php';
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        /* Enhanced Like Section Styling */
-        .like-section {
-            margin: 30px 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .like-section:hover {
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .like-btn-container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .like-btn {
-            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
-            border: none;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-            padding: 12px 20px;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .like-btn.liked {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            transform: scale(1.05);
-        }
-
-        .like-btn:hover {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
-        }
-
-        .like-btn:active {
-            transform: scale(0.95);
-        }
-
-        .like-icon {
-            animation: heartbeat 1.5s ease-in-out infinite;
-        }
-
-        .liked .like-icon {
-            animation: heartPulse 0.6s ease-in-out;
-        }
-
-        @keyframes heartbeat {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.1);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        @keyframes heartPulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.3);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        .likes-info {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #e74c3c;
-        }
-
-        .likes-count {
-            font-size: 18px;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        .show-likers {
-            color: #3498db;
-            cursor: pointer;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .show-likers:hover {
-            color: #2980b9;
-            text-decoration: underline;
-        }
-
-        .likers-list {
-            display: none;
-            margin-top: 15px;
-            padding: 15px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .liker-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            margin: 3px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        /* Enhanced Comment Section Styling */
         .comment-section {
             margin-top: 40px;
         }
@@ -298,7 +164,6 @@ require_once 'successHandler.php';
             color: #bdc3c7;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .like-btn {
                 font-size: 16px;
@@ -326,10 +191,10 @@ require_once 'successHandler.php';
             <p><em>By: <?= htmlspecialchars($post['username'] ?? 'Unknown'); ?></em></p>
         </div>
 
-        <div class="coverphoto post-image">
+        <div class="coverphoto post-image" style="margin-bottom: 20px;">
             <img src="<?= htmlspecialchars($post['cover_photo_path']); ?>" alt="Cover Photo" class="image-fluid">
         </div>
-        <div class="post-description">
+        <div class="post-description" >
             <p><?= nl2br(htmlspecialchars($post['description'])); ?></p>
         </div>
 
