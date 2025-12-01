@@ -11,7 +11,7 @@ class RegistrationRequest extends BaseRequest
     {
         $rules = [
             'username' => ['required', 'string', 'min:3'],
-            'email' => ['required', 'string', 'email'], // Ensure 'email' rule is implemented
+            'email' => ['required', 'string', 'email'],
             'password' => ['required', 'string', 'min:8', 'max:255']
         ];
 
@@ -28,22 +28,22 @@ class RegistrationRequest extends BaseRequest
         return self::validateRules($data, $rules);
     }
 
-public static function validatePasswordReset($data)
-{
-    if (empty($data['password'])) {
-        throw new ValidationException("Password is required.");
+    public static function validatePasswordReset($data)
+    {
+        if (empty($data['password'])) {
+            throw new ValidationException("Password is required.");
+        }
+
+        if (strlen($data['password']) < 8) {
+            throw new ValidationException("Password must be at least 8 characters long.");
+        }
+
+        if (empty($data['confirm_password'])) {
+            throw new ValidationException("Please confirm your password.");
+        }
+
+        if ($data['password'] !== $data['confirm_password']) {
+            throw new ValidationException("Passwords do not match.");
+        }
     }
-    
-    if (strlen($data['password']) < 8) {
-        throw new ValidationException("Password must be at least 8 characters long.");
-    }
-    
-    if (empty($data['confirm_password'])) {
-        throw new ValidationException("Please confirm your password.");
-    }
-    
-    if ($data['password'] !== $data['confirm_password']) {
-        throw new ValidationException("Passwords do not match.");
-    }
-}
 }

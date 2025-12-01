@@ -1,7 +1,6 @@
 <?php
 namespace Controllers;
 
-use PDOException;
 use Exception;
 use Models\Comment;
 use Models\Post;
@@ -22,7 +21,7 @@ class CommentsController extends BaseController
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['content'])) {
             try {
                 $content = trim($_POST['content']);
-                
+
                 if (empty($content)) {
                     setErrors(['Comment cannot be empty.']);
                     redirect("/blogtech/views/posts/post/$postId");
@@ -35,7 +34,6 @@ class CommentsController extends BaseController
                     return;
                 }
 
-                // Check if post exists
                 $post = (new Post)->getPostById($postId);
                 if (!$post) {
                     setErrors(['Post not found.']);
@@ -73,14 +71,13 @@ class CommentsController extends BaseController
     {
         try {
             $comment = (new Comment)->getCommentById($commentId);
-            
+
             if (!$comment) {
                 setErrors(['Comment not found.']);
                 redirect('/blogtech/views/posts/blog');
                 return;
             }
 
-            // Check if user owns the comment or is admin
             if ($_SESSION['user_id'] != $comment['user_id'] && $_SESSION['role'] != 1) {
                 setErrors(['You are not authorized to edit this comment.']);
                 redirect("/blogtech/views/posts/post/{$comment['post_id']}");
@@ -89,7 +86,7 @@ class CommentsController extends BaseController
 
             if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['content'])) {
                 $content = trim($_POST['content']);
-                
+
                 if (empty($content)) {
                     setErrors(['Comment cannot be empty.']);
                     redirect("/blogtech/views/posts/post/{$comment['post_id']}");
@@ -113,7 +110,6 @@ class CommentsController extends BaseController
                 redirect("/blogtech/views/posts/post/{$comment['post_id']}");
             }
 
-            // If GET request, show edit form
             include BASE_PATH . '/views/comments/edit_comment.php';
 
         } catch (Exception $e) {
@@ -127,23 +123,18 @@ class CommentsController extends BaseController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             try {
                 $comment = (new Comment)->getCommentById($commentId);
-                
+
                 if (!$comment) {
                     setErrors(['Comment not found.']);
                     redirect('/blogtech/views/posts/blog');
                     return;
                 }
 
-                // Get the post to check if current user is the post author
                 $post = (new Post)->getPostById($comment['post_id']);
-                
-                // Allow deletion if:
-                // 1. User is the comment author
-                // 2. User is the post author  
-                // 3. User is admin
-                $canDelete = ($_SESSION['user_id'] == $comment['user_id']) || 
-                           ($_SESSION['user_id'] == $post['user_id']) || 
-                           ($_SESSION['role'] == 1);
+
+                $canDelete = ($_SESSION['user_id'] == $comment['user_id']) ||
+                    ($_SESSION['user_id'] == $post['user_id']) ||
+                    ($_SESSION['role'] == 1);
 
                 if (!$canDelete) {
                     setErrors(['You are not authorized to delete this comment.']);

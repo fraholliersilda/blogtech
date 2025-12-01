@@ -12,14 +12,12 @@ class PostOwnershipMiddleware implements Middleware {
             die("Unauthorized access.");
         }
 
-        // If the user is an admin, they can access any post
         if ($_SESSION['role'] == 1) {
-            return; // Admins can bypass the ownership check
+            return;
         }
 
         $url = $_SERVER['REQUEST_URI'];
         
-        // Match both edit and delete patterns
         $postId = null;
         if (preg_match('/edit\/(\d+)/', $url, $matches)) {
             $postId = $matches[1];
@@ -34,7 +32,7 @@ class PostOwnershipMiddleware implements Middleware {
     
         $queryBuilder = new QueryBuilder();
         $post = $queryBuilder->table('posts')
-            ->select(['user_id']) // Assuming this is the column that links the post to the user
+            ->select(['user_id'])
             ->where('id', '=', $postId)
             ->getOne();
     

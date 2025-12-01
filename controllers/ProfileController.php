@@ -1,8 +1,6 @@
 <?php
 
 namespace Controllers;
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
 use Exception;
 use Requests\UpdateUsernameRequest;
 use Requests\UpdatePasswordRequest;
@@ -29,19 +27,19 @@ class ProfileController extends BaseController
     public function viewProfile()
     {
         $this->checkLoggedIn();
-    
+
         try {
             $user = (new User)->findBy('id', $this->getLoggedInUser()['id']);
             $profilePicture = (new Media)->getProfilePicture($user['id']);
             $userPosts = (new Post)->getUserPosts($user['id']);
-            
+
             if (!$profilePicture || !isset($profilePicture['path']) || empty($profilePicture['path'])) {
                 $profilePicture = ['path' => self::DEFAULT_PROFILE_PICTURE];
             }
-    
+
             $this->render('profile/profile', [
-                'user' => $user, 
-                'profilePicture' => $profilePicture, 
+                'user' => $user,
+                'profilePicture' => $profilePicture,
                 'userPosts' => $userPosts
             ]);
         } catch (Exception $e) {
@@ -49,7 +47,7 @@ class ProfileController extends BaseController
             redirect("/blogtech/views/profile/edit");
         }
     }
-    
+
 
     public function editProfile()
     {
@@ -58,13 +56,13 @@ class ProfileController extends BaseController
         try {
             $user = (new User)->findBy('id', $this->getLoggedInUser()['id']);
             $profilePicture = (new Media)->getProfilePicture($user['id']);
-            
+
             if (!$profilePicture || !isset($profilePicture['path']) || empty($profilePicture['path'])) {
                 $profilePicture = ['path' => self::DEFAULT_PROFILE_PICTURE];
             }
 
             $this->render('profile/edit_profile', ['user' => $user, 'profilePicture' => $profilePicture]);
-            
+
         } catch (Exception $e) {
             setErrors([$e->getMessage()]);
             redirect("/blogtech/views/profile/profile");
@@ -197,7 +195,6 @@ class ProfileController extends BaseController
                 unlink($_SERVER['DOCUMENT_ROOT'] . $existingProfile['path']);
             }
 
-            // Delete the old profile picture record from database if it exists
             if ($existingProfile) {
                 (new Media)->deleteProfilePicture($id);
             }

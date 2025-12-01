@@ -212,7 +212,7 @@ class RegistrationController extends BaseController
         }
 
         $token = $_SESSION['reset_token'] ?? '';
-        
+
         if (empty($token)) {
             setErrors(['Invalid token. Please try resetting your password again.']);
             return redirect("/blogtech/views/registration/forgot_password");

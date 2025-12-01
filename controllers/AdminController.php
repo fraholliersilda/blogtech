@@ -47,7 +47,7 @@ class AdminController extends BaseController
     {
         $this->checkAdmin();
         $search = isset($_GET['search']) ? trim(htmlspecialchars($_GET['search'])) : null;
-        $search = empty($search) ? null : $search; // Convert empty string to null
+        $search = empty($search) ? null : $search;
         $admins = $this->fetchUsersByRole('admin', $search);
         require BASE_PATH . '/views/admin/admins.php';
     }
@@ -56,7 +56,7 @@ class AdminController extends BaseController
     {
         $this->checkAdmin();
         $search = isset($_GET['search']) ? trim(htmlspecialchars($_GET['search'])) : null;
-        $search = empty($search) ? null : $search; // Convert empty string to null
+        $search = empty($search) ? null : $search;
         $users = $this->fetchUsersByRole('user', $search);
         require BASE_PATH . '/views/admin/users.php';
     }
@@ -159,7 +159,7 @@ class AdminController extends BaseController
 
     private function authenticateAdmin($email, $password)
     {
-        $user =(new User)->findByEmail($email);
+        $user = (new User)->findByEmail($email);
 
         if ($user && $user['role'] === 1) {
             if (password_verify($password, $user['password'])) {

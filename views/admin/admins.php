@@ -22,7 +22,6 @@
                     <h3><?= htmlspecialchars($admin['username']) ?></h3>
                     <p>Email: <?= htmlspecialchars($admin['email']) ?></p>
 
-                    <!-- Update Username and Email Form -->
                     <form method="POST" action="/ATIS/views/admin/admins">
                         <input type="hidden" name="action" value="update_user">
                         <input type="hidden" name="id" value="<?= $admin['id'] ?>">
@@ -33,7 +32,6 @@
                         <button type="submit">Update Admin</button>
                     </form>
 
-                    <!-- Delete Admin Form -->
                     <form method="POST" action="/blogtech/views/admin/admins" onsubmit="return confirmDelete()">
                         <input type="hidden" name="action" value="delete">
                         <input type="hidden" name="id" value="<?= $admin['id'] ?>">

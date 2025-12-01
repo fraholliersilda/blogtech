@@ -42,20 +42,18 @@ class User extends Model
         }
 
         $search = trim($search);
-        
-        // Get all users with the role first
+
         $allUsers = $this->findByRole($roleId);
-        
-        // Filter by search term (case-insensitive)
-        $filteredUsers = array_filter($allUsers, function($user) use ($search) {
+
+        $filteredUsers = array_filter($allUsers, function ($user) use ($search) {
             $searchLower = strtolower($search);
             $usernameLower = strtolower($user['username']);
             $emailLower = strtolower($user['email']);
-            
-            return strpos($usernameLower, $searchLower) !== false || 
-                   strpos($emailLower, $searchLower) !== false;
+
+            return strpos($usernameLower, $searchLower) !== false ||
+                strpos($emailLower, $searchLower) !== false;
         });
-        
-        return array_values($filteredUsers); // Re-index array
+
+        return array_values($filteredUsers);
     }
 }

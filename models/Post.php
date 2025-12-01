@@ -14,29 +14,6 @@ class Post extends Model
     ];
 
     public function getAllPost()
-    {
-        return $this->queryBuilder
-            ->table($this->table)
-            ->select([
-                'posts.*', 
-                'users.username',
-                'media.path as cover_photo_path',
-                'COUNT(DISTINCT likes.id) as likes_count',
-                'COUNT(DISTINCT comments.id) as comments_count'
-            ])
-            ->join('users', 'posts.user_id', '=', 'users.id')
-            ->leftJoin('media', function($join) {
-                $join->on('posts.id', '=', 'media.post_id')
-                     ->where('media.photo_type', '=', 'cover');
-            })
-            ->leftJoin('likes', 'posts.id', '=', 'likes.post_id')
-            ->leftJoin('comments', 'posts.id', '=', 'comments.post_id')
-            ->groupBy('posts.id')
-            ->orderBy('posts.created_at', 'DESC')
-            ->get();
-    }
-
-    public function getUserPosts($userId)
 {
     return $this->queryBuilder
         ->table($this->table)
@@ -44,7 +21,6 @@ class Post extends Model
             'posts.*', 
             'users.username',
             'media.path as cover_photo_path',
-            'COUNT(DISTINCT likes.id) as likes_count',
             'COUNT(DISTINCT comments.id) as comments_count'
         ])
         ->join('users', 'posts.user_id', '=', 'users.id')
@@ -52,7 +28,32 @@ class Post extends Model
             $join->on('posts.id', '=', 'media.post_id')
                  ->where('media.photo_type', '=', 'cover');
         })
-        ->leftJoin('likes', 'posts.id', '=', 'likes.post_id')
+
+
+        ->leftJoin('comments', 'posts.id', '=', 'comments.post_id')
+        ->groupBy('posts.id')
+        ->orderBy('posts.created_at', 'DESC')
+        ->get();
+}
+
+
+   public function getUserPosts($userId)
+{
+    return $this->queryBuilder
+        ->table($this->table)
+        ->select([
+            'posts.*', 
+            'users.username',
+            'media.path as cover_photo_path',
+            'COUNT(DISTINCT comments.id) as comments_count'
+        ])
+        ->join('users', 'posts.user_id', '=', 'users.id')
+        ->leftJoin('media', function($join) {
+            $join->on('posts.id', '=', 'media.post_id')
+                 ->where('media.photo_type', '=', 'cover');
+        })
+
+
         ->leftJoin('comments', 'posts.id', '=', 'comments.post_id')
         ->where('posts.user_id', '=', $userId)
         ->groupBy('posts.id')
@@ -60,57 +61,57 @@ class Post extends Model
         ->get();
 }
 
-    public function getPostById($postId)
-    {
-        return $this->queryBuilder
-            ->table($this->table)
-            ->select([
-                'posts.*', 
-                'users.username',
-                'media.path as cover_photo_path',
-                'COUNT(DISTINCT likes.id) as likes_count',
-                'COUNT(DISTINCT comments.id) as comments_count'
-            ])
-            ->join('users', 'posts.user_id', '=', 'users.id')
-            ->leftJoin('media', function($join) {
-                $join->on('posts.id', '=', 'media.post_id')
-                     ->where('media.photo_type', '=', 'cover');
-            })
-            ->leftJoin('likes', 'posts.id', '=', 'likes.post_id')
-            ->leftJoin('comments', 'posts.id', '=', 'comments.post_id')
-            ->where('posts.id', '=', $postId)
-            ->groupBy('posts.id')
-            ->getOne();
-    }
+
+public function getPostById($postId)
+{
+    return $this->queryBuilder
+        ->table($this->table)
+        ->select([
+            'posts.*', 
+            'users.username',
+            'media.path as cover_photo_path',
+            'COUNT(DISTINCT comments.id) as comments_count'
+        ])
+        ->join('users', 'posts.user_id', '=', 'users.id')
+        ->leftJoin('media', function($join) {
+            $join->on('posts.id', '=', 'media.post_id')
+                 ->where('media.photo_type', '=', 'cover');
+        })
+
+        ->leftJoin('comments', 'posts.id', '=', 'comments.post_id')
+        ->where('posts.id', '=', $postId)
+        ->groupBy('posts.id')
+        ->getOne();
+}
 
     public function getLatestPosts($excludePostId = null, $limit = 2)
-    {
-        $query = $this->queryBuilder
-            ->table($this->table)
-            ->select([
-                'posts.*', 
-                'users.username',
-                'media.path as cover_photo_path',
-                'COUNT(DISTINCT likes.id) as likes_count',
-                'COUNT(DISTINCT comments.id) as comments_count'
-            ])
-            ->join('users', 'posts.user_id', '=', 'users.id')
-            ->leftJoin('media', function($join) {
-                $join->on('posts.id', '=', 'media.post_id')
-                     ->where('media.photo_type', '=', 'cover');
-            })
-            ->leftJoin('likes', 'posts.id', '=', 'likes.post_id')
-            ->leftJoin('comments', 'posts.id', '=', 'comments.post_id');
+{
+    $query = $this->queryBuilder
+        ->table($this->table)
+        ->select([
+            'posts.*', 
+            'users.username',
+            'media.path as cover_photo_path',
+            'COUNT(DISTINCT comments.id) as comments_count'
+        ])
+        ->join('users', 'posts.user_id', '=', 'users.id')
+        ->leftJoin('media', function($join) {
+            $join->on('posts.id', '=', 'media.post_id')
+                 ->where('media.photo_type', '=', 'cover');
+        })
 
-        if ($excludePostId) {
-            $query->where('posts.id', '!=', $excludePostId);
-        }
+        ->leftJoin('comments', 'posts.id', '=', 'comments.post_id');
 
-        return $query->groupBy('posts.id')
-                    ->orderBy('posts.created_at', 'DESC')
-                    ->limit($limit)
-                    ->get();
+    if ($excludePostId) {
+        $query->where('posts.id', '!=', $excludePostId);
     }
+
+    return $query->groupBy('posts.id')
+                ->orderBy('posts.created_at', 'DESC')
+                ->limit($limit)
+                ->get();
+}
+
 
     public function createPost($data)
     {

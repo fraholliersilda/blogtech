@@ -3,18 +3,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/blogtech/functions.php';
 checkLoggedIn();
 $is_admin = isAdmin();
 
-$current_page = basename($_SERVER['REQUEST_URI']); 
-//nese do perdorej klasa BaseController
-// require __DIR__. '../../Database.php';
-// use App\Controllers\BaseController;
+$current_page = basename($_SERVER['REQUEST_URI']);
 
-// $baseController = new BaseController($conn);
 ?>
 
 <!-- navbar -->
 <div class="dashboard-nav">
     <header>
-       <b><a href="#" class="brand-logo"><i class="fa-solid fa-laptop-code"></i> <span>BLOGTECH</span></a></b> 
+        <b><a href="#" class="brand-logo"><i class="fa-solid fa-laptop-code"></i> <span>BLOGTECH</span></a></b>
     </header>
     <nav class="dashboard-nav-list">
         <a href="/blogtech/views/posts/blog"

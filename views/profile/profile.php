@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once 'successHandler.php';
 ?>
 <!DOCTYPE html>
@@ -13,6 +13,7 @@ require_once 'successHandler.php';
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
     <?php include BASE_PATH . '/navbar/navbar.php'; ?>
     <?php displaySuccessMessages(); ?>
@@ -29,7 +30,7 @@ require_once 'successHandler.php';
                                 <h4><?php echo htmlspecialchars($user['username']); ?></h4>
                                 <p class="text-muted font-size-sm"><?php echo htmlspecialchars($user['email']); ?></p>
                                 <p class="text-muted font-size-sm">
-                                    <i class="fa fa-newspaper"></i> 
+                                    <i class="fa fa-newspaper"></i>
                                     <?php echo count($userPosts); ?> Blog Posts
                                 </p>
                             </div>
@@ -70,7 +71,6 @@ require_once 'successHandler.php';
             </div>
         </div>
 
-        <!-- User's Blog Posts Section -->
         <div class="row">
             <div class="col-md-12">
                 <h1><b>MY BLOG POSTS</b></h1>
@@ -79,17 +79,23 @@ require_once 'successHandler.php';
                         <div class="col-md-12 post-card">
                             <div class="post-content">
                                 <div class="post-image">
-                                    <img src="<?= htmlspecialchars($post['cover_photo_path'] ?? '/blogtech/images/default_cover.jpg'); ?>" alt="Cover Photo" class="card-img-top">
+                                    <img src="<?= htmlspecialchars($post['cover_photo_path'] ?? '/blogtech/images/default_cover.jpg'); ?>"
+                                        alt="Cover Photo" class="card-img-top">
                                 </div>
                                 <div class="post-details">
                                     <h5 class="card-title"><?= htmlspecialchars($post['title']); ?></h5>
-                                    <p class="card-text"><em>By: <?= htmlspecialchars($post['username'] ?? 'Unknown'); ?></em></p>
+                                    <p class="card-text"><em>By: <?= htmlspecialchars($post['username'] ?? 'Unknown'); ?></em>
+                                    </p>
                                     <p class="card-text"><?= htmlspecialchars(substr($post['description'], 0, 300)); ?>...</p>
-                                    <a href="<?= BASE_URL ?>/views/posts/post/<?= $post['id']; ?>" class="btn btn-secondary">Read More</a>
-                                    <a href="/blogtech/views/posts/edit/<?php echo $post['id']; ?>" class="btn btn-primary">Edit</a>
-                                    <form action="<?= BASE_URL ?>/posts/delete/<?= $post['id'] ?>" method="post" style="display: inline;">
+                                    <a href="<?= BASE_URL ?>/views/posts/post/<?= $post['id']; ?>"
+                                        class="btn btn-secondary">Read More</a>
+                                    <a href="/blogtech/views/posts/edit/<?php echo $post['id']; ?>"
+                                        class="btn btn-primary">Edit</a>
+                                    <form action="<?= BASE_URL ?>/posts/delete/<?= $post['id'] ?>" method="post"
+                                        style="display: inline;">
                                         <input type="hidden" name="_method" value="DELETE">
-                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this post?')">Delete</button>
+                                        <button type="submit" class="btn btn-danger"
+                                            onclick="return confirm('Are you sure you want to delete this post?')">Delete</button>
                                     </form>
                                 </div>
                             </div>
