@@ -6,6 +6,7 @@ use Requests\BaseRequest;
 
 class UpdatePasswordRequest extends BaseRequest
 {
+    // Validate password update with old password verification and new password requirements
     public static function validate($data)
     {
         $rules = [

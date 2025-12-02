@@ -34,7 +34,9 @@ require_once 'errorHandler.php';
             <label for="cover_photo" class="form-label">Change Cover Photo:</label>
             <input type="file" name="cover_photo" id="cover_photo" accept="image/*" class="form-file">
             <br>
-            <?php if (isset($post['cover_photo_path']) && $post['cover_photo_path']): ?>
+            <?php 
+            // Display current cover photo if it exists
+            if (isset($post['cover_photo_path']) && $post['cover_photo_path']): ?>
                 <img src="<?php echo htmlspecialchars($post['cover_photo_path']); ?>" alt="Current Cover Photo"
                     class="cover-photo" width="150">
             <?php endif; ?>

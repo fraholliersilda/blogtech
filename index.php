@@ -1,19 +1,30 @@
 <?php
+
+// Enable error reporting for development
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+// Load composer autoloader
 require_once __DIR__ . '/vendor/autoload.php';
+
+// Start session
 session_start();
+
+// Define base paths
 define('BASE_PATH', __DIR__);
 define('BASE_URL', '/blogtech');
 
+// Get request details
 $request = $_SERVER['REQUEST_URI'];
 $method = $_SERVER['REQUEST_METHOD'];
 
+// Parse and clean the path
 $path = rtrim(parse_url(str_replace(BASE_URL, '', $request), PHP_URL_PATH), '/');
 
+// Load helper functions
 require_once 'redirect.php';
 
+// Import required classes
 use core\MiddlewareHandler;
 use Middlewares\AuthMiddleware;
 use Middlewares\IsAdminMiddleware;
@@ -21,22 +32,25 @@ use Middlewares\IsUserMiddleware;
 use Middlewares\GuestMiddleware;
 use Middlewares\AdminEditUserRoleMiddleware;
 use Middlewares\PostOwnershipMiddleware;
+use Middlewares\CommentOwnershipMiddleware;
 use Exceptions\ValidationException;
 use Controllers\ProfileController;
 use Controllers\RegistrationController;
 use Controllers\PostsController;
 use Controllers\AdminController;
 use Controllers\CommentsController;
-use Middlewares\CommentOwnershipMiddleware;
 
+// Initialize database connection
 require_once BASE_PATH . '/Database.php';
 
+// Initialize controllers
 $profileController = new ProfileController($conn);
 $registrationController = new RegistrationController($conn);
 $postsController = new PostsController($conn);
 $adminController = new AdminController($conn);
 $commentsController = new CommentsController($conn);
 
+// Define routes with callbacks and middlewares
 $routes = [
     'GET' => [
         '/logout' => [
@@ -153,21 +167,29 @@ $routes = [
             fn($id) => $commentsController->deleteComment($id),
             [AuthMiddleware::class, CommentOwnershipMiddleware::class]
         ],
-
     ]
 ];
 
+// Route matching and execution
 $routeFound = false;
 foreach ($routes[$method] as $route => $action) {
+    // Convert route pattern to regex (e.g., {id} becomes ([a-zA-Z0-9_-]+))
     $pattern = preg_replace('/\{[a-zA-Z]+\}/', '([a-zA-Z0-9_-]+)', $route);
+    
+    // Check if current path matches the route pattern
     if (preg_match("#^$pattern$#", $path, $matches)) {
+        // Remove full match, keep only captured groups
         array_shift($matches);
 
         try {
+            // Extract callback and middlewares
             $callback = $action[0];
             $middlewares = $action[1] ?? [];
+            
+            // Run middlewares
             MiddlewareHandler::run($middlewares);
 
+            // Execute callback with route parameters
             if (is_callable($callback)) {
                 $callback(...$matches);
             } else {
@@ -176,9 +198,11 @@ foreach ($routes[$method] as $route => $action) {
 
             $routeFound = true;
         } catch (ValidationException $exception) {
+            // Handle validation errors
             setErrors([$exception->getMessage()]);
             redirect($_SERVER['HTTP_REFERER']);
         } catch (Exception $exception) {
+            // Handle general errors
             setErrors(['Something went wrong. Please try again later.']);
             redirect("/blogtech/views/500.php");
         }
@@ -186,7 +210,7 @@ foreach ($routes[$method] as $route => $action) {
     }
 }
 
-// Route not found - Redirect to 404 page
+// Show 404 page if no route matched
 if (!$routeFound) {
     require BASE_PATH . '/views/404page.php';
     exit;

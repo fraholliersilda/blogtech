@@ -6,6 +6,7 @@ use Requests\BaseRequest;
 
 class UpdateUsernameRequest extends BaseRequest
 {
+    // Validate username and email update
     public static function validate($data)
     {
         $rules = [
@@ -16,4 +17,3 @@ class UpdateUsernameRequest extends BaseRequest
         return self::validateRules($data, $rules);
     }
 }
-

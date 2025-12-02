@@ -16,24 +16,28 @@ class CommentsController extends BaseController
         parent::__construct($conn);
     }
 
+    // Add a new comment to a post with content validation
     public function addComment($postId)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['content'])) {
             try {
                 $content = trim($_POST['content']);
 
+                // Validate comment is not empty
                 if (empty($content)) {
                     setErrors(['Comment cannot be empty.']);
                     redirect("/blogtech/views/posts/post/$postId");
                     return;
                 }
 
+                // Validate comment length doesn't exceed 1000 characters
                 if (strlen($content) > 1000) {
                     setErrors(['Comment is too long. Maximum 1000 characters allowed.']);
                     redirect("/blogtech/views/posts/post/$postId");
                     return;
                 }
 
+                // Verify the post exists before adding comment
                 $post = (new Post)->getPostById($postId);
                 if (!$post) {
                     setErrors(['Post not found.']);
@@ -67,6 +71,7 @@ class CommentsController extends BaseController
         }
     }
 
+    // Edit an existing comment with authorization and validation checks
     public function editComment($commentId)
     {
         try {
@@ -78,6 +83,7 @@ class CommentsController extends BaseController
                 return;
             }
 
+            // Check if user owns the comment or is an admin
             if ($_SESSION['user_id'] != $comment['user_id'] && $_SESSION['role'] != 1) {
                 setErrors(['You are not authorized to edit this comment.']);
                 redirect("/blogtech/views/posts/post/{$comment['post_id']}");
@@ -87,12 +93,14 @@ class CommentsController extends BaseController
             if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['content'])) {
                 $content = trim($_POST['content']);
 
+                // Validate comment is not empty
                 if (empty($content)) {
                     setErrors(['Comment cannot be empty.']);
                     redirect("/blogtech/views/posts/post/{$comment['post_id']}");
                     return;
                 }
 
+                // Validate comment length doesn't exceed 1000 characters
                 if (strlen($content) > 1000) {
                     setErrors(['Comment is too long. Maximum 1000 characters allowed.']);
                     redirect("/blogtech/views/posts/post/{$comment['post_id']}");
@@ -110,6 +118,7 @@ class CommentsController extends BaseController
                 redirect("/blogtech/views/posts/post/{$comment['post_id']}");
             }
 
+            // Display edit comment form
             include BASE_PATH . '/views/comments/edit_comment.php';
 
         } catch (Exception $e) {
@@ -118,6 +127,7 @@ class CommentsController extends BaseController
         }
     }
 
+    // Delete a comment with proper authorization checks
     public function deleteComment($commentId)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -132,6 +142,7 @@ class CommentsController extends BaseController
 
                 $post = (new Post)->getPostById($comment['post_id']);
 
+                // Allow deletion if user is comment owner, post owner, or admin
                 $canDelete = ($_SESSION['user_id'] == $comment['user_id']) ||
                     ($_SESSION['user_id'] == $post['user_id']) ||
                     ($_SESSION['role'] == 1);

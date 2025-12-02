@@ -7,6 +7,7 @@ use Requests\BaseRequest;
 
 class PasswordResetRequest extends BaseRequest
 {
+    // Validate email format for password reset request
     public function validateEmail($data)
     {
         $rules = [
@@ -16,6 +17,7 @@ class PasswordResetRequest extends BaseRequest
         return self::validateRules($data, $rules);
     }
 
+    // Validate password reset form with password confirmation match
     public function validatePasswordReset($data)
     {
         $rules = [
@@ -26,6 +28,7 @@ class PasswordResetRequest extends BaseRequest
 
         self::validateRules($data, $rules);
 
+        // Ensure password and confirmation match
         if ($data['password'] !== $data['confirm_password']) {
             throw new ValidationException("Passwords do not match.");
         }

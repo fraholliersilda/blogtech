@@ -13,12 +13,15 @@ class BaseController
         $this->conn = $conn;
     }
 
+    // Verify user is logged in, redirect to login page if not
     public function checkLoggedIn()
     {
         if (!isset($_SESSION['user_id'])) {
             redirect("/blogtech/views/registration/login");
         }
     }
+
+    // Retrieve current logged-in user with their role information
     public function getLoggedInUser()
     {
         if (isset($_SESSION['user_id'])) {

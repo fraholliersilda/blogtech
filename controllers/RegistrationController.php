@@ -22,12 +22,14 @@ class RegistrationController extends BaseController
         parent::__construct($conn);
     }
 
+    // Display the login page
     public function showLogin()
     {
         include BASE_PATH . '/views/registration/login.php';
         exit();
     }
 
+    // Handle user login with credential verification
     public function login()
     {
 
@@ -50,11 +52,13 @@ class RegistrationController extends BaseController
                 return redirect("/blogtech/views/registration/login");
             }
 
+            // Prevent admin users from logging in through regular interface
             if ($user['role'] === 1) {
                 setErrors(["Admin login not allowed through this interface."]);
                 return redirect("/blogtech/views/registration/login");
             }
 
+            // Verify password and set session variables
             if (password_verify($data['password'], $user['password'])) {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['role'] = $user['role'];
@@ -71,12 +75,14 @@ class RegistrationController extends BaseController
         redirect("/blogtech/views/registration/login");
     }
 
+    // Display the signup page
     public function showSignup()
     {
         include BASE_PATH . '/views/registration/signup.php';
         exit();
     }
 
+    // Handle new user registration with validation
     public function signup()
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -92,6 +98,7 @@ class RegistrationController extends BaseController
         try {
             RegistrationRequest::validateSignup($data);
 
+            // Check if email or username already exists
             $existingUser = (new User)->findByEmail($data['email']) ?? (new User)->findByUsername($data['username']);
 
             if ($existingUser) {
@@ -108,6 +115,7 @@ class RegistrationController extends BaseController
                 return redirect("/blogtech/views/registration/signup");
             }
 
+            // Hash password and set default role (2 = regular user)
             $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
             $data['role'] = 2;
 
@@ -126,6 +134,7 @@ class RegistrationController extends BaseController
         redirect("/blogtech/views/registration/signup");
     }
 
+    // Handle user logout and destroy session
     public function logout()
     {
         if (session_status() === PHP_SESSION_NONE) {
@@ -137,12 +146,14 @@ class RegistrationController extends BaseController
         redirect("/blogtech/views/registration/login");
     }
 
+    // Display the forgot password page
     public function showForgotPassword()
     {
         include BASE_PATH . '/views/registration/forgot_password.php';
         exit();
     }
 
+    // Handle forgot password request and send reset email
     public function forgotPassword()
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -159,6 +170,7 @@ class RegistrationController extends BaseController
             $user = (new User)->findByEmail($email);
 
             if ($user) {
+                // Generate unique reset token valid for 1 hour
                 $token = bin2hex(random_bytes(32));
                 $expires = date('Y-m-d H:i:s', strtotime('+1 hour'));
 
@@ -168,6 +180,7 @@ class RegistrationController extends BaseController
                 $resetUrl = "http://{$_SERVER['HTTP_HOST']}/blogtech/views/registration/reset_password?token=$token";
                 $this->sendPasswordResetEmail($email, $resetUrl);
             }
+            // Generic message to prevent email enumeration
             setSuccessMessages(['If your email is registered, a password reset link has been sent to your inbox.']);
         } catch (ValidationException $e) {
             setErrors([$e->getMessage()]);
@@ -179,6 +192,7 @@ class RegistrationController extends BaseController
         redirect("/blogtech/views/registration/forgot_password");
     }
 
+    // Display the reset password page if token is valid
     public function showResetPassword()
     {
         $token = $_GET['token'] ?? '';
@@ -188,6 +202,7 @@ class RegistrationController extends BaseController
             return redirect("/blogtech/views/registration/login");
         }
 
+        // Verify token exists and hasn't expired
         $stmt = $this->conn->prepare("SELECT * FROM users WHERE reset_token = ?");
         $stmt->execute([$token]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -203,6 +218,7 @@ class RegistrationController extends BaseController
         exit();
     }
 
+    // Handle password reset with token validation
     public function resetPassword()
     {
 
@@ -228,6 +244,7 @@ class RegistrationController extends BaseController
             $request = new PasswordResetRequest();
             $request->validatePasswordReset($data);
 
+            // Verify token is still valid
             $stmt = $this->conn->prepare("SELECT * FROM users WHERE reset_token = ?");
             $stmt->execute([$token]);
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -236,6 +253,7 @@ class RegistrationController extends BaseController
                 throw new ValidationException("Token is invalid or has expired.");
             }
 
+            // Update password and clear reset token
             $updateStmt = $this->conn->prepare("UPDATE users SET password = ?, reset_token = NULL, reset_token_expires_at = NULL WHERE id = ?");
             $updateStmt->execute([password_hash($data['password'], PASSWORD_DEFAULT), $user['id']]);
 
@@ -253,7 +271,7 @@ class RegistrationController extends BaseController
         }
     }
 
-
+    // Send password reset email with reset link
     private function sendPasswordResetEmail($email, $resetUrl)
     {
         $subject = "Password Reset Request";

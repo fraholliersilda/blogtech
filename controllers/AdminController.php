@@ -24,6 +24,7 @@ class AdminController extends BaseController
         parent::__construct($conn);
     }
 
+    // Verify that the current user has admin privileges (role = 1)
     private function checkAdmin()
     {
         if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 1) {
@@ -31,7 +32,7 @@ class AdminController extends BaseController
         }
     }
 
-
+    // Fetch users filtered by role and optional search term
     public function fetchUsersByRole($role, $search = null)
     {
         $roleId = (new Roles)->findBy('role', $role)['id'] ?? null;
@@ -43,6 +44,7 @@ class AdminController extends BaseController
         return [];
     }
 
+    // Display list of admin users with optional search filtering
     public function listAdmins()
     {
         $this->checkAdmin();
@@ -52,6 +54,7 @@ class AdminController extends BaseController
         require BASE_PATH . '/views/admin/admins.php';
     }
 
+    // Display list of regular users with optional search filtering
     public function listUsers()
     {
         $this->checkAdmin();
@@ -61,6 +64,7 @@ class AdminController extends BaseController
         require BASE_PATH . '/views/admin/users.php';
     }
 
+    // Handle POST requests for user management (update or delete)
     public function handleUserActions()
     {
         $this->checkLoggedIn();
@@ -83,6 +87,7 @@ class AdminController extends BaseController
         }
     }
 
+    // Update user information (username and email) with validation
     private function updateUser()
     {
         $data = [
@@ -103,6 +108,7 @@ class AdminController extends BaseController
         return null;
     }
 
+    // Delete a user with transaction safety
     private function deleteUser()
     {
         $id = intval($_POST['id']);
@@ -114,6 +120,7 @@ class AdminController extends BaseController
 
             Database::getConnection()->commit();
         } catch (PDOException $e) {
+            // Rollback transaction on error
             if (Database::getConnection()->inTransaction()) {
                 Database::getConnection()->rollBack();
             }
@@ -121,6 +128,7 @@ class AdminController extends BaseController
         }
     }
 
+    // Handle admin login with credential validation
     public function login()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -139,6 +147,7 @@ class AdminController extends BaseController
             $admin = $this->authenticateAdmin($data['email'], $data['password']);
 
             if ($admin) {
+                // Set session variables for authenticated admin
                 $_SESSION['user_id'] = $admin['id'];
                 $_SESSION['role'] = 1;
                 redirect("/blogtech/views/profile/profile");
@@ -151,16 +160,19 @@ class AdminController extends BaseController
         }
     }
 
+    // Display the admin login page
     public function showAdminLogin()
     {
         include BASE_PATH . '/views/admin/admin_login.php';
         exit();
     }
 
+    // Verify admin credentials and return user data if valid
     private function authenticateAdmin($email, $password)
     {
         $user = (new User)->findByEmail($email);
 
+        // Check if user exists and has admin role (role = 1)
         if ($user && $user['role'] === 1) {
             if (password_verify($password, $user['password'])) {
                 return $user;

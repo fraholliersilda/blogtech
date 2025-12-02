@@ -61078,3 +61078,1883 @@ Writing clean code shows discipline and professionalism. It reflects how you thi
     [1] => 41
 )
 
+[01-Dec-2025 13:48:45 Europe/Berlin] WHERE Condition: email = bela@gmail.com
+[01-Dec-2025 13:48:45 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[01-Dec-2025 13:48:45 Europe/Berlin] Bindings: Array
+(
+    [0] => bela@gmail.com
+)
+
+[01-Dec-2025 13:48:45 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[01-Dec-2025 13:48:45 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => bela@gmail.com
+)
+
+[01-Dec-2025 13:48:46 Europe/Berlin] WHERE Condition: u.id = 41
+[01-Dec-2025 13:48:46 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[01-Dec-2025 13:48:46 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:48:46 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[01-Dec-2025 13:48:46 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:48:46 Europe/Berlin] WHERE Condition: id = 41
+[01-Dec-2025 13:48:46 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[01-Dec-2025 13:48:46 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:48:46 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[01-Dec-2025 13:48:46 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:48:46 Europe/Berlin] WHERE Condition: user_id = 41
+[01-Dec-2025 13:48:46 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[01-Dec-2025 13:48:46 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:48:46 Europe/Berlin] WHERE Condition: photo_type = profile
+[01-Dec-2025 13:48:46 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[01-Dec-2025 13:48:46 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[01-Dec-2025 13:48:46 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[01-Dec-2025 13:48:46 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[01-Dec-2025 13:48:46 Europe/Berlin] WHERE Condition: posts.user_id = 41
+[01-Dec-2025 13:48:46 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ?
+[01-Dec-2025 13:48:46 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 41
+)
+
+[01-Dec-2025 13:48:46 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ? GROUP BY posts.id ORDER BY posts.created_at DESC
+[01-Dec-2025 13:48:46 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 41
+)
+
+[01-Dec-2025 13:48:48 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id GROUP BY posts.id ORDER BY posts.created_at DESC
+[01-Dec-2025 13:48:48 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+)
+
+[01-Dec-2025 13:51:14 Europe/Berlin] WHERE Condition: u.id = 41
+[01-Dec-2025 13:51:14 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[01-Dec-2025 13:51:14 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:51:14 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[01-Dec-2025 13:51:14 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:51:14 Europe/Berlin] WHERE Condition: id = 41
+[01-Dec-2025 13:51:14 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[01-Dec-2025 13:51:14 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:51:14 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[01-Dec-2025 13:51:14 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:51:14 Europe/Berlin] WHERE Condition: user_id = 41
+[01-Dec-2025 13:51:14 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[01-Dec-2025 13:51:14 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:51:14 Europe/Berlin] WHERE Condition: photo_type = profile
+[01-Dec-2025 13:51:14 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[01-Dec-2025 13:51:14 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[01-Dec-2025 13:51:14 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[01-Dec-2025 13:51:14 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[01-Dec-2025 13:51:14 Europe/Berlin] WHERE Condition: posts.user_id = 41
+[01-Dec-2025 13:51:14 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ?
+[01-Dec-2025 13:51:14 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 41
+)
+
+[01-Dec-2025 13:51:14 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ? GROUP BY posts.id ORDER BY posts.created_at DESC
+[01-Dec-2025 13:51:14 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 41
+)
+
+[01-Dec-2025 13:51:19 Europe/Berlin] WHERE Condition: u.id = 41
+[01-Dec-2025 13:51:19 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[01-Dec-2025 13:51:19 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:51:19 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[01-Dec-2025 13:51:19 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:51:19 Europe/Berlin] WHERE Condition: id = 41
+[01-Dec-2025 13:51:19 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[01-Dec-2025 13:51:19 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:51:19 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[01-Dec-2025 13:51:19 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:51:19 Europe/Berlin] WHERE Condition: user_id = 41
+[01-Dec-2025 13:51:19 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[01-Dec-2025 13:51:19 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[01-Dec-2025 13:51:19 Europe/Berlin] WHERE Condition: photo_type = profile
+[01-Dec-2025 13:51:19 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[01-Dec-2025 13:51:19 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[01-Dec-2025 13:51:19 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[01-Dec-2025 13:51:19 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[01-Dec-2025 13:51:47 Europe/Berlin] WHERE Condition: email = ersildafraholli1@gmail.com
+[01-Dec-2025 13:51:47 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[01-Dec-2025 13:51:47 Europe/Berlin] Bindings: Array
+(
+    [0] => ersildafraholli1@gmail.com
+)
+
+[01-Dec-2025 13:51:47 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[01-Dec-2025 13:51:47 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ersildafraholli1@gmail.com
+)
+
+[01-Dec-2025 13:51:47 Europe/Berlin] WHERE Condition: u.id = 14
+[01-Dec-2025 13:51:47 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[01-Dec-2025 13:51:47 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[01-Dec-2025 13:51:47 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[01-Dec-2025 13:51:47 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[01-Dec-2025 13:51:47 Europe/Berlin] WHERE Condition: id = 14
+[01-Dec-2025 13:51:47 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[01-Dec-2025 13:51:47 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[01-Dec-2025 13:51:47 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[01-Dec-2025 13:51:47 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[01-Dec-2025 13:51:47 Europe/Berlin] WHERE Condition: user_id = 14
+[01-Dec-2025 13:51:47 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[01-Dec-2025 13:51:47 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[01-Dec-2025 13:51:47 Europe/Berlin] WHERE Condition: photo_type = profile
+[01-Dec-2025 13:51:47 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[01-Dec-2025 13:51:47 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[01-Dec-2025 13:51:47 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[01-Dec-2025 13:51:47 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[01-Dec-2025 13:51:47 Europe/Berlin] WHERE Condition: posts.user_id = 14
+[01-Dec-2025 13:51:47 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ?
+[01-Dec-2025 13:51:47 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 14
+)
+
+[01-Dec-2025 13:51:47 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ? GROUP BY posts.id ORDER BY posts.created_at DESC
+[01-Dec-2025 13:51:47 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 14
+)
+
+[01-Dec-2025 13:53:25 Europe/Berlin] WHERE Condition: role = user
+[01-Dec-2025 13:53:25 Europe/Berlin] Current Query: SELECT * FROM roles WHERE role = ?
+[01-Dec-2025 13:53:25 Europe/Berlin] Bindings: Array
+(
+    [0] => user
+)
+
+[01-Dec-2025 13:53:25 Europe/Berlin] Executing Query: SELECT * FROM roles WHERE role = ? LIMIT 1
+[01-Dec-2025 13:53:25 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => user
+)
+
+[01-Dec-2025 13:53:25 Europe/Berlin] WHERE Condition: role = 2
+[01-Dec-2025 13:53:25 Europe/Berlin] Current Query: SELECT id, username, email FROM users WHERE role = ?
+[01-Dec-2025 13:53:25 Europe/Berlin] Bindings: Array
+(
+    [0] => 2
+)
+
+[01-Dec-2025 13:53:25 Europe/Berlin] Executing Query: SELECT id, username, email FROM users WHERE role = ?
+[01-Dec-2025 13:53:25 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 2
+)
+
+[01-Dec-2025 13:53:47 Europe/Berlin] WHERE Condition: role = user
+[01-Dec-2025 13:53:47 Europe/Berlin] Current Query: SELECT * FROM roles WHERE role = ?
+[01-Dec-2025 13:53:47 Europe/Berlin] Bindings: Array
+(
+    [0] => user
+)
+
+[01-Dec-2025 13:53:47 Europe/Berlin] Executing Query: SELECT * FROM roles WHERE role = ? LIMIT 1
+[01-Dec-2025 13:53:47 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => user
+)
+
+[01-Dec-2025 13:53:47 Europe/Berlin] WHERE Condition: role = 2
+[01-Dec-2025 13:53:47 Europe/Berlin] Current Query: SELECT id, username, email FROM users WHERE role = ?
+[01-Dec-2025 13:53:47 Europe/Berlin] Bindings: Array
+(
+    [0] => 2
+)
+
+[01-Dec-2025 13:53:47 Europe/Berlin] Executing Query: SELECT id, username, email FROM users WHERE role = ?
+[01-Dec-2025 13:53:47 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 2
+)
+
+[01-Dec-2025 13:54:12 Europe/Berlin] WHERE Condition: role = admin
+[01-Dec-2025 13:54:12 Europe/Berlin] Current Query: SELECT * FROM roles WHERE role = ?
+[01-Dec-2025 13:54:12 Europe/Berlin] Bindings: Array
+(
+    [0] => admin
+)
+
+[01-Dec-2025 13:54:12 Europe/Berlin] Executing Query: SELECT * FROM roles WHERE role = ? LIMIT 1
+[01-Dec-2025 13:54:12 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => admin
+)
+
+[01-Dec-2025 13:54:12 Europe/Berlin] WHERE Condition: role = 1
+[01-Dec-2025 13:54:12 Europe/Berlin] Current Query: SELECT id, username, email FROM users WHERE role = ?
+[01-Dec-2025 13:54:12 Europe/Berlin] Bindings: Array
+(
+    [0] => 1
+)
+
+[01-Dec-2025 13:54:12 Europe/Berlin] Executing Query: SELECT id, username, email FROM users WHERE role = ?
+[01-Dec-2025 13:54:12 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 1
+)
+
+[02-Dec-2025 23:28:59 Europe/Berlin] WHERE Condition: email = ersildafraholli1@gmail.com
+[02-Dec-2025 23:28:59 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[02-Dec-2025 23:28:59 Europe/Berlin] Bindings: Array
+(
+    [0] => ersildafraholli1@gmail.com
+)
+
+[02-Dec-2025 23:28:59 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[02-Dec-2025 23:28:59 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => ersildafraholli1@gmail.com
+)
+
+[02-Dec-2025 23:28:59 Europe/Berlin] WHERE Condition: u.id = 14
+[02-Dec-2025 23:28:59 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[02-Dec-2025 23:28:59 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:28:59 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[02-Dec-2025 23:28:59 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:28:59 Europe/Berlin] WHERE Condition: id = 14
+[02-Dec-2025 23:28:59 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[02-Dec-2025 23:28:59 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:28:59 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[02-Dec-2025 23:28:59 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:28:59 Europe/Berlin] WHERE Condition: user_id = 14
+[02-Dec-2025 23:28:59 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[02-Dec-2025 23:28:59 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:28:59 Europe/Berlin] WHERE Condition: photo_type = profile
+[02-Dec-2025 23:28:59 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[02-Dec-2025 23:28:59 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:28:59 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[02-Dec-2025 23:28:59 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:28:59 Europe/Berlin] WHERE Condition: posts.user_id = 14
+[02-Dec-2025 23:28:59 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ?
+[02-Dec-2025 23:28:59 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 14
+)
+
+[02-Dec-2025 23:28:59 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ? GROUP BY posts.id ORDER BY posts.created_at DESC
+[02-Dec-2025 23:28:59 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 14
+)
+
+[02-Dec-2025 23:29:01 Europe/Berlin] WHERE Condition: u.id = 14
+[02-Dec-2025 23:29:01 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[02-Dec-2025 23:29:01 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:01 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[02-Dec-2025 23:29:01 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:01 Europe/Berlin] WHERE Condition: id = 14
+[02-Dec-2025 23:29:01 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[02-Dec-2025 23:29:01 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:01 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[02-Dec-2025 23:29:01 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:01 Europe/Berlin] WHERE Condition: user_id = 14
+[02-Dec-2025 23:29:01 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[02-Dec-2025 23:29:01 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:01 Europe/Berlin] WHERE Condition: photo_type = profile
+[02-Dec-2025 23:29:01 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[02-Dec-2025 23:29:01 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:29:01 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[02-Dec-2025 23:29:01 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:29:04 Europe/Berlin] WHERE Condition: id = 14
+[02-Dec-2025 23:29:04 Europe/Berlin] Current Query: UPDATE users SET username = ?, email = ? WHERE id = ?
+[02-Dec-2025 23:29:04 Europe/Berlin] Bindings: Array
+(
+    [0] => Ersilda Fraholli1
+    [1] => ersildafraholli1@gmail.com
+    [2] => 14
+)
+
+[02-Dec-2025 23:29:04 Europe/Berlin] WHERE Condition: u.id = 14
+[02-Dec-2025 23:29:04 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[02-Dec-2025 23:29:04 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:04 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[02-Dec-2025 23:29:04 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:04 Europe/Berlin] WHERE Condition: id = 14
+[02-Dec-2025 23:29:04 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[02-Dec-2025 23:29:04 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:04 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[02-Dec-2025 23:29:04 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:04 Europe/Berlin] WHERE Condition: user_id = 14
+[02-Dec-2025 23:29:04 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[02-Dec-2025 23:29:04 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:04 Europe/Berlin] WHERE Condition: photo_type = profile
+[02-Dec-2025 23:29:04 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[02-Dec-2025 23:29:04 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:29:04 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[02-Dec-2025 23:29:04 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:29:04 Europe/Berlin] WHERE Condition: posts.user_id = 14
+[02-Dec-2025 23:29:04 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ?
+[02-Dec-2025 23:29:04 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 14
+)
+
+[02-Dec-2025 23:29:04 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ? GROUP BY posts.id ORDER BY posts.created_at DESC
+[02-Dec-2025 23:29:04 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 14
+)
+
+[02-Dec-2025 23:29:06 Europe/Berlin] WHERE Condition: u.id = 14
+[02-Dec-2025 23:29:06 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[02-Dec-2025 23:29:06 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:06 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[02-Dec-2025 23:29:06 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:06 Europe/Berlin] WHERE Condition: id = 14
+[02-Dec-2025 23:29:06 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[02-Dec-2025 23:29:06 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:06 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[02-Dec-2025 23:29:06 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:06 Europe/Berlin] WHERE Condition: user_id = 14
+[02-Dec-2025 23:29:06 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[02-Dec-2025 23:29:06 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:06 Europe/Berlin] WHERE Condition: photo_type = profile
+[02-Dec-2025 23:29:06 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[02-Dec-2025 23:29:06 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:29:06 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[02-Dec-2025 23:29:06 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:29:09 Europe/Berlin] WHERE Condition: id = 14
+[02-Dec-2025 23:29:09 Europe/Berlin] Current Query: UPDATE users SET username = ?, email = ? WHERE id = ?
+[02-Dec-2025 23:29:09 Europe/Berlin] Bindings: Array
+(
+    [0] => Ersilda Fraholli
+    [1] => ersildafraholli1@gmail.com
+    [2] => 14
+)
+
+[02-Dec-2025 23:29:09 Europe/Berlin] WHERE Condition: u.id = 14
+[02-Dec-2025 23:29:09 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[02-Dec-2025 23:29:09 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:09 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[02-Dec-2025 23:29:09 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:09 Europe/Berlin] WHERE Condition: id = 14
+[02-Dec-2025 23:29:09 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[02-Dec-2025 23:29:09 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:09 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[02-Dec-2025 23:29:09 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:09 Europe/Berlin] WHERE Condition: user_id = 14
+[02-Dec-2025 23:29:09 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[02-Dec-2025 23:29:09 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:29:09 Europe/Berlin] WHERE Condition: photo_type = profile
+[02-Dec-2025 23:29:09 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[02-Dec-2025 23:29:09 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:29:09 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[02-Dec-2025 23:29:09 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:29:09 Europe/Berlin] WHERE Condition: posts.user_id = 14
+[02-Dec-2025 23:29:09 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ?
+[02-Dec-2025 23:29:09 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 14
+)
+
+[02-Dec-2025 23:29:09 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ? GROUP BY posts.id ORDER BY posts.created_at DESC
+[02-Dec-2025 23:29:09 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 14
+)
+
+[02-Dec-2025 23:29:10 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id GROUP BY posts.id ORDER BY posts.created_at DESC
+[02-Dec-2025 23:29:10 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+)
+
+[02-Dec-2025 23:29:11 Europe/Berlin] WHERE Condition: posts.id = 111
+[02-Dec-2025 23:29:11 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ?
+[02-Dec-2025 23:29:11 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:29:11 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ? GROUP BY posts.id
+[02-Dec-2025 23:29:11 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:29:11 Europe/Berlin] WHERE Condition: post_id = 111
+[02-Dec-2025 23:29:11 Europe/Berlin] Current Query: SELECT id, path FROM media WHERE post_id = ?
+[02-Dec-2025 23:29:11 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:29:11 Europe/Berlin] WHERE Condition: photo_type = cover
+[02-Dec-2025 23:29:11 Europe/Berlin] Current Query: SELECT id, path FROM media WHERE post_id = ? AND photo_type = ?
+[02-Dec-2025 23:29:11 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+    [1] => cover
+)
+
+[02-Dec-2025 23:29:11 Europe/Berlin] Executing Query: SELECT id, path FROM media WHERE post_id = ? AND photo_type = ?
+[02-Dec-2025 23:29:11 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 111
+    [1] => cover
+)
+
+[02-Dec-2025 23:29:15 Europe/Berlin] WHERE Condition: posts.id = 111
+[02-Dec-2025 23:29:15 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ?
+[02-Dec-2025 23:29:15 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:29:15 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ? GROUP BY posts.id
+[02-Dec-2025 23:29:15 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:29:15 Europe/Berlin] WHERE Condition: post_id = 111
+[02-Dec-2025 23:29:15 Europe/Berlin] Current Query: SELECT id, path FROM media WHERE post_id = ?
+[02-Dec-2025 23:29:15 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:29:15 Europe/Berlin] WHERE Condition: photo_type = cover
+[02-Dec-2025 23:29:15 Europe/Berlin] Current Query: SELECT id, path FROM media WHERE post_id = ? AND photo_type = ?
+[02-Dec-2025 23:29:15 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+    [1] => cover
+)
+
+[02-Dec-2025 23:29:15 Europe/Berlin] Executing Query: SELECT id, path FROM media WHERE post_id = ? AND photo_type = ?
+[02-Dec-2025 23:29:15 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 111
+    [1] => cover
+)
+
+[02-Dec-2025 23:29:15 Europe/Berlin] WHERE Condition: id = 111
+[02-Dec-2025 23:29:15 Europe/Berlin] Current Query: UPDATE posts SET title = ?, description = ? WHERE id = ?
+[02-Dec-2025 23:29:15 Europe/Berlin] Bindings: Array
+(
+    [0] => Why Clean Code Matters in Modern Software Development!
+    [1] => In today’s fast-moving tech world, writing code that works is no longer enough. As applications grow more complex, clean and maintainable code has become one of the most valuable skills a developer can have.
+
+1. Easier Collaboration
+
+Clean code makes your work readable and predictable. When another developer opens your file, they should instantly understand what’s happening. Clear function names, consistent formatting, and avoiding unnecessary complexity help teams collaborate without confusion or wasted time.
+
+2. Faster Debugging
+
+Bugs are inevitable — but messy code makes them painful to fix. Clean code reduces the amount of time spent searching through long, tangled logic. When your structure is simple and well-organized, you can pinpoint issues quickly and ship updates faster.
+
+3. Better Scalability
+
+Projects evolve. Features change. Teams grow. Clean code ensures your application can be extended without breaking existing functionality. It creates a strong foundation that supports new features and improvements over time.
+
+4. Professionalism
+
+Writing clean code shows discipline and professionalism. It reflects how you think, how you solve problems, and how you treat the next person who will work on the project — including yourself.
+    [2] => 111
+)
+
+[02-Dec-2025 23:29:15 Europe/Berlin] WHERE Condition: posts.id = 111
+[02-Dec-2025 23:29:15 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ?
+[02-Dec-2025 23:29:15 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:29:15 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ? GROUP BY posts.id
+[02-Dec-2025 23:29:15 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:29:15 Europe/Berlin] WHERE Condition: posts.id != 111
+[02-Dec-2025 23:29:15 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ?
+[02-Dec-2025 23:29:15 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:29:15 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ? GROUP BY posts.id ORDER BY posts.created_at DESC LIMIT 2
+[02-Dec-2025 23:29:15 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:29:15 Europe/Berlin] WHERE Condition: post_id = 111
+[02-Dec-2025 23:29:15 Europe/Berlin] Current Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ?
+[02-Dec-2025 23:29:15 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:29:15 Europe/Berlin] Executing Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ? ORDER BY created_at ASC
+[02-Dec-2025 23:29:15 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:29:18 Europe/Berlin] WHERE Condition: role = admin
+[02-Dec-2025 23:29:18 Europe/Berlin] Current Query: SELECT * FROM roles WHERE role = ?
+[02-Dec-2025 23:29:18 Europe/Berlin] Bindings: Array
+(
+    [0] => admin
+)
+
+[02-Dec-2025 23:29:18 Europe/Berlin] Executing Query: SELECT * FROM roles WHERE role = ? LIMIT 1
+[02-Dec-2025 23:29:18 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => admin
+)
+
+[02-Dec-2025 23:29:18 Europe/Berlin] WHERE Condition: role = 1
+[02-Dec-2025 23:29:18 Europe/Berlin] Current Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:29:18 Europe/Berlin] Bindings: Array
+(
+    [0] => 1
+)
+
+[02-Dec-2025 23:29:18 Europe/Berlin] Executing Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:29:18 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 1
+)
+
+[02-Dec-2025 23:29:34 Europe/Berlin] WHERE Condition: role = admin
+[02-Dec-2025 23:29:34 Europe/Berlin] Current Query: SELECT * FROM roles WHERE role = ?
+[02-Dec-2025 23:29:34 Europe/Berlin] Bindings: Array
+(
+    [0] => admin
+)
+
+[02-Dec-2025 23:29:34 Europe/Berlin] Executing Query: SELECT * FROM roles WHERE role = ? LIMIT 1
+[02-Dec-2025 23:29:34 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => admin
+)
+
+[02-Dec-2025 23:29:34 Europe/Berlin] WHERE Condition: role = 1
+[02-Dec-2025 23:29:34 Europe/Berlin] Current Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:29:34 Europe/Berlin] Bindings: Array
+(
+    [0] => 1
+)
+
+[02-Dec-2025 23:29:34 Europe/Berlin] Executing Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:29:34 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 1
+)
+
+[02-Dec-2025 23:30:26 Europe/Berlin] WHERE Condition: role = admin
+[02-Dec-2025 23:30:26 Europe/Berlin] Current Query: SELECT * FROM roles WHERE role = ?
+[02-Dec-2025 23:30:26 Europe/Berlin] Bindings: Array
+(
+    [0] => admin
+)
+
+[02-Dec-2025 23:30:26 Europe/Berlin] Executing Query: SELECT * FROM roles WHERE role = ? LIMIT 1
+[02-Dec-2025 23:30:26 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => admin
+)
+
+[02-Dec-2025 23:30:26 Europe/Berlin] WHERE Condition: role = 1
+[02-Dec-2025 23:30:26 Europe/Berlin] Current Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:30:26 Europe/Berlin] Bindings: Array
+(
+    [0] => 1
+)
+
+[02-Dec-2025 23:30:26 Europe/Berlin] Executing Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:30:26 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 1
+)
+
+[02-Dec-2025 23:30:42 Europe/Berlin] WHERE Condition: role = admin
+[02-Dec-2025 23:30:42 Europe/Berlin] Current Query: SELECT * FROM roles WHERE role = ?
+[02-Dec-2025 23:30:42 Europe/Berlin] Bindings: Array
+(
+    [0] => admin
+)
+
+[02-Dec-2025 23:30:42 Europe/Berlin] Executing Query: SELECT * FROM roles WHERE role = ? LIMIT 1
+[02-Dec-2025 23:30:42 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => admin
+)
+
+[02-Dec-2025 23:30:42 Europe/Berlin] WHERE Condition: role = 1
+[02-Dec-2025 23:30:42 Europe/Berlin] Current Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:30:42 Europe/Berlin] Bindings: Array
+(
+    [0] => 1
+)
+
+[02-Dec-2025 23:30:42 Europe/Berlin] Executing Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:30:42 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 1
+)
+
+[02-Dec-2025 23:31:01 Europe/Berlin] WHERE Condition: role = admin
+[02-Dec-2025 23:31:01 Europe/Berlin] Current Query: SELECT * FROM roles WHERE role = ?
+[02-Dec-2025 23:31:01 Europe/Berlin] Bindings: Array
+(
+    [0] => admin
+)
+
+[02-Dec-2025 23:31:01 Europe/Berlin] Executing Query: SELECT * FROM roles WHERE role = ? LIMIT 1
+[02-Dec-2025 23:31:01 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => admin
+)
+
+[02-Dec-2025 23:31:01 Europe/Berlin] WHERE Condition: role = 1
+[02-Dec-2025 23:31:01 Europe/Berlin] Current Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:31:01 Europe/Berlin] Bindings: Array
+(
+    [0] => 1
+)
+
+[02-Dec-2025 23:31:01 Europe/Berlin] Executing Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:31:01 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 1
+)
+
+[02-Dec-2025 23:31:18 Europe/Berlin] WHERE Condition: role = user
+[02-Dec-2025 23:31:18 Europe/Berlin] Current Query: SELECT * FROM roles WHERE role = ?
+[02-Dec-2025 23:31:18 Europe/Berlin] Bindings: Array
+(
+    [0] => user
+)
+
+[02-Dec-2025 23:31:18 Europe/Berlin] Executing Query: SELECT * FROM roles WHERE role = ? LIMIT 1
+[02-Dec-2025 23:31:18 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => user
+)
+
+[02-Dec-2025 23:31:18 Europe/Berlin] WHERE Condition: role = 2
+[02-Dec-2025 23:31:18 Europe/Berlin] Current Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:31:18 Europe/Berlin] Bindings: Array
+(
+    [0] => 2
+)
+
+[02-Dec-2025 23:31:18 Europe/Berlin] Executing Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:31:18 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 2
+)
+
+[02-Dec-2025 23:31:21 Europe/Berlin] WHERE Condition: id = 15
+[02-Dec-2025 23:31:21 Europe/Berlin] Current Query: SELECT role FROM users WHERE id = ?
+[02-Dec-2025 23:31:21 Europe/Berlin] Bindings: Array
+(
+    [0] => 15
+)
+
+[02-Dec-2025 23:31:21 Europe/Berlin] Executing Query: SELECT role FROM users WHERE id = ?
+[02-Dec-2025 23:31:21 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 15
+)
+
+[02-Dec-2025 23:31:21 Europe/Berlin] WHERE Condition: id = 15
+[02-Dec-2025 23:31:21 Europe/Berlin] Current Query: UPDATE users SET username = ?, email = ? WHERE id = ?
+[02-Dec-2025 23:31:21 Europe/Berlin] Bindings: Array
+(
+    [0] => Esi Nezhaaa
+    [1] => esi@gmail.com
+    [2] => 15
+)
+
+[02-Dec-2025 23:31:21 Europe/Berlin] WHERE Condition: role = user
+[02-Dec-2025 23:31:21 Europe/Berlin] Current Query: SELECT * FROM roles WHERE role = ?
+[02-Dec-2025 23:31:21 Europe/Berlin] Bindings: Array
+(
+    [0] => user
+)
+
+[02-Dec-2025 23:31:21 Europe/Berlin] Executing Query: SELECT * FROM roles WHERE role = ? LIMIT 1
+[02-Dec-2025 23:31:21 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => user
+)
+
+[02-Dec-2025 23:31:21 Europe/Berlin] WHERE Condition: role = 2
+[02-Dec-2025 23:31:21 Europe/Berlin] Current Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:31:21 Europe/Berlin] Bindings: Array
+(
+    [0] => 2
+)
+
+[02-Dec-2025 23:31:21 Europe/Berlin] Executing Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:31:21 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 2
+)
+
+[02-Dec-2025 23:31:25 Europe/Berlin] WHERE Condition: id = 15
+[02-Dec-2025 23:31:25 Europe/Berlin] Current Query: SELECT role FROM users WHERE id = ?
+[02-Dec-2025 23:31:25 Europe/Berlin] Bindings: Array
+(
+    [0] => 15
+)
+
+[02-Dec-2025 23:31:25 Europe/Berlin] Executing Query: SELECT role FROM users WHERE id = ?
+[02-Dec-2025 23:31:25 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 15
+)
+
+[02-Dec-2025 23:31:25 Europe/Berlin] WHERE Condition: id = 15
+[02-Dec-2025 23:31:25 Europe/Berlin] Current Query: UPDATE users SET username = ?, email = ? WHERE id = ?
+[02-Dec-2025 23:31:25 Europe/Berlin] Bindings: Array
+(
+    [0] => Esi Nezha
+    [1] => esi@gmail.com
+    [2] => 15
+)
+
+[02-Dec-2025 23:31:25 Europe/Berlin] WHERE Condition: role = user
+[02-Dec-2025 23:31:25 Europe/Berlin] Current Query: SELECT * FROM roles WHERE role = ?
+[02-Dec-2025 23:31:25 Europe/Berlin] Bindings: Array
+(
+    [0] => user
+)
+
+[02-Dec-2025 23:31:25 Europe/Berlin] Executing Query: SELECT * FROM roles WHERE role = ? LIMIT 1
+[02-Dec-2025 23:31:25 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => user
+)
+
+[02-Dec-2025 23:31:25 Europe/Berlin] WHERE Condition: role = 2
+[02-Dec-2025 23:31:25 Europe/Berlin] Current Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:31:25 Europe/Berlin] Bindings: Array
+(
+    [0] => 2
+)
+
+[02-Dec-2025 23:31:25 Europe/Berlin] Executing Query: SELECT id, username, email FROM users WHERE role = ?
+[02-Dec-2025 23:31:25 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 2
+)
+
+[02-Dec-2025 23:31:32 Europe/Berlin] WHERE Condition: u.id = 14
+[02-Dec-2025 23:31:32 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[02-Dec-2025 23:31:32 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:31:32 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[02-Dec-2025 23:31:32 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:31:32 Europe/Berlin] WHERE Condition: id = 14
+[02-Dec-2025 23:31:32 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[02-Dec-2025 23:31:32 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:31:32 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[02-Dec-2025 23:31:32 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:31:32 Europe/Berlin] WHERE Condition: user_id = 14
+[02-Dec-2025 23:31:32 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[02-Dec-2025 23:31:32 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:31:32 Europe/Berlin] WHERE Condition: photo_type = profile
+[02-Dec-2025 23:31:32 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[02-Dec-2025 23:31:32 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:31:32 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[02-Dec-2025 23:31:32 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:31:32 Europe/Berlin] WHERE Condition: posts.user_id = 14
+[02-Dec-2025 23:31:32 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ?
+[02-Dec-2025 23:31:32 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 14
+)
+
+[02-Dec-2025 23:31:32 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ? GROUP BY posts.id ORDER BY posts.created_at DESC
+[02-Dec-2025 23:31:32 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 14
+)
+
+[02-Dec-2025 23:31:34 Europe/Berlin] WHERE Condition: posts.id = 42
+[02-Dec-2025 23:31:34 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ?
+[02-Dec-2025 23:31:34 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 42
+)
+
+[02-Dec-2025 23:31:34 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ? GROUP BY posts.id
+[02-Dec-2025 23:31:34 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 42
+)
+
+[02-Dec-2025 23:31:34 Europe/Berlin] WHERE Condition: posts.id != 42
+[02-Dec-2025 23:31:34 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ?
+[02-Dec-2025 23:31:34 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 42
+)
+
+[02-Dec-2025 23:31:34 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ? GROUP BY posts.id ORDER BY posts.created_at DESC LIMIT 2
+[02-Dec-2025 23:31:34 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 42
+)
+
+[02-Dec-2025 23:31:34 Europe/Berlin] WHERE Condition: post_id = 42
+[02-Dec-2025 23:31:34 Europe/Berlin] Current Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ?
+[02-Dec-2025 23:31:34 Europe/Berlin] Bindings: Array
+(
+    [0] => 42
+)
+
+[02-Dec-2025 23:31:34 Europe/Berlin] Executing Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ? ORDER BY created_at ASC
+[02-Dec-2025 23:31:34 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 42
+)
+
+[02-Dec-2025 23:31:40 Europe/Berlin] WHERE Condition: posts.id = 111
+[02-Dec-2025 23:31:40 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ?
+[02-Dec-2025 23:31:40 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:31:40 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ? GROUP BY posts.id
+[02-Dec-2025 23:31:40 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:31:40 Europe/Berlin] WHERE Condition: posts.id != 111
+[02-Dec-2025 23:31:40 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ?
+[02-Dec-2025 23:31:40 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:31:40 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ? GROUP BY posts.id ORDER BY posts.created_at DESC LIMIT 2
+[02-Dec-2025 23:31:40 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:31:40 Europe/Berlin] WHERE Condition: post_id = 111
+[02-Dec-2025 23:31:40 Europe/Berlin] Current Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ?
+[02-Dec-2025 23:31:40 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:31:40 Europe/Berlin] Executing Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ? ORDER BY created_at ASC
+[02-Dec-2025 23:31:40 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:31:46 Europe/Berlin] WHERE Condition: posts.id = 42
+[02-Dec-2025 23:31:46 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ?
+[02-Dec-2025 23:31:46 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 42
+)
+
+[02-Dec-2025 23:31:46 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ? GROUP BY posts.id
+[02-Dec-2025 23:31:46 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 42
+)
+
+[02-Dec-2025 23:31:46 Europe/Berlin] WHERE Condition: posts.id != 42
+[02-Dec-2025 23:31:46 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ?
+[02-Dec-2025 23:31:46 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 42
+)
+
+[02-Dec-2025 23:31:46 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ? GROUP BY posts.id ORDER BY posts.created_at DESC LIMIT 2
+[02-Dec-2025 23:31:46 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 42
+)
+
+[02-Dec-2025 23:31:46 Europe/Berlin] WHERE Condition: post_id = 42
+[02-Dec-2025 23:31:46 Europe/Berlin] Current Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ?
+[02-Dec-2025 23:31:46 Europe/Berlin] Bindings: Array
+(
+    [0] => 42
+)
+
+[02-Dec-2025 23:31:46 Europe/Berlin] Executing Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ? ORDER BY created_at ASC
+[02-Dec-2025 23:31:46 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 42
+)
+
+[02-Dec-2025 23:31:52 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id GROUP BY posts.id ORDER BY posts.created_at DESC
+[02-Dec-2025 23:31:52 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+)
+
+[02-Dec-2025 23:31:54 Europe/Berlin] WHERE Condition: posts.id = 111
+[02-Dec-2025 23:31:54 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ?
+[02-Dec-2025 23:31:54 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:31:54 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ? GROUP BY posts.id
+[02-Dec-2025 23:31:54 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:31:54 Europe/Berlin] WHERE Condition: post_id = 111
+[02-Dec-2025 23:31:54 Europe/Berlin] Current Query: SELECT id, path FROM media WHERE post_id = ?
+[02-Dec-2025 23:31:54 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:31:54 Europe/Berlin] WHERE Condition: photo_type = cover
+[02-Dec-2025 23:31:54 Europe/Berlin] Current Query: SELECT id, path FROM media WHERE post_id = ? AND photo_type = ?
+[02-Dec-2025 23:31:54 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+    [1] => cover
+)
+
+[02-Dec-2025 23:31:54 Europe/Berlin] Executing Query: SELECT id, path FROM media WHERE post_id = ? AND photo_type = ?
+[02-Dec-2025 23:31:54 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 111
+    [1] => cover
+)
+
+[02-Dec-2025 23:31:56 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id GROUP BY posts.id ORDER BY posts.created_at DESC
+[02-Dec-2025 23:31:56 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+)
+
+[02-Dec-2025 23:32:01 Europe/Berlin] WHERE Condition: u.id = 14
+[02-Dec-2025 23:32:01 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[02-Dec-2025 23:32:01 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:32:01 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[02-Dec-2025 23:32:01 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:32:01 Europe/Berlin] WHERE Condition: id = 14
+[02-Dec-2025 23:32:01 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[02-Dec-2025 23:32:01 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:32:01 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[02-Dec-2025 23:32:01 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:32:01 Europe/Berlin] WHERE Condition: user_id = 14
+[02-Dec-2025 23:32:01 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[02-Dec-2025 23:32:01 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+)
+
+[02-Dec-2025 23:32:01 Europe/Berlin] WHERE Condition: photo_type = profile
+[02-Dec-2025 23:32:01 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[02-Dec-2025 23:32:01 Europe/Berlin] Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:32:01 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[02-Dec-2025 23:32:01 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 14
+    [1] => profile
+)
+
+[02-Dec-2025 23:32:01 Europe/Berlin] WHERE Condition: posts.user_id = 14
+[02-Dec-2025 23:32:01 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ?
+[02-Dec-2025 23:32:01 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 14
+)
+
+[02-Dec-2025 23:32:01 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ? GROUP BY posts.id ORDER BY posts.created_at DESC
+[02-Dec-2025 23:32:01 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 14
+)
+
+[02-Dec-2025 23:32:08 Europe/Berlin] WHERE Condition: email = bela@gmail.com
+[02-Dec-2025 23:32:08 Europe/Berlin] Current Query: SELECT * FROM users WHERE email = ?
+[02-Dec-2025 23:32:08 Europe/Berlin] Bindings: Array
+(
+    [0] => bela@gmail.com
+)
+
+[02-Dec-2025 23:32:08 Europe/Berlin] Executing Query: SELECT * FROM users WHERE email = ? LIMIT 1
+[02-Dec-2025 23:32:08 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => bela@gmail.com
+)
+
+[02-Dec-2025 23:32:08 Europe/Berlin] WHERE Condition: u.id = 41
+[02-Dec-2025 23:32:08 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[02-Dec-2025 23:32:08 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:08 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[02-Dec-2025 23:32:08 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:08 Europe/Berlin] WHERE Condition: id = 41
+[02-Dec-2025 23:32:08 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[02-Dec-2025 23:32:08 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:08 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[02-Dec-2025 23:32:08 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:08 Europe/Berlin] WHERE Condition: user_id = 41
+[02-Dec-2025 23:32:08 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[02-Dec-2025 23:32:08 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:08 Europe/Berlin] WHERE Condition: photo_type = profile
+[02-Dec-2025 23:32:08 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[02-Dec-2025 23:32:08 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[02-Dec-2025 23:32:08 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[02-Dec-2025 23:32:08 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[02-Dec-2025 23:32:08 Europe/Berlin] WHERE Condition: posts.user_id = 41
+[02-Dec-2025 23:32:08 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ?
+[02-Dec-2025 23:32:08 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 41
+)
+
+[02-Dec-2025 23:32:08 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ? GROUP BY posts.id ORDER BY posts.created_at DESC
+[02-Dec-2025 23:32:08 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 41
+)
+
+[02-Dec-2025 23:32:11 Europe/Berlin] WHERE Condition: u.id = 41
+[02-Dec-2025 23:32:11 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[02-Dec-2025 23:32:11 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:11 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[02-Dec-2025 23:32:11 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:11 Europe/Berlin] WHERE Condition: id = 41
+[02-Dec-2025 23:32:11 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[02-Dec-2025 23:32:11 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:11 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[02-Dec-2025 23:32:11 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:11 Europe/Berlin] WHERE Condition: user_id = 41
+[02-Dec-2025 23:32:11 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[02-Dec-2025 23:32:11 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:11 Europe/Berlin] WHERE Condition: photo_type = profile
+[02-Dec-2025 23:32:11 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[02-Dec-2025 23:32:11 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[02-Dec-2025 23:32:11 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[02-Dec-2025 23:32:11 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[02-Dec-2025 23:32:12 Europe/Berlin] WHERE Condition: id = 41
+[02-Dec-2025 23:32:12 Europe/Berlin] Current Query: UPDATE users SET username = ?, email = ? WHERE id = ?
+[02-Dec-2025 23:32:12 Europe/Berlin] Bindings: Array
+(
+    [0] => Belaa
+    [1] => bela@gmail.com
+    [2] => 41
+)
+
+[02-Dec-2025 23:32:12 Europe/Berlin] WHERE Condition: u.id = 41
+[02-Dec-2025 23:32:12 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[02-Dec-2025 23:32:12 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:12 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[02-Dec-2025 23:32:12 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:12 Europe/Berlin] WHERE Condition: id = 41
+[02-Dec-2025 23:32:13 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[02-Dec-2025 23:32:13 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:13 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[02-Dec-2025 23:32:13 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:13 Europe/Berlin] WHERE Condition: user_id = 41
+[02-Dec-2025 23:32:13 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[02-Dec-2025 23:32:13 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:13 Europe/Berlin] WHERE Condition: photo_type = profile
+[02-Dec-2025 23:32:13 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[02-Dec-2025 23:32:13 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[02-Dec-2025 23:32:13 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[02-Dec-2025 23:32:13 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[02-Dec-2025 23:32:13 Europe/Berlin] WHERE Condition: posts.user_id = 41
+[02-Dec-2025 23:32:13 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ?
+[02-Dec-2025 23:32:13 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 41
+)
+
+[02-Dec-2025 23:32:13 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ? GROUP BY posts.id ORDER BY posts.created_at DESC
+[02-Dec-2025 23:32:13 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 41
+)
+
+[02-Dec-2025 23:32:15 Europe/Berlin] WHERE Condition: posts.id = 111
+[02-Dec-2025 23:32:15 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ?
+[02-Dec-2025 23:32:15 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:32:15 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ? GROUP BY posts.id
+[02-Dec-2025 23:32:15 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:32:15 Europe/Berlin] WHERE Condition: posts.id != 111
+[02-Dec-2025 23:32:15 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ?
+[02-Dec-2025 23:32:15 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:32:15 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ? GROUP BY posts.id ORDER BY posts.created_at DESC LIMIT 2
+[02-Dec-2025 23:32:15 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:32:15 Europe/Berlin] WHERE Condition: post_id = 111
+[02-Dec-2025 23:32:15 Europe/Berlin] Current Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ?
+[02-Dec-2025 23:32:15 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:32:15 Europe/Berlin] Executing Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ? ORDER BY created_at ASC
+[02-Dec-2025 23:32:15 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:32:18 Europe/Berlin] WHERE Condition: id = 111
+[02-Dec-2025 23:32:18 Europe/Berlin] Current Query: SELECT user_id FROM posts WHERE id = ?
+[02-Dec-2025 23:32:18 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:32:18 Europe/Berlin] Executing Query: SELECT user_id FROM posts WHERE id = ?
+[02-Dec-2025 23:32:18 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:32:18 Europe/Berlin] WHERE Condition: posts.id = 111
+[02-Dec-2025 23:32:18 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ?
+[02-Dec-2025 23:32:18 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:32:18 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ? GROUP BY posts.id
+[02-Dec-2025 23:32:18 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:32:18 Europe/Berlin] WHERE Condition: post_id = 111
+[02-Dec-2025 23:32:18 Europe/Berlin] Current Query: SELECT id, path FROM media WHERE post_id = ?
+[02-Dec-2025 23:32:18 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:32:18 Europe/Berlin] WHERE Condition: photo_type = cover
+[02-Dec-2025 23:32:18 Europe/Berlin] Current Query: SELECT id, path FROM media WHERE post_id = ? AND photo_type = ?
+[02-Dec-2025 23:32:18 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+    [1] => cover
+)
+
+[02-Dec-2025 23:32:18 Europe/Berlin] Executing Query: SELECT id, path FROM media WHERE post_id = ? AND photo_type = ?
+[02-Dec-2025 23:32:18 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 111
+    [1] => cover
+)
+
+[02-Dec-2025 23:32:23 Europe/Berlin] WHERE Condition: id = 111
+[02-Dec-2025 23:32:23 Europe/Berlin] Current Query: SELECT user_id FROM posts WHERE id = ?
+[02-Dec-2025 23:32:23 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:32:23 Europe/Berlin] Executing Query: SELECT user_id FROM posts WHERE id = ?
+[02-Dec-2025 23:32:23 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:32:23 Europe/Berlin] WHERE Condition: posts.id = 111
+[02-Dec-2025 23:32:23 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ?
+[02-Dec-2025 23:32:23 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:32:23 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ? GROUP BY posts.id
+[02-Dec-2025 23:32:23 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:32:23 Europe/Berlin] WHERE Condition: post_id = 111
+[02-Dec-2025 23:32:23 Europe/Berlin] Current Query: SELECT id, path FROM media WHERE post_id = ?
+[02-Dec-2025 23:32:23 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:32:23 Europe/Berlin] WHERE Condition: photo_type = cover
+[02-Dec-2025 23:32:23 Europe/Berlin] Current Query: SELECT id, path FROM media WHERE post_id = ? AND photo_type = ?
+[02-Dec-2025 23:32:23 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+    [1] => cover
+)
+
+[02-Dec-2025 23:32:23 Europe/Berlin] Executing Query: SELECT id, path FROM media WHERE post_id = ? AND photo_type = ?
+[02-Dec-2025 23:32:23 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 111
+    [1] => cover
+)
+
+[02-Dec-2025 23:32:23 Europe/Berlin] WHERE Condition: id = 111
+[02-Dec-2025 23:32:23 Europe/Berlin] Current Query: UPDATE posts SET title = ?, description = ? WHERE id = ?
+[02-Dec-2025 23:32:23 Europe/Berlin] Bindings: Array
+(
+    [0] => Why Clean Code Matters in Modern Software Development
+    [1] => In today’s fast-moving tech world, writing code that works is no longer enough. As applications grow more complex, clean and maintainable code has become one of the most valuable skills a developer can have.
+
+1. Easier Collaboration
+
+Clean code makes your work readable and predictable. When another developer opens your file, they should instantly understand what’s happening. Clear function names, consistent formatting, and avoiding unnecessary complexity help teams collaborate without confusion or wasted time.
+
+2. Faster Debugging
+
+Bugs are inevitable — but messy code makes them painful to fix. Clean code reduces the amount of time spent searching through long, tangled logic. When your structure is simple and well-organized, you can pinpoint issues quickly and ship updates faster.
+
+3. Better Scalability
+
+Projects evolve. Features change. Teams grow. Clean code ensures your application can be extended without breaking existing functionality. It creates a strong foundation that supports new features and improvements over time.
+
+4. Professionalism
+
+Writing clean code shows discipline and professionalism. It reflects how you think, how you solve problems, and how you treat the next person who will work on the project — including yourself.
+    [2] => 111
+)
+
+[02-Dec-2025 23:32:23 Europe/Berlin] WHERE Condition: posts.id = 111
+[02-Dec-2025 23:32:23 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ?
+[02-Dec-2025 23:32:23 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:32:23 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ? GROUP BY posts.id
+[02-Dec-2025 23:32:23 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:32:23 Europe/Berlin] WHERE Condition: posts.id != 111
+[02-Dec-2025 23:32:23 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ?
+[02-Dec-2025 23:32:23 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:32:23 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ? GROUP BY posts.id ORDER BY posts.created_at DESC LIMIT 2
+[02-Dec-2025 23:32:23 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 111
+)
+
+[02-Dec-2025 23:32:24 Europe/Berlin] WHERE Condition: post_id = 111
+[02-Dec-2025 23:32:24 Europe/Berlin] Current Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ?
+[02-Dec-2025 23:32:24 Europe/Berlin] Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:32:24 Europe/Berlin] Executing Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ? ORDER BY created_at ASC
+[02-Dec-2025 23:32:24 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 111
+)
+
+[02-Dec-2025 23:32:27 Europe/Berlin] WHERE Condition: posts.id = 109
+[02-Dec-2025 23:32:27 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ?
+[02-Dec-2025 23:32:27 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 109
+)
+
+[02-Dec-2025 23:32:27 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id = ? GROUP BY posts.id
+[02-Dec-2025 23:32:27 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 109
+)
+
+[02-Dec-2025 23:32:27 Europe/Berlin] WHERE Condition: posts.id != 109
+[02-Dec-2025 23:32:27 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ?
+[02-Dec-2025 23:32:27 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 109
+)
+
+[02-Dec-2025 23:32:27 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.id != ? GROUP BY posts.id ORDER BY posts.created_at DESC LIMIT 2
+[02-Dec-2025 23:32:27 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 109
+)
+
+[02-Dec-2025 23:32:27 Europe/Berlin] WHERE Condition: post_id = 109
+[02-Dec-2025 23:32:27 Europe/Berlin] Current Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ?
+[02-Dec-2025 23:32:27 Europe/Berlin] Bindings: Array
+(
+    [0] => 109
+)
+
+[02-Dec-2025 23:32:27 Europe/Berlin] Executing Query: SELECT comments.*, users.username FROM comments INNER JOIN users ON comments.user_id = users.id WHERE post_id = ? ORDER BY created_at ASC
+[02-Dec-2025 23:32:27 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 109
+)
+
+[02-Dec-2025 23:32:30 Europe/Berlin] WHERE Condition: u.id = 41
+[02-Dec-2025 23:32:30 Europe/Berlin] Current Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ?
+[02-Dec-2025 23:32:30 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:30 Europe/Berlin] Executing Query: SELECT u.*, r.role FROM users u INNER JOIN roles r ON u.role = r.id WHERE u.id = ? LIMIT 1
+[02-Dec-2025 23:32:30 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:31 Europe/Berlin] WHERE Condition: id = 41
+[02-Dec-2025 23:32:31 Europe/Berlin] Current Query: SELECT * FROM users WHERE id = ?
+[02-Dec-2025 23:32:31 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:31 Europe/Berlin] Executing Query: SELECT * FROM users WHERE id = ? LIMIT 1
+[02-Dec-2025 23:32:31 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:31 Europe/Berlin] WHERE Condition: user_id = 41
+[02-Dec-2025 23:32:31 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ?
+[02-Dec-2025 23:32:31 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+)
+
+[02-Dec-2025 23:32:31 Europe/Berlin] WHERE Condition: photo_type = profile
+[02-Dec-2025 23:32:31 Europe/Berlin] Current Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ?
+[02-Dec-2025 23:32:31 Europe/Berlin] Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[02-Dec-2025 23:32:31 Europe/Berlin] Executing Query: SELECT path FROM media WHERE user_id = ? AND photo_type = ? ORDER BY id DESC LIMIT 1
+[02-Dec-2025 23:32:31 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => 41
+    [1] => profile
+)
+
+[02-Dec-2025 23:32:31 Europe/Berlin] WHERE Condition: posts.user_id = 41
+[02-Dec-2025 23:32:31 Europe/Berlin] Current Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ?
+[02-Dec-2025 23:32:31 Europe/Berlin] Bindings: Array
+(
+    [0] => cover
+    [1] => 41
+)
+
+[02-Dec-2025 23:32:31 Europe/Berlin] Executing Query: SELECT posts.*, users.username, media.path as cover_photo_path, COUNT(DISTINCT comments.id) as comments_count FROM posts INNER JOIN users ON posts.user_id = users.id LEFT JOIN media ON posts.id = media.post_id AND media.photo_type = ? LEFT JOIN comments ON posts.id = comments.post_id WHERE posts.user_id = ? GROUP BY posts.id ORDER BY posts.created_at DESC
+[02-Dec-2025 23:32:31 Europe/Berlin] Executing Bindings: Array
+(
+    [0] => cover
+    [1] => 41
+)
+

@@ -17,6 +17,7 @@ class Media extends Model
         'post_id'
     ];
 
+    // Retrieve user's profile picture path
     public function getProfilePicture($userId)
     {
         return $this->queryBuilder
@@ -29,6 +30,7 @@ class Media extends Model
             ->getOne();
     }
 
+    // Retrieve cover photo for a specific post
     public function getCoverPhotoByPostId($postId)
     {
         return $this->queryBuilder
@@ -39,6 +41,7 @@ class Media extends Model
             ->getOne();
     }
 
+    // Update post cover photo by deleting old one first
     public function updateCoverPhoto($coverPhoto, $path, $postId)
     {
         $existingMedia = $this->queryBuilder
@@ -49,11 +52,13 @@ class Media extends Model
             ->getOne();
 
         if ($existingMedia) {
+            // Delete old cover photo file from server
             $deleteFile = $_SERVER['DOCUMENT_ROOT'] . $existingMedia['path'];
             if (file_exists($deleteFile)) {
                 unlink($deleteFile);
             }
     
+            // Remove old media record from database
             $this->queryBuilder
                 ->table('media')
                 ->where('id', '=', $existingMedia['id'])
@@ -65,13 +70,16 @@ class Media extends Model
 
     }
     
+    // Save new cover photo for a post with hashed filename
     public function saveCoverPhoto($coverPhoto, $postId)
     {
+        // Generate unique hashed filename
         $hashName = md5(uniqid(time(), true)) . "." . strtolower(pathinfo($coverPhoto['name'], PATHINFO_EXTENSION));
     
         $path = '/blogtech/uploads/' . $hashName;
         move_uploaded_file($coverPhoto['tmp_name'], $_SERVER['DOCUMENT_ROOT'] . $path);
     
+        // Insert media record into database
         return $this->queryBuilder
             ->table('media')
             ->insert([
@@ -88,6 +96,7 @@ class Media extends Model
             
     }
     
+    // Delete media record by ID
     public function deleteMediaById($mediaId)
     {
         try {
@@ -101,15 +110,17 @@ class Media extends Model
             throw $e;
         }
     }
-public function deleteProfilePicture($userId)
-{
-    return $this->queryBuilder
-        ->table('media')
-        ->where('user_id', '=', $userId)
-        ->where('photo_type', '=', 'profile')
-        ->delete()
-        ->execute();
-}
+
+    // Delete user's profile picture from database
+    public function deleteProfilePicture($userId)
+    {
+        return $this->queryBuilder
+            ->table('media')
+            ->where('user_id', '=', $userId)
+            ->where('photo_type', '=', 'profile')
+            ->delete()
+            ->execute();
+    }
 
 
 }

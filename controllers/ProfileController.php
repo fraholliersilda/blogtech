@@ -24,6 +24,7 @@ class ProfileController extends BaseController
         parent::__construct($conn);
     }
 
+    // Display user profile with posts and profile picture
     public function viewProfile()
     {
         $this->checkLoggedIn();
@@ -33,6 +34,7 @@ class ProfileController extends BaseController
             $profilePicture = (new Media)->getProfilePicture($user['id']);
             $userPosts = (new Post)->getUserPosts($user['id']);
 
+            // Use default profile picture if none exists
             if (!$profilePicture || !isset($profilePicture['path']) || empty($profilePicture['path'])) {
                 $profilePicture = ['path' => self::DEFAULT_PROFILE_PICTURE];
             }
@@ -48,7 +50,7 @@ class ProfileController extends BaseController
         }
     }
 
-
+    // Display profile edit form with current user data
     public function editProfile()
     {
         $this->checkLoggedIn();
@@ -57,6 +59,7 @@ class ProfileController extends BaseController
             $user = (new User)->findBy('id', $this->getLoggedInUser()['id']);
             $profilePicture = (new Media)->getProfilePicture($user['id']);
 
+            // Use default profile picture if none exists
             if (!$profilePicture || !isset($profilePicture['path']) || empty($profilePicture['path'])) {
                 $profilePicture = ['path' => self::DEFAULT_PROFILE_PICTURE];
             }
@@ -69,6 +72,7 @@ class ProfileController extends BaseController
         }
     }
 
+    // Route profile update requests to appropriate handlers based on action
     public function updateProfile($data, $files)
     {
         $id = $data["id"] ?? null;
@@ -79,6 +83,7 @@ class ProfileController extends BaseController
                 throw new Exception("Invalid user ID or no action specified.");
             }
 
+            // Dispatch to specific update method based on action type
             switch ($action) {
                 case 'updateUsername':
                     $this->updateUsername($data);
@@ -106,6 +111,7 @@ class ProfileController extends BaseController
         }
     }
 
+    // Update user's username and email with validation
     private function updateUsername($data)
     {
         $id = $data["id"] ?? null;
@@ -128,6 +134,7 @@ class ProfileController extends BaseController
         }
     }
 
+    // Update user's password after verifying old password
     private function updatePassword($data)
     {
         $id = $data["id"] ?? null;
@@ -143,6 +150,7 @@ class ProfileController extends BaseController
                 throw new Exception("User not found.");
             }
 
+            // Verify old password matches before updating
             if (!password_verify($old_password, $user['password'])) {
                 throw new Exception("Incorrect old password.");
             }
@@ -163,6 +171,7 @@ class ProfileController extends BaseController
         }
     }
 
+    // Update user's profile picture, replacing existing one if present
     private function updateProfilePicture($data, $files)
     {
         $id = $data["id"] ?? null;
@@ -177,11 +186,13 @@ class ProfileController extends BaseController
 
             $existingProfile = (new Media)->getProfilePicture($id);
 
+            // Ensure upload directory exists
             $targetDir = $_SERVER['DOCUMENT_ROOT'] . "/blogtech/uploads/";
             if (!is_dir($targetDir)) {
                 mkdir($targetDir, 0777, true);
             }
 
+            // Generate unique hashed filename
             $hashName = md5(uniqid(time(), true)) . "." . $extension;
             $targetFile = $targetDir . $hashName;
 
@@ -191,14 +202,17 @@ class ProfileController extends BaseController
 
             $path = "/blogtech/uploads/" . $hashName;
 
+            // Delete old profile picture file if it exists
             if ($existingProfile && file_exists($_SERVER['DOCUMENT_ROOT'] . $existingProfile['path'])) {
                 unlink($_SERVER['DOCUMENT_ROOT'] . $existingProfile['path']);
             }
 
+            // Remove old profile picture record from database
             if ($existingProfile) {
                 (new Media)->deleteProfilePicture($id);
             }
 
+            // Save new profile picture metadata to database
             (new Media)->create([
                 'original_name' => $originalName,
                 'hash_name' => $hashName,
@@ -216,6 +230,8 @@ class ProfileController extends BaseController
             redirect("/blogtech/views/profile/edit");
         }
     }
+
+    // Helper method to render views with data
     private function render($view, $data = [])
     {
         extract($data);

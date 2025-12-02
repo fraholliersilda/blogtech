@@ -12,6 +12,7 @@ class QueryBuilder
     private array $bindings = [];
     private array $joinConditions = [];
 
+    // Reset query builder state for reuse
     public function reset(): self
     {
         $this->table = '';
@@ -21,6 +22,7 @@ class QueryBuilder
         return $this;
     }
 
+    // Set the table for the query
     public function table(string $table): self
     {
         $this->reset();
@@ -28,6 +30,7 @@ class QueryBuilder
         return $this;
     }
 
+    // Build SELECT query with specified columns
     public function select(array $columns = ['*']): self
     {
         $columnsList = implode(', ', $columns);
@@ -35,6 +38,7 @@ class QueryBuilder
         return $this;
     }
 
+    // Add WHERE condition to query with parameter binding
     public function where(string $column, string $operator, mixed $value): self
     {
         $placeholder = "?";
@@ -48,6 +52,7 @@ class QueryBuilder
         return $this;
     }
 
+    // Insert data into table and return last insert ID
     public function insert(array $data): mixed
     {
         $columns = implode(', ', array_keys($data));
@@ -63,6 +68,7 @@ class QueryBuilder
         return false;
     }
 
+    // Build UPDATE query with data
     public function update(array $data): self
     {
         $set = implode(', ', array_map(fn($col) => "$col = ?", array_keys($data)));
@@ -71,6 +77,7 @@ class QueryBuilder
         return $this;
     }
 
+    // Build DELETE query with required WHERE clause for safety
     public function delete(): self
     {
         if (!str_contains($this->query, "WHERE")) {
@@ -84,6 +91,7 @@ class QueryBuilder
         return $this;
     }
 
+    // Add INNER JOIN to query with support for callable join conditions
     public function join(string $table, $column1, ?string $operator = null, ?string $column2 = null, string $type = "INNER"): self
     {
         if (is_callable($column1)) {
@@ -97,6 +105,7 @@ class QueryBuilder
         return $this;
     }
 
+    // Add LEFT JOIN to query with support for callable join conditions
     public function leftJoin(string $table, $column1, ?string $operator = null, ?string $column2 = null): self
     {
         if (is_callable($column1)) {
@@ -110,12 +119,14 @@ class QueryBuilder
         return $this;
     }
 
+    // Add GROUP BY clause to query
     public function groupBy(string $column): self
     {
         $this->query .= " GROUP BY $column";
         return $this;
     }
 
+    // Add LIMIT clause to query, removing any existing limit
     public function limit(int $count): self
     {
         $this->query = preg_replace('/\s+LIMIT\s+\d+/i', '', $this->query);
@@ -123,12 +134,14 @@ class QueryBuilder
         return $this;
     }
 
+    // Add ORDER BY clause to query
     public function orderBy(string $column, string $direction = 'ASC'): self
     {
         $this->query .= " ORDER BY $column $direction";
         return $this;
     }
 
+    // Execute query without returning results
     public function execute(): bool
     {
         $pdo = Database::getConnection();
@@ -136,6 +149,7 @@ class QueryBuilder
         return $stmt->execute($this->bindings);
     }
 
+    // Execute query and return all results
     public function get(): array
     {
         try {
@@ -154,6 +168,7 @@ class QueryBuilder
         }
     }
 
+    // Execute query and return first result
     public function getOne(): array
     {
         $results = $this->get();
@@ -161,6 +176,7 @@ class QueryBuilder
     }
 }
 
+// Helper class for building complex JOIN conditions
 class JoinBuilder
 {
     private string $table;
@@ -174,12 +190,14 @@ class JoinBuilder
         $this->type = $type;
     }
 
+    // Add ON condition to join (column to column comparison)
     public function on(string $column1, string $operator, string $column2): self
     {
         $this->conditions[] = "$column1 $operator $column2";
         return $this;
     }
 
+    // Add WHERE condition to join (column to value comparison)
     public function where(string $column, string $operator, mixed $value): self
     {
         $this->conditions[] = "$column $operator ?";
@@ -187,12 +205,14 @@ class JoinBuilder
         return $this;
     }
 
+    // Build the complete JOIN clause string
     public function buildJoin(): string
     {
         $conditionsStr = implode(' AND ', $this->conditions);
         return " {$this->type} JOIN {$this->table} ON $conditionsStr";
     }
 
+    // Return bindings for prepared statement
     public function getBindings(): array
     {
         return $this->bindings;

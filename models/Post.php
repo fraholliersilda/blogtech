@@ -13,6 +13,7 @@ class Post extends Model
         'created_at'
     ];
 
+    // Retrieve all posts with user info, cover photo, and comment count
     public function getAllPost()
 {
     return $this->queryBuilder
@@ -36,7 +37,7 @@ class Post extends Model
         ->get();
 }
 
-
+    // Retrieve all posts by a specific user with related data
    public function getUserPosts($userId)
 {
     return $this->queryBuilder
@@ -61,7 +62,7 @@ class Post extends Model
         ->get();
 }
 
-
+    // Retrieve a single post by ID with all related data
 public function getPostById($postId)
 {
     return $this->queryBuilder
@@ -84,6 +85,7 @@ public function getPostById($postId)
         ->getOne();
 }
 
+    // Retrieve latest posts, optionally excluding a specific post
     public function getLatestPosts($excludePostId = null, $limit = 2)
 {
     $query = $this->queryBuilder
@@ -102,6 +104,7 @@ public function getPostById($postId)
 
         ->leftJoin('comments', 'posts.id', '=', 'comments.post_id');
 
+    // Exclude specific post if provided (useful for "related posts")
     if ($excludePostId) {
         $query->where('posts.id', '!=', $excludePostId);
     }
@@ -112,7 +115,7 @@ public function getPostById($postId)
                 ->get();
 }
 
-
+    // Create a new post with current user as author
     public function createPost($data)
     {
         return $this->queryBuilder
@@ -124,6 +127,7 @@ public function getPostById($postId)
             ]);
     }
 
+    // Update an existing post
     public function updatePost($postId, $data)
     {
         return $this->queryBuilder
@@ -133,6 +137,7 @@ public function getPostById($postId)
             ->execute();
     }
 
+    // Delete a post by ID
     public function deletePost($postId)
     {
         return $this->queryBuilder

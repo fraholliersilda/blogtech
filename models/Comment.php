@@ -14,6 +14,7 @@ class Comment extends Model
         'updated_at'
     ];
 
+    // Retrieve all comments for a specific post with user information
     public function getCommentsByPostId($postId)
     {
         return $this->queryBuilder
@@ -25,6 +26,7 @@ class Comment extends Model
             ->get();
     }
 
+    // Retrieve a single comment by ID with user information
     public function getCommentById($commentId)
     {
         return $this->queryBuilder
@@ -35,6 +37,7 @@ class Comment extends Model
             ->getOne();
     }
 
+    // Create a new comment
     public function addComment($data)
     {
         return $this->queryBuilder
@@ -46,6 +49,7 @@ class Comment extends Model
             ]);
     }
 
+    // Update comment content
     public function updateComment($commentId, $content)
     {
         return $this->queryBuilder
@@ -55,6 +59,7 @@ class Comment extends Model
             ->execute();
     }
 
+    // Delete a comment by ID
     public function deleteComment($commentId)
     {
         return $this->queryBuilder
@@ -64,6 +69,7 @@ class Comment extends Model
             ->execute();
     }
 
+    // Get total number of comments for a specific post
     public function getCommentsCountByPostId($postId)
     {
         return $this->queryBuilder

@@ -3,6 +3,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/blogtech/functions.php';
 checkLoggedIn();
 $is_admin = isAdmin();
 
+// Get current page for active navigation highlighting
 $current_page = basename($_SERVER['REQUEST_URI']);
 
 ?>
@@ -19,7 +20,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
         </a>
 
         <?php if (!$is_admin): ?>
-            <!-- show new post only if normal user -->
+            <!-- Show new post link only for regular users -->
             <a href="/blogtech/views/posts/new"
                 class="dashboard-nav-item <?php echo ($current_page == 'new_post.php') ? 'active' : ''; ?>">
                 <i class="fa-solid fa-folder-open"></i> New post
@@ -27,6 +28,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
         <?php endif; ?>
 
         <?php if ($is_admin): ?>
+            <!-- Admin dropdown menu with user management options -->
             <div class="dropdown">
                 <button class="dashboard-nav-item"
                     style="background-color: #16a085; width: 100%; color: white; border: none;">

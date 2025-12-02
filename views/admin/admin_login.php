@@ -33,6 +33,7 @@ require_once __DIR__ . '/../../errorHandler.php';
             </div>
 
             <?php
+            // Display validation or login errors if any exist
             if (isset($_SESSION['messages']['errors']) && !empty($_SESSION['messages']['errors'])) {
                 echo '<div class="error-message">';
                 displayErrors();

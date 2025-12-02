@@ -13,6 +13,7 @@ class Model
         $this->queryBuilder = new QueryBuilder();
     }
 
+    // Find a single record by column and value
     public function findBy($column, $value)
     {
         return $this->queryBuilder
@@ -23,6 +24,7 @@ class Model
             ->getOne();
     }
 
+    // Insert a new record into the table
     public function create($data)
     {
         return $this->queryBuilder
@@ -30,6 +32,7 @@ class Model
             ->insert($data);
     }
 
+    // Update an existing record by ID
     public function update($id, $data)
     {
         return $this->queryBuilder
@@ -39,6 +42,7 @@ class Model
             ->execute();
     }
 
+    // Delete a record by ID
     public function delete($id)
     {
         return $this->queryBuilder
@@ -48,6 +52,7 @@ class Model
             ->execute();
     }
 
+    // Start a select query for all columns
     public function select()
     {
         return $this->queryBuilder

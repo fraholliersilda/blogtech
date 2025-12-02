@@ -142,6 +142,7 @@ require_once 'successHandler.php';
                         <div class="post-card">
                             <div class="post-content">
 
+                                <!-- Display post cover image or default -->
                                 <div class="post-image">
                                     <img src="<?= htmlspecialchars($post['cover_photo_path'] ?? '/blogtech/images/default_cover.jpg'); ?>"
                                         alt="Cover">
@@ -152,8 +153,10 @@ require_once 'successHandler.php';
 
                                     <p><em>By: <?= htmlspecialchars($post['username'] ?? 'Unknown'); ?></em></p>
 
+                                    <!-- Display truncated description (first 250 characters) -->
                                     <p><?= htmlspecialchars(substr($post['description'], 0, 250)); ?>...</p>
 
+                                    <!-- Show comment count -->
                                     <div class="engagement-stats">
                                         <i class="fas fa-comment"></i>
                                         <?= $post['comments_count'] ?? 0; ?> comments
@@ -163,7 +166,9 @@ require_once 'successHandler.php';
                                         <a href="<?= BASE_URL ?>/views/posts/post/<?= $post['id']; ?>"
                                             class="btn btn-secondary">Read More</a>
 
-                                        <?php if ($is_admin || (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $post['user_id'])) { ?>
+                                        <?php 
+                                        // Show edit/delete buttons only for post owner or admin
+                                        if ($is_admin || (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $post['user_id'])) { ?>
                                             <a href="/blogtech/views/posts/edit/<?= $post['id']; ?>"
                                                 class="btn btn-primary">Edit</a>
 

@@ -16,16 +16,19 @@ class User extends Model
         'reset_token_expires_at'
     ];
 
+    // Find user by email address
     public function findByEmail($email)
     {
         return $this->findBy('email', $email);
     }
 
+    // Find user by username
     public function findByUsername($username)
     {
         return $this->findBy('username', $username);
     }
 
+    // Retrieve all users with a specific role
     public function findByRole($roleId)
     {
         return $this->queryBuilder
@@ -35,6 +38,7 @@ class User extends Model
             ->get();
     }
 
+    // Find users by role with optional search filtering on username or email
     public function findByRoleWithSearch($roleId, $search = null)
     {
         if (empty($search)) {
@@ -45,6 +49,7 @@ class User extends Model
 
         $allUsers = $this->findByRole($roleId);
 
+        // Filter users by search term (case-insensitive)
         $filteredUsers = array_filter($allUsers, function ($user) use ($search) {
             $searchLower = strtolower($search);
             $usernameLower = strtolower($user['username']);

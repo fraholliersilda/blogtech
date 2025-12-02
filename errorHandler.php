@@ -1,12 +1,12 @@
 <?php
 
-
+// Store errors in session
 function setErrors($errors)
 {
     $_SESSION['messages']['errors'] = $errors;
 }
 
-
+// Retrieve and clear errors from session
 function getErrors()
 {
     if (isset($_SESSION['messages']['errors'])) {
@@ -17,6 +17,7 @@ function getErrors()
     return [];
 }
 
+// Display all errors as HTML
 function displayErrors()
 {
     $errors = getErrors();

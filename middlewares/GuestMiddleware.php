@@ -3,7 +3,9 @@ namespace Middlewares;
 
 use core\Middleware;
 require_once 'redirect.php';
+
 class GuestMiddleware implements Middleware {
+    // Redirect authenticated users away from guest-only pages
     public function handle(){
         if (isset($_SESSION['user_id'])) {
             redirect("/blogtech/views/profile/profile");

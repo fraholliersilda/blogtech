@@ -186,11 +186,13 @@ require_once 'successHandler.php';
 
     <?php displaySuccessMessages(); ?>
     <div class="container">
+        <!-- Post title and author -->
         <h1 class="post-title"><?= htmlspecialchars($post['title']); ?></h1>
         <div class="post-author">
             <p><em>By: <?= htmlspecialchars($post['username'] ?? 'Unknown'); ?></em></p>
         </div>
 
+        <!-- Post cover photo -->
         <div class="coverphoto post-image" style="margin-bottom: 20px;">
             <img src="<?= htmlspecialchars($post['cover_photo_path']); ?>" alt="Cover Photo" class="image-fluid">
         </div>
@@ -198,10 +200,13 @@ require_once 'successHandler.php';
             <p><?= nl2br(htmlspecialchars($post['description'])); ?></p>
         </div>
 
+        <!-- Post navigation and action buttons -->
         <div class="post-navigation" style="margin-bottom: 20px;">
             <a href="/blogtech/views/posts/blog" class="btn btn-primary"
                 style="background-color: #16a085; margin-right: 10px;">Back to Blog</a>
-            <?php if (
+            <?php 
+            // Show edit/delete buttons only for post owner or admin
+            if (
                 isset($_SESSION['user_id']) &&
                 (($_SESSION['user_id'] == $post['user_id']) ||
                     (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'))
@@ -216,10 +221,12 @@ require_once 'successHandler.php';
             <?php endif; ?>
         </div>
 
+        <!-- Comments section -->
         <div class="comment-section">
             <h3><i class="fas fa-comments"></i> Comments (<?= count($comments); ?>)</h3>
 
             <?php if (isset($_SESSION['user_id'])): ?>
+                <!-- Comment submission form for logged-in users -->
                 <div class="add-comment-form">
                     <h4><i class="fas fa-plus-circle"></i> Add Your Comment</h4>
                     <form method="POST" action="/blogtech/comments/add/<?= $post['id']; ?>">
@@ -236,6 +243,7 @@ require_once 'successHandler.php';
                     </form>
                 </div>
             <?php else: ?>
+                <!-- Prompt to login for non-authenticated users -->
                 <div class="alert alert-info">
                     <i class="fas fa-sign-in-alt"></i>
                     <strong>Want to join the conversation?</strong>
@@ -243,10 +251,12 @@ require_once 'successHandler.php';
                 </div>
             <?php endif; ?>
 
+            <!-- Display all comments -->
             <div class="comments-list">
                 <?php if (!empty($comments)): ?>
                     <?php foreach ($comments as $comment): ?>
                         <div class="comment-item" id="comment-<?= $comment['id']; ?>">
+                            <!-- Comment metadata (author and timestamp) -->
                             <div class="comment-meta">
                                 <span class="comment-author">
                                     <i class="fas fa-user-circle"></i>
@@ -268,6 +278,7 @@ require_once 'successHandler.php';
                         </div>
                     <?php endforeach; ?>
                 <?php else: ?>
+                    <!-- Empty state when no comments exist -->
                     <div class="no-comments">
                         <i class="fas fa-comment-slash"></i>
                         <h4>No comments yet</h4>
@@ -277,7 +288,9 @@ require_once 'successHandler.php';
             </div>
         </div>
 
-        <?php if (
+        <?php 
+        // Delete confirmation modal for post owner or admin
+        if (
             isset($_SESSION['user_id']) &&
             (($_SESSION['user_id'] == $post['user_id']) ||
                 (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'))
@@ -306,6 +319,7 @@ require_once 'successHandler.php';
             </div>
         <?php endif; ?>
 
+        <!-- Latest posts sidebar -->
         <div class="containerposts">
             <h3>Latest Posts</h3>
             <div class="row">
@@ -324,7 +338,9 @@ require_once 'successHandler.php';
                                         <a href="<?= BASE_URL ?>/views/posts/post/<?= $latestPost['id']; ?>"
                                             class="btn btn-secondary">Read More</a>
 
-                                        <?php if (
+                                        <?php 
+                                        // Show edit/delete buttons for post owner or admin
+                                        if (
                                             isset($_SESSION['user_id']) &&
                                             (($_SESSION['user_id'] == $latestPost['user_id']) ||
                                                 (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'))
@@ -341,7 +357,9 @@ require_once 'successHandler.php';
                                     </div>
                                 </div>
 
-                                <?php if (
+                                <?php 
+                                // Delete confirmation modal for each latest post
+                                if (
                                     isset($_SESSION['user_id']) &&
                                     (($_SESSION['user_id'] == $latestPost['user_id']) ||
                                         (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'))
@@ -386,16 +404,19 @@ require_once 'successHandler.php';
     <script>
         // COMMENT FUNCTIONALITY - ACTIVE
 
+        // Show inline edit form for comment
         function showEditForm(commentId) {
             $('#comment-content-' + commentId).slideUp(200);
             $('#edit-form-' + commentId).slideDown(200);
         }
 
+        // Cancel comment edit and restore original content
         function cancelEdit(commentId) {
             $('#edit-form-' + commentId).slideUp(200);
             $('#comment-content-' + commentId).slideDown(200);
         }
 
+        // Submit comment update via AJAX
         function updateComment(event, commentId) {
             event.preventDefault();
 
@@ -430,6 +451,7 @@ require_once 'successHandler.php';
             });
         }
 
+        // Delete comment via AJAX with confirmation
         function deleteComment(commentId) {
             if (confirm('Are you sure you want to delete this comment? This action cannot be undone.')) {
                 $.ajax({
@@ -448,6 +470,8 @@ require_once 'successHandler.php';
                 });
             }
         }
+
+        // Display temporary notification message
         function showNotification(message, type) {
             const alertClass = type === 'success' ? 'alert-success' : 'alert-danger';
             const iconClass = type === 'success' ? 'fas fa-check-circle' : 'fas fa-exclamation-circle';
@@ -467,7 +491,7 @@ require_once 'successHandler.php';
             }, 4000);
         }
 
-        // Helper functions
+        // Escape HTML special characters to prevent XSS
         function escapeHtml(text) {
             const map = {
                 '&': '&amp;',
@@ -479,11 +503,13 @@ require_once 'successHandler.php';
             return text.replace(/[&<>"']/g, function (m) { return map[m]; });
         }
 
+        // Convert newlines to HTML br tags
         function nl2br(str) {
             return str.replace(/\n/g, '<br>');
         }
 
         $(document).ready(function () {
+            // Smooth scrolling for anchor links
             $('a[href^="#"]').on('click', function (e) {
                 e.preventDefault();
                 const target = $(this.getAttribute('href'));
@@ -494,6 +520,7 @@ require_once 'successHandler.php';
                 }
             });
 
+            // Character counter for comment textarea
             $('.comment-textarea').on('input', function () {
                 const maxLength = 1000;
                 const currentLength = $(this).val().length;
@@ -510,12 +537,14 @@ require_once 'successHandler.php';
                 counterElement.text(`${remaining} characters remaining`);
             });
 
+            // Disable submit button while form is processing
             $('form').on('submit', function () {
                 const submitBtn = $(this).find('button[type="submit"]');
                 const originalText = submitBtn.html();
                 submitBtn.html('<i class="fas fa-spinner fa-spin"></i> Processing...').prop('disabled', true);
             });
 
+            // Hover effect for comment items
             $('.comment-item').hover(
                 function () {
                     $(this).css('border-left-color', '#2980b9');
@@ -526,3 +555,6 @@ require_once 'successHandler.php';
             );
         });
     </script>
+</body>
+
+</html>

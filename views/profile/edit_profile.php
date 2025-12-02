@@ -1,4 +1,5 @@
 <?php
+// Include the error handler to manage and display any errors
 require_once 'errorHandler.php';
 ?>
 
@@ -10,21 +11,31 @@ require_once 'errorHandler.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDIT PROFILE</title>
     <link rel="icon" type="image/png" href="../../icon.png">
+    <!-- Custom stylesheet for the blog -->
     <link rel="stylesheet" href="/blogtech/css/styles.css">
+    <!-- Bootstrap CSS for responsive design and components -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
-    <?php include BASE_PATH . '/navbar/navbar.php'; ?>
+    <?php 
+    // Include the navigation bar at the top of the page
+    include BASE_PATH . '/navbar/navbar.php'; 
+    ?>
+    
     <div class="prov">
         <div class="row">
             <div class="col-lg-8">
+                <!-- Profile card displaying user information -->
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
+                            <!-- Display user's profile picture -->
                             <img src="<?php echo htmlspecialchars($profilePicture['path']); ?>" alt="User"
                                 class="rounded-circle" width="150">
+                            <!-- Display username -->
                             <h4><?php echo htmlspecialchars($user['username']); ?></h4>
                             <p class="text-secondary mb-1">Full Stack Developer</p>
                             <p class="text-muted font-size-sm">Tirane, Albania</p>
@@ -33,17 +44,23 @@ require_once 'errorHandler.php';
                 </div>
             </div>
         </div>
+        
         <div class="col-lg-8">
             <?php
+            // Display any error messages if they exist
             displayErrors();
             ?>
 
+            <!-- Form 1: Update Username and Email -->
             <div class="card">
                 <div class="card-body">
                     <form action="/blogtech/views/profile/edit" method="POST" enctype="multipart/form-data">
+                        <!-- Hidden field to specify which action we're performing -->
                         <input type="hidden" name="action" value="updateUsername">
+                        <!-- Hidden field to pass the user ID -->
                         <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
 
+                        <!-- Username input field -->
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Username</h6>
@@ -54,6 +71,7 @@ require_once 'errorHandler.php';
                             </div>
                         </div>
 
+                        <!-- Email input field -->
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Email</h6>
@@ -64,6 +82,7 @@ require_once 'errorHandler.php';
                             </div>
                         </div>
 
+                        <!-- Submit button for username and email update -->
                         <div class="row">
                             <div class="col-sm-3"></div>
                             <div class="col-sm-9 text-secondary">
@@ -75,12 +94,15 @@ require_once 'errorHandler.php';
                 </div>
             </div>
 
+            <!-- Form 2: Update Password -->
             <div class="card mt-4">
                 <div class="card-body">
                     <form action="/blogtech/views/profile/edit" method="POST" enctype="multipart/form-data">
+                        <!-- Hidden field to specify password update action -->
                         <input type="hidden" name="action" value="updatePassword">
                         <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
 
+                        <!-- Old password input for verification -->
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Old Password</h6>
@@ -90,6 +112,7 @@ require_once 'errorHandler.php';
                             </div>
                         </div>
 
+                        <!-- New password input -->
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">New Password</h6>
@@ -99,6 +122,7 @@ require_once 'errorHandler.php';
                             </div>
                         </div>
 
+                        <!-- Submit button for password update -->
                         <div class="row">
                             <div class="col-sm-3"></div>
                             <div class="col-sm-9 text-secondary">
@@ -110,26 +134,32 @@ require_once 'errorHandler.php';
                 </div>
             </div>
 
+            <!-- Form 3: Update Profile Picture -->
             <div class="card mt-4">
                 <div class="card-body">
                     <form action="/blogtech/views/profile/edit" method="POST" enctype="multipart/form-data">
+                        <!-- Hidden field to specify profile picture update action -->
                         <input type="hidden" name="action" value="updateProfilePicture">
                         <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
 
+                        <!-- File input for selecting a new profile picture -->
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Profile Picture</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
+                                <!-- Accept only image files -->
                                 <input type="file" class="form-control" name="profile_picture" accept="image/*">
                             </div>
                         </div>
 
+                        <!-- Submit and cancel buttons for profile picture -->
                         <div class="row">
                             <div class="col-sm-3"></div>
                             <div class="col-sm-9 text-secondary">
                                 <input type="submit" class="btn btn-primary px-4" value="Save Profile Picture"
                                     style="background-color:#1abc9c; color: white; border-color: #1abc9c;">
+                                <!-- Cancel button to discard changes -->
                                 <input type="button" class="btn btn-secondary px-4" value="Cancel"
                                     onclick="handleCancel(event)">
                             </div>
@@ -141,9 +171,12 @@ require_once 'errorHandler.php';
         </div>
     </div>
 
+    <!-- Custom JavaScript files -->
     <script src="../../js/script.js"></script>
     <script src="../../js/edit_profile.js"></script>
+    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript for interactive components -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 

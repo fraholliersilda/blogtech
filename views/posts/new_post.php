@@ -20,6 +20,7 @@ require_once 'errorHandler.php';
     include BASE_PATH . '/navbar/navbar.php';
     ?>
 
+    <!-- Form for creating a new blog post with cover photo -->
     <form method="POST" enctype="multipart/form-data" class="post-form" action="/blogtech/views/posts/new">
         <label for="title">Title:</label><br>
         <input type="text" id="title" name="title"><br>

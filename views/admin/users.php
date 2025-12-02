@@ -21,6 +21,7 @@ require_once 'successHandler.php';
     <div class="admin_dashboard">
         <h1><b>Users</b></h1>
 
+        <!-- Search form for filtering users by username or email -->
         <div class="search-container" style="margin-bottom: 20px;">
             <form method="GET" action="/blogtech/views/admin/users"
                 style="display: flex; gap: 10px; align-items: center;">
@@ -45,6 +46,7 @@ require_once 'successHandler.php';
         </div>
 
         <?php if (!empty($_GET['search'])): ?>
+            <!-- Display search results summary -->
             <div style="margin-bottom: 15px; padding: 10px; background-color: #e9ecef; border-radius: 5px;">
                 <i class="fas fa-info-circle"></i>
                 Showing results for: "<strong><?= htmlspecialchars($_GET['search']) ?></strong>"
@@ -59,6 +61,7 @@ require_once 'successHandler.php';
         ?>
 
         <?php if (empty($users)): ?>
+            <!-- Display empty state when no users found -->
             <div style="text-align: center; padding: 40px; color: #666;">
                 <i class="fas fa-users" style="font-size: 48px; margin-bottom: 15px;"></i>
                 <h3>No users found</h3>
@@ -71,6 +74,7 @@ require_once 'successHandler.php';
         <?php else: ?>
             <div class="user-cards">
                 <?php foreach ($users as $user) {
+                    // Skip displaying the current logged-in user's own card
                     if ($user['id'] === $_SESSION['user_id']) {
                         continue;
                     }
@@ -79,6 +83,7 @@ require_once 'successHandler.php';
                         <h3><?= htmlspecialchars($user['username']) ?></h3>
                         <p>Email: <?= htmlspecialchars($user['email']) ?></p>
 
+                        <!-- Form to update user username and email -->
                         <form method="POST" action="/blogtech/views/admin/users">
                             <input type="hidden" name="action" value="update_user">
                             <input type="hidden" name="id" value="<?= $user['id'] ?>">
@@ -89,6 +94,7 @@ require_once 'successHandler.php';
                             <button type="submit">Update User</button>
                         </form>
 
+                        <!-- Form to delete user with confirmation -->
                         <form method="POST" action="/blogtech/views/admin/users" onsubmit="return confirmDelete()">
                             <input type="hidden" name="action" value="delete">
                             <input type="hidden" name="id" value="<?= $user['id'] ?>">

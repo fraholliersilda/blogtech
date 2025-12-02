@@ -1,10 +1,12 @@
 <?php
 
+// Store success messages in session
 function setSuccessMessages($messages)
 {
     $_SESSION['messages']['success'] = $messages;
 }
 
+// Retrieve and clear success messages from session
 function getSuccessMessages()
 {
     if (isset($_SESSION['messages']['success'])) {
@@ -15,6 +17,7 @@ function getSuccessMessages()
     return [];
 }
 
+// Display all success messages as HTML
 function displaySuccessMessages()
 {
     $messages = getSuccessMessages();
